@@ -1,0 +1,20 @@
+{
+  "dataVariationFileInfo": [
+    {
+      "filePath": ".variations\\TestDataAREF_WachtwoordReset.json",
+      "dataVariationType": "File"
+    },
+    {
+      "filePath": ".variations\\TestDataAREF_RegexExtraheren.json",
+      "dataVariationType": "File"
+    },
+    {
+      "filePath": ".variations\\TestDataAREF_AanmakenLogging.json",
+      "dataVariationType": "File"
+    },
+    {
+      "filePath": ".variations\\TestDataAREF_GetLogs_1.json",
+      "dataVariationType": "File"
+    }
+  ]
+}

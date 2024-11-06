@@ -1,0 +1,342 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="AFS_Bladeren" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+    <x:Property Name="io_uieOpenBrowserAFS" Type="InOutArgument(ui:UiElement)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1114,3932</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>AFS_Blader_Test_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="74">
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="74">
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Omschrijving: in AFS bladeren naar de juiste pagina, Raadplegen debiteuren facturen.&#xA;&#xA;pre: AFS geopend en ingelogd&#xA;post : AFS staat op de juiste pagina in AFS" DisplayName="AFS_Bladeren naar Raadplegen facturen" sap:VirtualizedContainerService.HintSize="1124,3867" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="s:SystemException" Name="SE" />
+      <Variable x:TypeArguments="x:Boolean" Name="blnPaginaGevonden" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message Gestart: AFS_Bladeren" sap:VirtualizedContainerService.HintSize="1062,141" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Start AFS_Bladeren.&quot;]" />
+    <Sequence DisplayName="Preconditie" sap:VirtualizedContainerService.HintSize="1062,1130" sap2010:WorkflowViewState.IdRef="Sequence_7">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Private: Use Browser Chrome: JD Edwards" sap:VirtualizedContainerService.HintSize="988,1019" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[io_uieOpenBrowserAFS]" IsIncognito="True" OpenMode="Never" OutUiElement="[io_uieOpenBrowserAFS]" ScopeGuid="0e702458-711d-4c3e-85e3-d54bc1a77e91" Version="V2" WindowResize="Maximize">
+        <uix:NApplicationCard.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            </ActivityAction.Argument>
+            <uix:NCheckState sap2010:Annotation.AnnotationText="Controleren of de Navigatie button aanwezig is, anders ben je niet goed ingelogd.&#xA;Is feitelijk een pre conditie!" DisplayName="Check App State Navigatie button." sap:VirtualizedContainerService.HintSize="954,882" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="0e702458-711d-4c3e-85e3-d54bc1a77e91" Version="V1">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appaer wel ingelogd" sap:VirtualizedContainerService.HintSize="450,258" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message wel ingelogd" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Trace" Message="[&quot;Er is ingelogd&quot;]" />
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence sap2010:Annotation.AnnotationText="Wanneer de navigatie button niet gevonden kan worden, dan&#xA;SE gebruiken om de robot te stoppen." DisplayName="Target does not appear Dan foutmelding en SE." sap:VirtualizedContainerService.HintSize="450,583" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message Navigator niet gevonden" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Warn" Message="[&quot;De navigatie button is niet gevonden, werkt AFS wel goed?&quot;]" />
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Workflows\Exchange\Exchange_MaakStuurScreenshot.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="RPA_Workflows\Diverse\Tools_MaakStuurScreenshot.xaml">
+                    <ui:InvokeWorkflowFile.Arguments>
+                      <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_strMelding">Navigatie button helaas niet gevonden.</InArgument>
+                    </ui:InvokeWorkflowFile.Arguments>
+                  </ui:InvokeWorkflowFile>
+                  <Throw DisplayName="Throw Niet goed ingelogd" Exception="[New SystemException(&quot;Er is niet ingelogd.&quot;)]" sap:VirtualizedContainerService.HintSize="388,90" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://prd.afs.amsterdam.nl/jde/E1Menu.maf?jdeowpBackButtonProtect=PROTECTED" DesignTimeRectangle="339, 116, 36, 35" DesignTimeScaleFactor="1" FriendlyName="'DIV drop_mainmenu'" FullSelectorArgument="&lt;webctrl id='drop_mainmenu' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='drop_mainmenu' tag='DIV' type='' class='e1MenuBarItemChild MenuBarFocusableDiv' aaname='' /&gt;" Guid="850b9996-6fc1-451d-80df-36864d22b741" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACgAAAAnCAYAAAB9qAq4AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH6SURBVFhH7ZbLK0RRHMf9JZJHWVpYYGNjRfIopRQpCxuMlMirxM5mFlKyoqYGKSVFajIm5JWFx5/z43PrpzvXuTOO051mcRafbuf3OPfb7/x+596a2u4pqWa8QFe8QFe8QFe8QFe8QFecBbaPrcpCOiOZ84LkHt+k8PIZPFljx2/K+yv/Ftg8MCcbeydy8/wRiFIubl+L1viJI960Tzn+JbBleFGOLu8CAVRrdedQuiY3pb53JvDzZI1dq3p8eR/kRfcqh7VAKsHLeCnH2DqyZIxT8BOnIm0raS2Q41JxTf2zga2uZ1oaelO/YhXiVCT5ppg4rATS8PQUxxauXPPgnGQvbqVzYr0oPgzx5JFvMzhWAplKqkBvhe0IxH799CGzW/tBRcN+hTzi2MfkN2ElUI+JAQjbVaBycJaXttGVohggDz/7RH1xWAnUidRpVaICIffw9tOjCnmB73ufsL0UVgLZnHsuajcJBOzRWL0no/Y4EqsgRAUmXsG4HmQolrezkn9+Lykw8R6Mm2KlY3xNdo+vYgUmPsVx92CUofm0nOYeiwRW5B4E05fERGNf6uc+rNiXBKr+Wwz8lahIjo3eYgB0unmyxq6TT3xF/mYUKsFx0VMIUKrifzAMDc9UcoxaLZ6ssdsMhAlngUnjBbriBbriBbriBboxJV9cnf7uvKDXBgAAAABJRU5ErkJggg==" InformativeScreenshot="80f737869b67dcacd241809afef28af0.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='E1MENUMAIN_6541903152275124224' title='JD Edwards' /&gt;" SearchSteps="Selector" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="298, 114, 38, 38" FriendlyName="'Wijzig het'" FullSelectorArgument="&lt;webctrl id='drop_home' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='drop_home' tag='DIV' type='' class='e1MenuBarItem MenuBarFocusableDiv' aaname='                        ' check:text='Wijzig het gebruikersprofiel om de toegankelijkheidsmodus te gebruiken voor verbeterde' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAYAAADFw8lbAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHwSURBVFhH7ZRLS0JBFMf7DBWk2GMR9HZbLmrRQ7SiFkFBRBJCD8poEUS4KbiLHlQQLnpAD4oiMKUii8JHiQVpRUTRxzl5Buai3rnllSGLZvHjMP85c+Yn3ntzClpy4S8gRHkjRHkjRHkjRHkjRHnzf0WbR8zgvr4mNTE/uDgHbyAEM2sLSXm6cBW1z45A+OkNIs8fpOKa7l3dx0i+sr+RdCZduIgarAUgbS4TkVQwx/2zmzBZZ020oqsMtk+OZbHz2wj0OQdIpRnuNw41gccfzI5ovb1BIVTZVQ46cx6pqT/AMtoKg9IYc9Z3ZCzaO22DUPRVFsG/uNCig/bxDvD6A6TiOvGRwH48x5r3HZpF9eZ8cLok+fLw4zt5aXTxfGJxSs4RXGNOXrJ4H83xPM5hzVdDs+i6+0C+8DLyQD5DpZ0l4DralfNEMMd97MN+muMc1nw1NIvSiw59PjB214DJZiIvCc1Z4D72YT+eozlrvhoZiS7trUFxmyH+vPVDMPoiX/wV2If9eA7PY8aar4ZmUcf8JKnDkkMhkw70PK3polmUovaBv7qLwc6ph1TW/o9/R1mic1urUGTVk32suE7t+RWidbbapB5jT7Wi53eKdlcpeoSoGkJUhYxFfxohyhshyhshyhshyhshyps/IpoLnyqrR+1TaqRGAAAAAElFTkSuQmCC" SearchSteps="Selector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NCheckState.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheckState>
+          </ActivityAction>
+        </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.TargetApp>
+          <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACbSURBVDhPtZPBCYAwDEUzlacencUVvDiBdCNX8NYZPBVcIeYbirW00ioGHoL+/0rBEBMZYRKc4CtBFh0DgRU2gRtBx0LgeBi4OPlywEHgeRw1jGdKXFgW5Xrv74I4nIJimGbBvuv3ME2CvlcBMuuquaIgN7EsXKMowGkpTYI4nON/wecr5KZCgMW4B5+4yuD8lT8v09t1npmoOwB59XBDS4/tzQAAAABJRU5ErkJggg==" InformativeScreenshot="ef129bb4821fd9d6bc44329b674e92df.png" Selector="&lt;html app='chrome.exe' htmlwindowname='E1MENUMAIN_7625918297056831488' title='JD Edwards' /&gt;" Title="JD Edwards" />
+        </uix:NApplicationCard.TargetApp>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </uix:NApplicationCard>
+    </Sequence>
+    <Sequence DisplayName="Acties" sap:VirtualizedContainerService.HintSize="1062,1395" sap2010:WorkflowViewState.IdRef="Sequence_8">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: JD Edwards" sap:VirtualizedContainerService.HintSize="484,1284" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InUiElement="[io_uieOpenBrowserAFS]" OpenMode="Never" ScopeGuid="0e702458-711d-4c3e-85e3-d54bc1a77e91" Version="V2">
+        <uix:NApplicationCard.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            </ActivityAction.Argument>
+            <Sequence sap:VirtualizedContainerService.HintSize="450,1147" sap2010:WorkflowViewState.IdRef="Sequence_11">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Raadplegen facturen'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_11" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0e702458-711d-4c3e-85e3-d54bc1a77e91" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://afs.acc.amsterdam.nl/jde/CafeOneManagerService.mafService?containerId=1&amp;stackId=undefined&amp;cmd=2005&amp;Action=2&amp;e1UserActInfo=false&amp;e1.mode=view&amp;design=false&amp;objectId=af3c86bf-7515-4d8a-952b-5f2c3c4e3db9&amp;product=undefined&amp;e1.namespace=&amp;RID=a95701e87bfa6a2e&amp;RENDER_MAFLET=E1Menu&amp;e1.state=maximized&amp;e1.service=CafeOneManagerService" DesignTimeRectangle="240, 592, 236, 121" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Raadplegen facturen'" FullSelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl id='wcFrame0' tag='IFRAME' /&gt;&lt;webctrl id='RILayoutTable1' tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='RIPaneIFRAME1' tableRow='3' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' idx='1' /&gt;&lt;webctrl tableRow='2' innertext='                     *                 ' idx='17' /&gt;" FuzzySelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl id='wcFrame0' tag='IFRAME' /&gt;&lt;webctrl id='RILayoutTable1' tag='TABLE' /&gt;&lt;webctrl id='RIPaneIFRAME1' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='TABLE' innertext='                     *                 ' type='' class='tileTemplateTable' aaname='' check:text='Raadplegen facturen workbench' /&gt;" Guid="262c01bb-728f-4e46-a086-2fc564c8bc3f" InformativeScreenshot="dd2cacd02be502136584b012e46527bd.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='E1MENUMAIN_*' title='JD Edwards' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target DesignTimeRectangle="244, 540, 83, 20" ElementType="Text" FriendlyName="'Raadplegen'" FullSelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl id='wcFrame0' tag='IFRAME' /&gt;&lt;webctrl id='RILayoutTable1' tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='RIPaneIFRAME1' tableRow='3' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='Raadplegen' tableRow='15' tag='SPAN' innertext='Raadplegen' visibleinnertext='Raadplegen' /&gt;" FuzzySelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl id='wcFrame0' tag='IFRAME' /&gt;&lt;webctrl id='RILayoutTable1' tag='TABLE' /&gt;&lt;webctrl id='RIPaneIFRAME1' tag='IFRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='Raadplegen' type='' tag='SPAN' innertext='Raadplegen' visibleinnertext='Raadplegen' class='titleNormal sectionTitle' check:text='Raadplegen' /&gt;" SearchSteps="Selector" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NClick.Target>
+              </uix:NClick>
+              <Delay DisplayName="Delay Wachten op scherm" Duration="00:00:02" sap:VirtualizedContainerService.HintSize="388,90" sap2010:WorkflowViewState.IdRef="Delay_1" />
+              <uix:NClick ActivateBefore="True" sap2010:Annotation.AnnotationText="Klik in het veld 'oorspronkelijk doc nr'" ClickType="Single" DisplayName="Click 'INPUT Document nr'" sap:VirtualizedContainerService.HintSize="388,188" sap2010:WorkflowViewState.IdRef="NClick_12" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0e702458-711d-4c3e-85e3-d54bc1a77e91" Version="V1">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://afs.acc.amsterdam.nl/jde/RunApp.mafService?e1UserActInfo=true&amp;e1.mode=view&amp;e1.namespace=&amp;RENDER_MAFLET=E1Menu&amp;e1.state=maximized&amp;e1.service=RunApp&amp;RID=702a0d0043589e29" DesignTimeRectangle="283, 424, 84, 17" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl id='jdeGridHeaderData0_1' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tag='INPUT' aaname='Document nummer' uipath-html-title='Document nummer' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl id='jdeGridHeaderData0_1' tag='TABLE' /&gt;&lt;webctrl tag='INPUT' aaname='Document nummer' uipath-html-title='Document nummer' type='text' class='textfield' /&gt;" Guid="ba0e5613-a878-4874-b666-2f7054cd3218" ImageBase64="" InformativeScreenshot="8b712dc9ce61c4ab4fcbe097cac8be1e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='E1MENUMAIN_*' title='Factuurverwerking - Raadplegen - Facturen workbench' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target DesignTimeRectangle="286, 454, 50, 24" FriendlyName="'Documentnummer'" FullSelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl parentid='HDR_DIV0_1.0' tableRow='2' tag='TABLE' /&gt;&lt;webctrl id='GC0_1.0' tag='SPAN' aaname='Documentnummer' colName='Documentnummer' innertext='Documentnummer' /&gt;" FuzzySelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl parentid='HDR_DIV0_1.0' tag='TABLE' /&gt;&lt;webctrl id='GC0_1.0' tag='SPAN' aaname='Documentnummer' colName='Documentnummer' innertext='Documentnummer' type='' class='' check:text='Documentnummer' /&gt;" SearchSteps="Selector" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NClick.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NClick>
+              <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="Typ het documentnummer in dit veld" ClickBeforeMode="Single" DisplayName="Type Into 'Document nummer'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,249" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="0e702458-711d-4c3e-85e3-d54bc1a77e91" Text="1234567" Version="V1">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable BrowserURL="https://afs.acc.amsterdam.nl/jde/RunApp.mafService?e1UserActInfo=true&amp;e1.mode=view&amp;e1.namespace=&amp;RENDER_MAFLET=E1Menu&amp;e1.state=maximized&amp;e1.service=RunApp&amp;RID=19bb3cdac520bdf9" DesignTimeRectangle="283, 424, 84, 17" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl id='jdeGridHeaderData0_1' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tag='INPUT' aaname='Document nummer' uipath-html-title='Document nummer' /&gt;" FuzzySelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl id='jdeGridHeaderData0_1' tag='TABLE' /&gt;&lt;webctrl tag='INPUT' aaname='Document nummer' uipath-html-title='Document nummer' type='text' class='textfield' /&gt;" Guid="f5c61d10-4d38-4ebf-b704-03d090324870" InformativeScreenshot="8b712dc9ce61c4ab4fcbe097cac8be1e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='E1MENUMAIN_*' title='Factuurverwerking - Raadplegen - Facturen workbench' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target DesignTimeRectangle="286, 454, 50, 24" FriendlyName="'Documentnummer'" FullSelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl parentid='HDR_DIV0_1.0' tableRow='2' tag='TABLE' /&gt;&lt;webctrl id='GC0_1.0' tag='SPAN' aaname='Documentnummer' colName='Documentnummer' visibleinnertext='Document&amp;#xA;nummer' /&gt;" FuzzySelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl parentid='HDR_DIV0_1.0' tag='TABLE' /&gt;&lt;webctrl id='GC0_1.0' tag='SPAN' aaname='Documentnummer' colName='Documentnummer' visibleinnertext='Document&amp;#xA;nummer' type='' class='' check:text='Documentnummer' /&gt;" SearchSteps="Selector" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NTypeInto.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NTypeInto>
+              <uix:NClick ActivateBefore="True" sap2010:Annotation.AnnotationText="Klik op zoeken" ClickType="Single" DisplayName="Click 'Zoeken opgegeven Docnr'" sap:VirtualizedContainerService.HintSize="388,188" sap2010:WorkflowViewState.IdRef="NClick_13" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0e702458-711d-4c3e-85e3-d54bc1a77e91" Version="V1">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://prd.afs.amsterdam.nl/jde/RunApp.mafService?e1UserActInfo=true&amp;e1.mode=view&amp;e1.namespace=&amp;RENDER_MAFLET=E1Menu&amp;e1.state=maximized&amp;e1.service=RunApp&amp;RID=7f768da0429cc532" DesignTimeRectangle="239, 281, 20, 20" DesignTimeScaleFactor="1" ElementType="Icon" FriendlyName="'IMG hc_Find'" FullSelectorArgument="&lt;webctrl id='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl id='WebMenuBar' tableRow='1' tag='TABLE' /&gt;&lt;webctrl aria-role='button' id='hc_Find' tableRow='1' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl id='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl id='WebMenuBar' tag='TABLE' /&gt;&lt;webctrl aria-role='button' id='hc_Find' type='' tag='IMG' class='' aaname='Zoeken (Ctrl+Alt+I)' /&gt;" Guid="3c81fd15-9eb1-4223-9e78-93ad354ac4b4" InformativeScreenshot="99f70b767f9b304cd42fd0a954036c41.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='E1MENUMAIN_1273383633198074880' title='VTMO - Raadplegen facturen - Werken met debiteuren subgrootboek' /&gt;" SearchSteps="Selector" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target DesignTimeRectangle="322, 279, 30, 22" ElementType="Text" FriendlyName="'Rij (R)'" FullSelectorArgument="&lt;webctrl id='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl parentid='WebMenuBar' tableRow='1' tag='TABLE' /&gt;&lt;webctrl aaname='Rij (R)' tableRow='1' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl parentid='WebMenuBar' tag='TABLE' /&gt;&lt;webctrl aaname='Rij (R)' type='' tag='A' class='' check:innerText='Rij (R)' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACIAAAAaCAYAAADSbo4CAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEDSURBVEhL7ZdBDoQgDEW9HMfhDF6Bu3ARtrOahQtOYTq2ZQQ7Qh0nk7DgJSQK9ff7hYXT47lAD2OCThhGJMOIZBiRFEYieGvAGDFc4OXgwFi/VXGd9ZHnD+Cag6BpRQ/2fZ34MHJogA8YC6c9T4jeAuvrWrmWaRtJc/SAmkgAR+uIokWU9d8kohnB9b2LokVgTb5X98guphjBqPOcopUILidUT0S+wQ0jVa3ENSMINjd4CtL1L5+m1CKwpvFpZAN0TQKaEdx8eyNFC28wJdJjCiNX4SZ592fkkWxRPb7zPNOGqo11XbcqNnGMuKRMpYFIA7mRyH8YRiTDiGQYkXTyg7XAC/Z43LWocKMlAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NClick.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NClick>
+            </Sequence>
+          </ActivityAction>
+        </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.TargetApp>
+          <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACbSURBVDhPtZPBCYAwDEUzlacencUVvDiBdCNX8NYZPBVcIeYbirW00ioGHoL+/0rBEBMZYRKc4CtBFh0DgRU2gRtBx0LgeBi4OPlywEHgeRw1jGdKXFgW5Xrv74I4nIJimGbBvuv3ME2CvlcBMuuquaIgN7EsXKMowGkpTYI4nON/wecr5KZCgMW4B5+4yuD8lT8v09t1npmoOwB59XBDS4/tzQAAAABJRU5ErkJggg==" InformativeScreenshot="ef129bb4821fd9d6bc44329b674e92df.png" Selector="&lt;html app='chrome.exe' htmlwindowname='E1MENUMAIN_7625918297056831488' title='JD Edwards' /&gt;" Title="JD Edwards" />
+        </uix:NApplicationCard.TargetApp>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </uix:NApplicationCard>
+    </Sequence>
+    <Sequence DisplayName="Postconditie" sap:VirtualizedContainerService.HintSize="1062,717" sap2010:WorkflowViewState.IdRef="Sequence_9">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <uix:NCheckState sap2010:Annotation.AnnotationText="Controle of de juiste pagina is bereikt, op basis van titel &quot;Factuurverwerking - Raadplegen - Facturen workbench&quot;. Niet meer de oude op deel van zoveel records gevonden." DisplayName="Check App State 'Factuurverwerking - Raa…'" Exists="[blnPaginaGevonden]" sap:VirtualizedContainerService.HintSize="1000,606" sap2010:WorkflowViewState.IdRef="NCheckState_3" Version="V1">
+        <uix:NCheckState.IfExists>
+          <Sequence sap2010:Annotation.AnnotationText="Als de juiste pagina bereikt is, dan open laten staan voor verdere verwerkingen." DisplayName="Target appears Raadplegen" sap:VirtualizedContainerService.HintSize="450,300" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:LogMessage DisplayName="Log Message juiste pagina gevonden" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Juiste pagina Raadplegen gevonden&quot;]" />
+          </Sequence>
+        </uix:NCheckState.IfExists>
+        <uix:NCheckState.IfNotExists>
+          <Sequence sap2010:Annotation.AnnotationText="Als de juiste pagina niet bereikt is, dan is er een systeemfout." DisplayName="Target does not appear Raadplegen" sap:VirtualizedContainerService.HintSize="496,358" sap2010:WorkflowViewState.IdRef="Sequence_6">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Assign DisplayName="Assign Bladeren mislukt." sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign.To>
+                <OutArgument x:TypeArguments="s:SystemException">[SE]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="s:SystemException">[new SystemException("Bladeren mislukt.")]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Throw DisplayName="Throw Pagina niet gevonden" Exception="[SE]" sap:VirtualizedContainerService.HintSize="434,90" sap2010:WorkflowViewState.IdRef="Throw_2" />
+          </Sequence>
+        </uix:NCheckState.IfNotExists>
+        <uix:NCheckState.Target>
+          <uix:TargetAnchorable BrowserURL="https://afs.acc.amsterdam.nl/jde/RunApp.mafService?e1UserActInfo=true&amp;e1.mode=view&amp;e1.namespace=&amp;RENDER_MAFLET=E1Menu&amp;e1.state=maximized&amp;e1.service=RunApp&amp;RID=ca70a3b4b04b2bbb" DesignTimeRectangle="212, 193, 370, 16" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Factuurverwerking - Raa…'" FullSelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl id='formTitleTable' tag='TABLE' /&gt;&lt;webctrl id='jdeFormTitle0' tableRow='1' tag='SPAN' aaname=' Factuurverwerking - Raadplegen - Facturen workbench' innertext=' Factuurverwerking - Raadplegen - Facturen workbench' visibleinnertext=' Factuurverwerking - Raadplegen - Facturen workbench' /&gt;" FuzzySelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl id='formTitleTable' tag='TABLE' /&gt;&lt;webctrl id='jdeFormTitle0' type='' tag='SPAN' aaname=' Factuurverwerking - Raadplegen - Facturen workbench' innertext=' Factuurverwerking - Raadplegen - Facturen workbench' visibleinnertext=' Factuurverwerking - Raadplegen - Facturen workbench' class='' check:text='Factuurverwerking - Raadplegen - Facturen workbench' /&gt;" Guid="eb3d6244-5712-4b7d-8127-aa808a7d7577" InformativeScreenshot="1f57496a6d49c38dfc6db6a21f5a4cab.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='E1MENUMAIN_*' title='Factuurverwerking - Raadplegen - Facturen workbench' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+            <uix:TargetAnchorable.Anchors>
+              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                <uix:Target DesignTimeRectangle="18, 130, 140, 16" ElementType="Icon" FriendlyName="'IMG oracleImage'" FullSelectorArgument="&lt;webctrl id='oracleImage' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl id='oracleImage' tag='IMG' type='' class='' aaname='ORACLE ®' /&gt;" ImageBase64="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" SearchSteps="Selector" />
+              </scg:List>
+            </uix:TargetAnchorable.Anchors>
+          </uix:TargetAnchorable>
+        </uix:NCheckState.Target>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </uix:NCheckState>
+    </Sequence>
+    <ui:LogMessage DisplayName="Log Message gestopt AFS bladeren" sap:VirtualizedContainerService.HintSize="1062,141" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Einde AFS_Bladeren&quot;]" />
+  </Sequence>
+</Activity>

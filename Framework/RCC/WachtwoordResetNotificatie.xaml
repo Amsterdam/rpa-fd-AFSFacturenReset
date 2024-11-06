@@ -1,0 +1,544 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="WachtwoordNotificatie" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:str="clr-namespace:System.Text.RegularExpressions;assembly=System.Text.RegularExpressions" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabh="clr-namespace:UiPath.Mail.Activities.Business.HtmlEditor;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1057,2122</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>WachtwoordNotificatie_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="70">
+      <x:String>Microsoft.Exchange.WebServices.Data</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.Globalization</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.Mail.Activities.Business</x:String>
+      <x:String>UiPath.Mail.Activities.Business.HtmlEditor</x:String>
+      <x:String>UiPath.Mail.Exchange</x:String>
+      <x:String>UiPath.Mail.Exchange.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Enums</x:String>
+      <x:String>Microsoft.Graph</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Mail</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="62">
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>Microsoft.Exchange.WebServices</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365</AssemblyReference>
+      <AssemblyReference>Microsoft.Graph</AssemblyReference>
+      <AssemblyReference>Microsoft.Graph.Core</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Er wordt een wachtwoord reset notificatie gemaild naar het RoboCC en naar de business met het resterende aantal dagen waarop het wachtwoord gewijzigd moet zijn.&#xA;Preconditie:&#xA;De volgende Assets moeten aangemaakt en gevuld zijn:&#xA;0_WachtwoordResetDatum: dd-mm-yyyy - De datum waarop het wachtwoord voor het laatst is gewijzigd.&#xA;1_WachtwoordResetDetails: 70_90_ADW, CityControl en Nog een applicatie - [#Dagen waarna notificatie wordt gemaild]_[#Dagen waarna het WW verloopt]_[Applicaties]&#xA;MailRCC: Blabla@hier.nl - Standaard mailadres van RoboCC&#xA;MailProcesspecialist: Hoppeta@daar.nl - Mailadres van Processpecialist&#xA;MailServer: https://mail.hier.nl/ - Standaar mailserver&#xA;" DisplayName="WachtwoordResetNotificatie" sap:VirtualizedContainerService.HintSize="1067,2057" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="s:DateTime" sap2010:Annotation.AnnotationText="Datum waarop het wachtwoord voor het laatst gereset is." Name="dtmWachtwoordResetDatum" />
+      <Variable x:TypeArguments="s:DateTime" sap2010:Annotation.AnnotationText="Datum vanaf wanneer er een wachtwoord reset notificatie gemaild wordt" Name="dtmWachtwoordNotificatieDatum" />
+      <Variable x:TypeArguments="x:Int32" sap2010:Annotation.AnnotationText="Aantal dagen na de WachtwoordResetDatum waarna een notificatie wordt gemaild." Name="IntDagenNotificatieTermijn" />
+      <Variable x:TypeArguments="x:Int32" sap2010:Annotation.AnnotationText="Aantal dagen na de WachtwoordResetDatum waarna het wachtwoord verloopt" Name="intDagenVerloopTermijn" />
+      <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Aantal dagen na de WachtwoordResetDatum waarna het wachtwoord verloopt maar dan in type string" Name="strDagenTotVerloopDatum" />
+      <Variable x:TypeArguments="s:DateTime" sap2010:Annotation.AnnotationText="Datum waarop het wachtwoord verloopt" Name="dtmWachtwoordVerloopDatum" />
+      <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="De applicaties waar de wachtwoord reset betrekking op heeft." Name="strApplicaties" />
+      <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="De HTML tekst waarin de mail body staat" Name="strHTMLMailBody" />
+      <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="De HTML tekst waarin het onderwerp van de mail staat" Name="strMailOnderwerp" />
+      <Variable x:TypeArguments="scg:IEnumerable(str:Match)" sap2010:Annotation.AnnotationText="Bevat het MailSubject dat is onttrokken uit de body met RegEx" Name="ieMailOnderwerp" />
+      <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Bevat de ADW gebruikersnaam" Name="strADWGebruikersnaam" />
+      <Variable x:TypeArguments="s:String[]" sap2010:Annotation.AnnotationText="Bevat het mailadres waar de mail naartoe wordt verzonden met O365 mail" Name="arrMailZendenNaar" />
+      <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Bevat de naam van degene waar de mail naar verzonden wordt: Ontwikkelaar, Specialist of RCC" Name="strNaamMailOntvanger" />
+      <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Bevat het mailadres waar de mail naartoe wordt verzonden met Exchange Mail" Name="strMailZendenNaar" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message - Workflow WachtwoordResetNotificatie gestart" sap:VirtualizedContainerService.HintSize="1005,141" sap2010:WorkflowViewState.IdRef="LogMessage_32" Level="Info" Message="[&quot;Workflow WachtwoordResetNotificatie is gestart&quot;]" />
+    <ui:MultipleAssign sap2010:Annotation.AnnotationText="Haal de wachtwoord reset gegevens op uit de assets&#xA;-WachtwoordResetDatum&#xA;-WachtwoordResetDetails" DisplayName="Multiple Assign - Wachtwoord reset gegevens ophalen" sap:VirtualizedContainerService.HintSize="1005,266" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+      <ui:MultipleAssign.AssignOperations>
+        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="s:DateTime">[dtmWachtwoordResetDatum]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="s:DateTime">[Datetime.ParseExact(in_Config("WachtwoordResetDatum").toString,"dd-MM-yyyy",System.Globalization.CultureInfo.InvariantCulture)]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:Int32">[IntDagenNotificatieTermijn]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:Int32">[CInt(in_Config("WachtwoordResetDetails").toString.Split("_"c)(0))]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_24">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:Int32">[intDagenVerloopTermijn]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:Int32">[CInt(in_Config("WachtwoordResetDetails").ToString.Split("_"c)(1))]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="AssignOperation_25">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[strApplicaties]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[in_Config("WachtwoordResetDetails").ToString.Split("_"c)(2)]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+        </scg:List>
+      </ui:MultipleAssign.AssignOperations>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:MultipleAssign>
+    <ui:MultipleAssign sap2010:Annotation.AnnotationText="dtmWachtwoordNotificatieDatum = Datum vanaf wanneer een notificatie-mail verstuurd moet worden&#xA;&#xA;dtmWachtwoordResetDatum = Datum waarvoor het wachtwoord gereset moet zijn&#xA;&#xA;strDagenTotVerloopDatum = Het aantal dagen tot het wachtwoord verloopt&#xA;&#xA;strMeerApplicaties = Bij meerdere applicaties wordt &quot;de wachtwoorden&quot; en anders &quot;het wachtwoord&quot; gebruikt in de notificatie-tekst." DisplayName="Multiple Assign - Berekende wachtwoord reset gegevens" sap:VirtualizedContainerService.HintSize="1005,340" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+      <ui:MultipleAssign.AssignOperations>
+        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
+          <ui:AssignOperation sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="s:DateTime">[dtmWachtwoordNotificatieDatum]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="s:DateTime">[dtmWachtwoordResetDatum.AddDays(IntDagenNotificatieTermijn)]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="s:DateTime">[dtmWachtwoordVerloopDatum]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="s:DateTime">[dtmWachtwoordResetDatum.AddDays(intDagenVerloopTermijn)]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[strDagenTotVerloopDatum]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[(DateDiff(DateInterval.Day, Now,dtmWachtwoordVerloopDatum)+1).ToString]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+        </scg:List>
+      </ui:MultipleAssign.AssignOperations>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:MultipleAssign>
+    <Flowchart sap2010:Annotation.AnnotationText="ALS de wachtwoord notificatietermijn verstreken is &#xA;DAN wordt er een mail gestuurd waarin wordt aangegeven dat het wachtwoord GAAT of IS verlopen. &#xA;ANDERS wordt er geen mail verstuurd.&#xA;&#xA;   V----------------------------------------|---------------------------------------------V---------------------------------------------------------|---------------------------------V&#xA;Now = Geen mail             dtmWachtwoordNotificatieDatum                   Now= Mail WW GAAT verlopen                   dtmWachtwoordVerloopDatum                  Now = Mail WW IS verlopen&#xA;                                            *************************************                                                                                            *********************************" DisplayName="Flowchart Wachtwoord notificatie mail verzenden" sap:VirtualizedContainerService.HintSize="1005,932" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <av:Point x:Key="ShapeLocation">440,2.5</av:Point>
+          <av:Size x:Key="ShapeSize">60,75</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">470,77.5 470,127.5</av:PointCollection>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          <x:Double x:Key="Width">971</x:Double>
+          <x:Double x:Key="Height">778</x:Double>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Flowchart.StartNode>
+        <x:Reference>__ReferenceID5</x:Reference>
+      </Flowchart.StartNode>
+      <FlowDecision x:Name="__ReferenceID5" Condition="[dtmWachtwoordNotificatieDatum &lt;= Now]" DisplayName="Notificatiedatum verlopen?" sap:VirtualizedContainerService.HintSize="150,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <av:Point x:Key="ShapeLocation">395,127.5</av:Point>
+            <av:Size x:Key="ShapeSize">150,87</av:Size>
+            <av:PointCollection x:Key="FalseConnector">545,171 680,171 680,409.5</av:PointCollection>
+            <x:String x:Key="FalseLabel">NIET verlopen</x:String>
+            <x:String x:Key="TrueLabel">WEL verlopen</x:String>
+            <av:PointCollection x:Key="TrueConnector">395,171 274.5,171 274.5,246.5</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <FlowDecision.True>
+          <FlowDecision x:Name="__ReferenceID2" Condition="[Now &gt;= dtmWachtwoordVerloopDatum]" DisplayName="Wachtwoord verlopen?" sap:VirtualizedContainerService.HintSize="128,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <av:Point x:Key="ShapeLocation">210.5,246.5</av:Point>
+                <av:Size x:Key="ShapeSize">128,87</av:Size>
+                <av:PointCollection x:Key="TrueConnector">210.5,290 120,290 120,409.5</av:PointCollection>
+                <av:PointCollection x:Key="FalseConnector">338.5,290 420,290 420,409.5</av:PointCollection>
+                <x:String x:Key="TrueLabel">IS verlopen</x:String>
+                <x:String x:Key="FalseLabel">GAAT verlopen</x:String>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <FlowDecision.True>
+              <FlowStep x:Name="__ReferenceID3">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <av:Point x:Key="ShapeLocation">20,409.5</av:Point>
+                    <av:Size x:Key="ShapeSize">200,138</av:Size>
+                    <av:PointCollection x:Key="ConnectorLocation">120,547.5 120,593 270,593 270,629.5</av:PointCollection>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Sequence sap2010:Annotation.AnnotationText="Voor Wachtwoord IS verlopen&#xA;-Mail body opmaken en&#xA;-Onderwerp extraheren " DisplayName="Wachtwoord IS verlopen" sap:VirtualizedContainerService.HintSize="200,138" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message - WachtwoordVerloopTermijn is verlopen" sap:VirtualizedContainerService.HintSize="496,141" sap2010:WorkflowViewState.IdRef="LogMessage_26" Level="Warn" Message="[&quot;De wachtwoord verlooptermijn IS op &quot; + dtmWachtwoordVerloopDatum.ToString(&quot;dd-MM-yyyy&quot;) + &quot; verstreken.&quot;]" />
+                  <Sequence sap2010:Annotation.AnnotationText="Body en onderwerp van de mail wordt opgemaakt o.b.v. het bestand WachtwoordISVerlopenBestand" DisplayName="Mail body en onderwerp opmaken IS verlopen" sap:VirtualizedContainerService.HintSize="496,505" sap2010:WorkflowViewState.IdRef="Sequence_44">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <umab:CreateHtmlContent sap2010:Annotation.AnnotationText="-De variabele waarden worden toegevoegd aan de body van de e-mail.&#xA;-De tekstuele waarden (enkelvoud/meervoud) worden toegevoegd aan de body van de mail." DisplayName="Create HTML Mail Body voor IS verlopen" sap:VirtualizedContainerService.HintSize="434,210" HtmlContent="[strHTMLMailBody]" sap2010:WorkflowViewState.IdRef="CreateHtmlContent_5">
+                      <umab:CreateHtmlContent.HtmlContentArg>
+                        <umabh:HtmlContentArgument FilePath="Data/WachtwoordISVerlopenResetNotificatie.html">
+                          <umabh:HtmlContentArgument.RuntimeImages>
+                            <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                          </umabh:HtmlContentArgument.RuntimeImages>
+                          <umabh:HtmlContentArgument.ValueMappings>
+                            <scg:List x:TypeArguments="umabh:HtmlValueMappingBase" Capacity="16">
+                              <umabh:HtmlTextValueMapping Name="ADW_Gebruikersnaam" Value="[Environment.UserName]" />
+                              <umabh:HtmlTextValueMapping Name="DagenTotVerloop" Value="[strDagenTotVerloopDatum]" />
+                              <umabh:HtmlTextValueMapping Name="VerloopDatum" Value="[dtmWachtwoordVerloopDatum.ToString(&quot;dd-MM-yyyy&quot;)]" />
+                              <umabh:HtmlTextValueMapping Name="Applicaties" Value="[strApplicaties]" />
+                              <umabh:HtmlTextValueMapping Name="ProcesNaam" Value="[in_Config(&quot;ProcesNaam&quot;)]" />
+                              <umabh:HtmlTextValueMapping Name="RobotNaam" Value="[in_Config(&quot;RobotNaam&quot;)]" />
+                              <umabh:HtmlTextValueMapping Name="Het_wachtwoord_EnkelMeervoud" Value="[If(strApplicaties.Split(&quot; &quot;c).Count &gt;1,&quot;De wachtwoorden&quot;, &quot;Het wachtwoord&quot;)]" />
+                              <umabh:HtmlTextValueMapping Name="verloopt_EnkelMeervoud" Value="[If(strApplicaties.Split(&quot; &quot;c).Count &gt;1,&quot;verlopen&quot;, &quot;verloopt&quot;)]" />
+                              <umabh:HtmlTextValueMapping Name="het_wachtwoord_EnkelMeervoud" Value="[If(strApplicaties.Split(&quot; &quot;c).Count &gt;1,&quot;de wachtwoorden&quot;, &quot;het wachtwoord&quot;)]" />
+                              <umabh:HtmlTextValueMapping Name="is_EnkelMeervoud" Value="[If(strApplicaties.Split(&quot; &quot;c).Count &gt;1,&quot;zijn&quot;, &quot;is&quot;)]" />
+                            </scg:List>
+                          </umabh:HtmlContentArgument.ValueMappings>
+                        </umabh:HtmlContentArgument>
+                      </umab:CreateHtmlContent.HtmlContentArg>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </umab:CreateHtmlContent>
+                    <ui:Matches FirstMatch="{x:Null}" sap2010:Annotation.AnnotationText="Haal  het onderwerp van de mail uit de body van de mail" BuilderPattern=".+?(?= waardoor)" DisplayName="Matches - Wachtwoord IS verlopen" sap:VirtualizedContainerService.HintSize="434,102" sap2010:WorkflowViewState.IdRef="Matches_7" Input="[strHTMLMailBody]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;LIT&quot;,&quot;OperationName&quot;:&quot;Literal&quot;,&quot;OperationValue&quot;:&quot;.+?(?= waardoor)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern=".+?(?= waardoor)" RegexOption="IgnoreCase, Compiled" Result="[ieMailOnderwerp]">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:Matches>
+                  </Sequence>
+                </Sequence>
+                <FlowStep.Next>
+                  <FlowStep x:Name="__ReferenceID0">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <av:Point x:Key="ShapeLocation">170,629.5</av:Point>
+                        <av:Size x:Key="ShapeSize">200,123</av:Size>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Sequence sap2010:Annotation.AnnotationText="-Mail onderwerp opmaken&#xA;-Mail verzenden" DisplayName="Mail verzenden " sap:VirtualizedContainerService.HintSize="634,1878" sap2010:WorkflowViewState.IdRef="Sequence_45">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Sequence DisplayName="Mail onderwerp opstellen" sap:VirtualizedContainerService.HintSize="572,315" sap2010:WorkflowViewState.IdRef="Sequence_47">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign DisplayName="Assign - Regex naar String" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_13">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[strMailOnderwerp]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">[ieMailOnderwerp(0).ToString + " voor het proces: " + in_Config("ProcesNaam").ToString]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Assign DisplayName="Assign - Verwijder html code" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_14">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[strMailOnderwerp]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">[strMailOnderwerp.Remove(0,29).Replace("&amp;nbsp;", " ").Replace("&lt;strong&gt;","").Replace("&lt;/strong&gt;","")]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                      </Sequence>
+                      <Sequence sap2010:Annotation.AnnotationText="Er wordt een Reset mail vestuurd naar de &quot;Processpecialist &amp; RCC&quot; of Ontwikkelaar" DisplayName="Reset Mail versturen" sap:VirtualizedContainerService.HintSize="572,1370" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                        <Sequence.Variables>
+                          <Variable x:TypeArguments="ss:SecureString" sap2010:Annotation.AnnotationText="Bevat het ADW wachtwoord" Name="ssADWWachtwoord" />
+                          <Variable x:TypeArguments="ss:SecureString" sap2010:Annotation.AnnotationText="Bevat de ApplicationSecret van O365 mail" Name="ssApplicationSecret" />
+                        </Sequence.Variables>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <If sap2010:Annotation.AnnotationText="ALS MailOntwikkelaar gevuld&#xA;DAN arrMailZendenNaar = mailadres Ontwikkelaar en strNaamMailOntvanger = Ontwikkelaar&#xA;ANDERS arrMailZendenNaar = mailadres Processpecialst en strNaamMailOntvanger = Processpecialist" Condition="[cStr(in_Config(&quot;MailOntwikkelaar&quot;)).Contains(&quot;@&quot;)]" DisplayName="If MailOntwikkelaar gevuld" sap:VirtualizedContainerService.HintSize="510,1033" sap2010:WorkflowViewState.IdRef="If_14">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <If.Then>
+                            <Sequence sap:VirtualizedContainerService.HintSize="476,382" sap2010:WorkflowViewState.IdRef="Sequence_48">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <Assign sap2010:Annotation.AnnotationText="strMailZendenNaar wordt gebruikt voor Exchange send mail" DisplayName="Assign strMailZendenNaar = MailOntwikkelaar" sap:VirtualizedContainerService.HintSize="434,113" sap2010:WorkflowViewState.IdRef="Assign_16">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">[strMailZendenNaar]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">[CStr(in_Config("MailOntwikkelaar"))]</InArgument>
+                                </Assign.Value>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </Assign>
+                              <ui:LogMessage DisplayName="Mail naar Ontwikkelaar" sap:VirtualizedContainerService.HintSize="434,141" sap2010:WorkflowViewState.IdRef="LogMessage_30" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;WachtwoordMail versturen naar Ontwikkelaar&quot;]" />
+                            </Sequence>
+                          </If.Then>
+                          <If.Else>
+                            <Sequence sap:VirtualizedContainerService.HintSize="476,382" sap2010:WorkflowViewState.IdRef="Sequence_49">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <Assign sap2010:Annotation.AnnotationText="strMailZendenNaar wordt gebruikt voor Exchange send mail" DisplayName="Assign strMailZendenNaar = MailProcesspecialist en MailRCC" sap:VirtualizedContainerService.HintSize="434,113" sap2010:WorkflowViewState.IdRef="Assign_19">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">[strMailZendenNaar]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">[CStr(in_Config("MailProcesspecialist"))+";"+CStr(in_Config("MailRCC"))]</InArgument>
+                                </Assign.Value>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </Assign>
+                              <ui:LogMessage DisplayName="Mail naar Specialist/Business en RCC" sap:VirtualizedContainerService.HintSize="434,141" sap2010:WorkflowViewState.IdRef="LogMessage_31" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;WachtwoordMail versturen naar Specialist/Business en RCC&quot;]" />
+                            </Sequence>
+                          </If.Else>
+                        </If>
+                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Zend O365 of Exchange WachtwoordMail naar Specialist en RCC of Ontwikkelaar" DisplayName="Framework\RCC\ZendMail.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="510,155" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Framework\RCC\ZendMail.xaml">
+                          <ui:InvokeWorkflowFile.Arguments>
+                            <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="MailOnderwerp">[strMailOnderwerp]</InArgument>
+                            <InArgument x:TypeArguments="scg:IEnumerable(x:String)" x:Key="MailBijlagen">[Nothing]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="HTMLMailBody">[strHTMLMailBody]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="MailZendenNaar">[strMailZendenNaar]</InArgument>
+                          </ui:InvokeWorkflowFile.Arguments>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:InvokeWorkflowFile>
+                      </Sequence>
+                    </Sequence>
+                  </FlowStep>
+                </FlowStep.Next>
+              </FlowStep>
+            </FlowDecision.True>
+            <FlowDecision.False>
+              <FlowStep x:Name="__ReferenceID4">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <av:Point x:Key="ShapeLocation">320,409.5</av:Point>
+                    <av:Size x:Key="ShapeSize">200,153</av:Size>
+                    <av:PointCollection x:Key="ConnectorLocation">420,562.5 420,592.5 270,592.5 270,629.5</av:PointCollection>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Sequence sap2010:Annotation.AnnotationText="Voor Wachtwoord GAAT verlopen&#xA;-Mail body opmaken en &#xA;-Onderwerp extraheren " DisplayName="Wachtwoord GAAT verlopen" sap:VirtualizedContainerService.HintSize="200,153" sap2010:WorkflowViewState.IdRef="Sequence_42">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message - WachtwoordNotificatieTermijn GAAT verstrijken" sap:VirtualizedContainerService.HintSize="496,141" sap2010:WorkflowViewState.IdRef="LogMessage_25" Level="Info" Message="[&quot;De wachtwoord verlooptermijn GAAT op &quot; + dtmWachtwoordVerloopDatum.ToString(&quot;dd-MM-yyyy&quot;) + &quot; verstrijken.&quot;]" />
+                  <Sequence sap2010:Annotation.AnnotationText="Body van de mail wordt opgemaakt o.b.v. de template WachtwoordGAATVerlopenResetNotificatie.html" DisplayName="Mail body en onderwerp opmaken GAAT verlopen" sap:VirtualizedContainerService.HintSize="496,505" sap2010:WorkflowViewState.IdRef="Sequence_43">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <umab:CreateHtmlContent sap2010:Annotation.AnnotationText="-De variabele waarden worden toegevoegd aan de body van de e-mail.&#xA;-De tekstuele waarden (enkelvoud/meervoud) worden toegevoegd aan de body van de mail." DisplayName="Create HTML Mail Body voor GAAT/GAAN verlopen" sap:VirtualizedContainerService.HintSize="434,210" HtmlContent="[strHTMLMailBody]" sap2010:WorkflowViewState.IdRef="CreateHtmlContent_4">
+                      <umab:CreateHtmlContent.HtmlContentArg>
+                        <umabh:HtmlContentArgument FilePath="Data/WachtwoordGAATVerlopenResetNotificatie.html">
+                          <umabh:HtmlContentArgument.RuntimeImages>
+                            <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                          </umabh:HtmlContentArgument.RuntimeImages>
+                          <umabh:HtmlContentArgument.ValueMappings>
+                            <scg:List x:TypeArguments="umabh:HtmlValueMappingBase" Capacity="16">
+                              <umabh:HtmlTextValueMapping Name="ADW_Gebruikersnaam" Value="[Environment.UserName]" />
+                              <umabh:HtmlTextValueMapping Name="DagenTotVerloop" Value="[strDagenTotVerloopDatum]" />
+                              <umabh:HtmlTextValueMapping Name="VerloopDatum" Value="[dtmWachtwoordVerloopDatum.ToString(&quot;dd-MM-yyyy&quot;)]" />
+                              <umabh:HtmlTextValueMapping Name="Applicaties" Value="[strApplicaties]" />
+                              <umabh:HtmlTextValueMapping Name="ProcesNaam" Value="[in_Config(&quot;ProcesNaam&quot;)]" />
+                              <umabh:HtmlTextValueMapping Name="RobotNaam" Value="[in_Config(&quot;RobotNaam&quot;)]" />
+                              <umabh:HtmlTextValueMapping Name="Het_wachtwoord_EnkelMeervoud" Value="[If(strApplicaties.Split(&quot; &quot;c).Count &gt;1,&quot;De wachtwoorden&quot;, &quot;Het wachtwoord&quot;)]" />
+                              <umabh:HtmlTextValueMapping Name="verloopt_EnkelMeervoud" Value="[If(strApplicaties.Split(&quot; &quot;c).Count &gt;1,&quot;verlopen&quot;, &quot;verloopt&quot;)]" />
+                              <umabh:HtmlTextValueMapping Name="het_wachtwoord_EnkelMeervoud" Value="[If(strApplicaties.Split(&quot; &quot;c).Count &gt;1,&quot;de wachtwoorden&quot;, &quot;het wachtwoord&quot;)]" />
+                              <umabh:HtmlTextValueMapping Name="is_EnkelMeervoud" Value="[If(strApplicaties.Split(&quot; &quot;c).Count &gt;1,&quot;zijn&quot;, &quot;is&quot;)]" />
+                            </scg:List>
+                          </umabh:HtmlContentArgument.ValueMappings>
+                        </umabh:HtmlContentArgument>
+                      </umab:CreateHtmlContent.HtmlContentArg>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </umab:CreateHtmlContent>
+                    <ui:Matches FirstMatch="{x:Null}" sap2010:Annotation.AnnotationText="Haal  het onderwerp van de mail uit de body van de mail" BuilderPattern=".+?(?= op [0-9])" DisplayName="Matches - Wachtwoord verloopt over X dagen" sap:VirtualizedContainerService.HintSize="434,102" sap2010:WorkflowViewState.IdRef="Matches_6" Input="[strHTMLMailBody]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;LIT&quot;,&quot;OperationName&quot;:&quot;Literal&quot;,&quot;OperationValue&quot;:&quot;.+?(?= op [0-9])&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern=".+?(?= op [0-9])" RegexOption="IgnoreCase, Compiled" Result="[ieMailOnderwerp]">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:Matches>
+                  </Sequence>
+                </Sequence>
+                <FlowStep.Next>
+                  <x:Reference>__ReferenceID0</x:Reference>
+                </FlowStep.Next>
+              </FlowStep>
+            </FlowDecision.False>
+          </FlowDecision>
+        </FlowDecision.True>
+        <FlowDecision.False>
+          <FlowStep x:Name="__ReferenceID1">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <av:Point x:Key="ShapeLocation">580,409.5</av:Point>
+                <av:Size x:Key="ShapeSize">200,123</av:Size>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence sap2010:Annotation.AnnotationText="Geen Reset Notificatie mail verzenden" DisplayName="GEEN Notificatie verzenden" sap:VirtualizedContainerService.HintSize="200,123" sap2010:WorkflowViewState.IdRef="Sequence_40">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:LogMessage DisplayName="Log Message - WachtwoordNotificatieTermijn is NIET verstreken" sap:VirtualizedContainerService.HintSize="388,141" sap2010:WorkflowViewState.IdRef="LogMessage_27" Level="Info" Message="[&quot;Het wachtwoord verstrijkt pas op: &quot; + dtmWachtwoordVerloopDatum.ToString(&quot;dd-MM-yyyy&quot;) + &quot;. Er wordt geen mail verstuurd.&quot;]" />
+            </Sequence>
+          </FlowStep>
+        </FlowDecision.False>
+      </FlowDecision>
+      <x:Reference>__ReferenceID1</x:Reference>
+      <x:Reference>__ReferenceID2</x:Reference>
+      <x:Reference>__ReferenceID3</x:Reference>
+      <x:Reference>__ReferenceID4</x:Reference>
+      <x:Reference>__ReferenceID0</x:Reference>
+    </Flowchart>
+  </Sequence>
+</Activity>

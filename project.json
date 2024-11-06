@@ -1,0 +1,199 @@
+{
+  "name": "rpa-fd-AFSFacturenReset",
+  "description": "Nieuwe AFS Bezemwagen.\r\nOp basis van AREF.\r\nAmsterdamse Robotic Enterprise Framework.\r\nHet standaard REF uitgebreid met functionaliteiten voor de gemeente Amsterdam",
+  "main": "Main.xaml",
+  "dependencies": {
+    "AMS.Microsoft": "[1.0.11]",
+    "UiPath.CodedWorkflows": "[23.10.4]",
+    "UiPath.Excel.Activities": "[2.22.3]",
+    "UiPath.Mail.Activities": "[1.21.1]",
+    "UiPath.MicrosoftOffice365.Activities": "[2.2.7]",
+    "UiPath.System.Activities": "[23.10.5]",
+    "UiPath.Testing.Activities": "[23.10.1]",
+    "UiPath.UIAutomation.Activities": "[23.10.8]",
+    "UiPath.WebAPI.Activities": "[1.18.0]"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "23.4.4.0",
+  "projectVersion": "1.2.19",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": true,
+    "isAttended": false,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": true,
+    "pipType": "ChildSession"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": [
+        "RPA_Workflows/AFS/__Verzamelde Testen.xaml",
+        "RPA_Workflows/AFS/AFS_Bladeren_Test.xaml",
+        "RPA_Workflows/AFS/AFS_Coderen_Test.xaml",
+        "RPA_Workflows/AFS/AFS_DeCoderenEnAfkeuren_Test.xaml",
+        "RPA_Workflows/AFS/AFS_FactuurVerwijderen_Test.xaml",
+        "RPA_Workflows/AFS/AFS_FactuurZoeken_Test.xaml",
+        "RPA_Workflows/AFS/AFS_OpenenEnLogin_Test.xaml",
+        "RPA_Workflows/AFS/AFS_Tegels.xaml",
+        "RPA_Workflows/AFS/AFS_Tegels_TEST.xaml",
+        "RPA_Workflows/AFS/AFS_Testjes.xaml",
+        "RPA_Workflows/AFS/AFS_ToepassingenSluiten_Test.xaml",
+        "RPA_Workflows/AFS/AFS_Valideren_Test.xaml",
+        "RPA_Workflows/Praktijk testen/Omegam/AFS_OmegamOpschonen.xaml",
+        "RPA_Workflows/Praktijk testen/Omegam/AFS_OmegamOpschonenExcelBron.xaml",
+        "RPA_Workflows/Praktijk testen/Waternet/AFS_Bladeren_Coderen.xaml",
+        "RPA_Workflows/Praktijk testen/Waternet/AFS_Coderen_GB_Waternet.xaml",
+        "RPA_Workflows/Praktijk testen/Waternet/AFS_Coderen_GB_Waternet_Test.xaml",
+        "RPA_Workflows/Praktijk testen/Waternet/AFS_Coderen_IO_Waternet.xaml",
+        "RPA_Workflows/Praktijk testen/Waternet/AFS_Coderen_IO_Waternet_Test.xaml",
+        "RPA_Workflows/Praktijk testen/Waternet/AFS_DeCoderen_Waternet.xaml",
+        "RPA_Workflows/Praktijk testen/Waternet/AFS_DeCoderen_Waternet_Test.xaml",
+        "RPA_Workflows/Praktijk testen/Waternet/AFS_OpenenEnLogin_Waternet.xaml",
+        "RPA_Workflows/Praktijk testen/Waternet/AFS_Waternet_Testen.xaml",
+        "RPA_Workflows/Office365/Office365_Mail_Beantwoorden_Test.xaml",
+        "RPA_Workflows/Office365/Office365_Mail_Concept_Test.xaml",
+        "RPA_Workflows/Office365/Office365_Mail_Ophalen_Test.xaml",
+        "RPA_Workflows/Office365/Office365_Mail_Opslaan_Test.xaml",
+        "RPA_Workflows/Office365/Office365_Mail_Verplaatsen_Test.xaml",
+        "RPA_Workflows/Exchange/Exchange_HaalMailMetIdOp_Test.xaml",
+        "RPA_Workflows/Diverse/Logica_HaalFactuurNummerUitExcel_Test.xaml",
+        "RPA_Workflows/Diverse/Logica_HaalFactuurNummerUItMail_Test.xaml",
+        "RPA_Workflows/Diverse/Logica_MaakOverzichtFactuurnummers_Test.xaml",
+        "RPA_Workflows/Diverse/Logica_VerzamelFactuurnummersEnBijlagen_Test.xaml",
+        "RPA_Workflows/Diverse/Logica_WachtwoordControleVeroudering.xaml",
+        "RPA_Workflows/Diverse/Robot_WerkLogDetailsBij_Test.xaml",
+        "RPA_Workflows/Diverse/Tools_MaakStuurScreenshot_Test.xaml",
+        "RPA_Workflows/Chrome/Chrome_NetjesAfsluiten_Test.xaml",
+        "RPA_Workflows/AFS/AFS_Bulk_Testen.xaml",
+        "RPA_Workflows/Exchange/Exchange_MessageIDophalen_Test.xaml",
+        "RPA_Workflows/Office365/Office365_Mail_Versturen_Test.xaml"
+      ]
+    },
+    "fileInfoCollection": [
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "8869afa1-7e2d-44f4-9585-832b2ce24520",
+        "testCaseType": "TestCase",
+        "executionTemplateType": "Local",
+        "fileName": "Tests\\GetTransactionDataTestCase.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "082b18ce-7d37-4d2e-9a57-a3dd5c006309",
+        "testCaseType": "TestCase",
+        "executionTemplateType": "Local",
+        "fileName": "Tests\\InitAllApplicationsTestCase.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "2e090bd1-c4f2-4ce2-81b4-1eac2532e0b7",
+        "testCaseType": "TestCase",
+        "executionTemplateType": "Local",
+        "fileName": "Tests\\InitAllSettingsTestCase.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "d5ea1422-d711-4ce6-8d9c-9c8d238acc78",
+        "testCaseType": "TestCase",
+        "executionTemplateType": "Local",
+        "fileName": "Tests\\MainTestCase.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "832feea8-4008-41cb-9c00-efbdf2c23255",
+        "testCaseType": "TestCase",
+        "executionTemplateType": "Local",
+        "fileName": "Tests\\ProcessTestCase.xaml"
+      },
+      {
+        "templateType": "Generic",
+        "fileName": ".templates\\Pre_Actie_Post.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "fa13a5bb-ab37-4609-84dd-92f6d79ea232",
+        "dataVariationFilePath": ".variations\\TestDataAREF_RegexExtraheren.json",
+        "testCaseType": "TestCase",
+        "fileName": "RCC_Utilities\\RegexExtraheren_Test.xaml"
+      },
+      {
+        "templateType": "TestCase",
+        "fileName": ".templates\\Given_When_Then.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "e32b68e9-ed22-48ef-a4ab-a41a6d22c4e6",
+        "dataVariationFilePath": ".variations\\TestDataAREF_WachtwoordReset.json",
+        "testCaseType": "TestCase",
+        "fileName": "Framework\\RCC\\WachtwoordResetNotificatie_Test.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "fcf30f66-271e-4316-8afa-a48c710a9a29",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Framework\\RCC\\FolderTempSchonen_Test.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "7749c5a7-3682-4b1f-aca7-641cdb0fd1ea",
+        "dataVariationFilePath": ".variations\\TestDataAREF_AanmakenLogging.json",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "Framework\\RCC\\AanmakenLogging_Test.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "800669f4-909e-4e3b-b501-3b49aff75851",
+        "dataVariationFilePath": ".variations\\TestDataAREF_GetLogs_1.json",
+        "testCaseType": "TestCase",
+        "fileName": "Framework\\RCC\\GetLogs_Test.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "c1ce7ab9-0535-4c1f-8b06-ba705d5de1a8",
+        "testCaseType": "TestCase",
+        "fileName": "Framework\\RCC\\ParseJSONLogs_Test.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "1d63901e-34f8-43ee-981d-f492293b76fa",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "RPA_Workflows\\Diverse\\Tools_QueueVullen_Test.xaml"
+      }
+    ],
+    "modernBehavior": true
+  },
+  "expressionLanguage": "VisualBasic",
+  "entryPoints": [
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "ea87978f-bdc6-4687-a7fe-e0cddeb66ce9",
+      "input": [],
+      "output": []
+    }
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Windows"
+}

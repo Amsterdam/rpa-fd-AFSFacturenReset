@@ -1,0 +1,952 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="AFS_DeCoderenEnAfkeuren" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+    <x:Property Name="in_strDocumentnummer" Type="InArgument(x:String)" />
+    <x:Property Name="in_uieOpenBrowserAFS" Type="InArgument(ui:UiElement)" />
+    <x:Property Name="in_strRedenAfkeuring" Type="InArgument(x:String)" />
+    <x:Property Name="io_TransactionDetails" Type="InOutArgument(scg:Dictionary(x:String, x:String))" />
+    <x:Property Name="BreakTriggerScopeInArgument" Type="InArgument(x:String)" />
+    <x:Property Name="in_TransactionNumber" Type="InArgument(x:Int32)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>951,1730</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>AFS_DeCoderenEnAfkeuren_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.ComponentModel</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Flowchart DisplayName="AFS_DeCoderenEnAfkeuren" sap:VirtualizedContainerService.HintSize="961,1665" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+    <Flowchart.Variables>
+      <Variable x:TypeArguments="x:String" Name="strGekoppeld" />
+      <Variable x:TypeArguments="x:Boolean" Name="blnFactuurGevonden" />
+      <Variable x:TypeArguments="x:Boolean" Name="blnDefCoderingGevonden" />
+    </Flowchart.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <av:Point x:Key="ShapeLocation">0,2.5</av:Point>
+        <av:Size x:Key="ShapeSize">60,75</av:Size>
+        <x:Double x:Key="Width">927</x:Double>
+        <x:Double x:Key="Height">1628</x:Double>
+        <av:PointCollection x:Key="ConnectorLocation">60,40 330,40 330,73</av:PointCollection>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Flowchart.StartNode>
+      <x:Reference>__ReferenceID13</x:Reference>
+    </Flowchart.StartNode>
+    <FlowStep x:Name="__ReferenceID13">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">230,73</av:Point>
+          <av:Size x:Key="ShapeSize">200,94</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">330,167 330,197 320,197 320,214</av:PointCollection>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:Comment sap:VirtualizedContainerService.HintSize="200,94" sap2010:WorkflowViewState.IdRef="Comment_1" Text="De factuur decoderen en afkeuren met controles voor en na elke stap.">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:Comment>
+      <FlowStep.Next>
+        <FlowStep x:Name="__ReferenceID1">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <av:Point x:Key="ShapeLocation">220,214</av:Point>
+              <av:Size x:Key="ShapeSize">200,52</av:Size>
+              <av:PointCollection x:Key="ConnectorLocation">320,266 320,339.5</av:PointCollection>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:LogMessage DisplayName="Log Message &quot;Gestart: AFS_DeCoderen.&quot;" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Start AFS_DeCoderen en afkeuren.&quot;]" />
+          <FlowStep.Next>
+            <FlowStep x:Name="__ReferenceID2">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <av:Point x:Key="ShapeLocation">220,339.5</av:Point>
+                  <av:Size x:Key="ShapeSize">200,123</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">320,462.5 320,492.5 321.64166666666665,492.5 321.64166666666665,506.5</av:PointCollection>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Sequence sap2010:Annotation.AnnotationText="Documentnummer opzoeken bij Raadplegen." DisplayName="Sequence factuur opzoeken" sap:VirtualizedContainerService.HintSize="200,123" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:LogMessage DisplayName="Log Message - welk documentnummer wordt behandeld" sap:VirtualizedContainerService.HintSize="484,141" sap2010:WorkflowViewState.IdRef="LogMessage_22" Level="Info" Message="[&quot;Start DeCoderen van documentnummer: &quot; &amp; in_strDocumentNummer]">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:LogMessage>
+                <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="484,240" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                  <ui:MultipleAssign.AssignOperations>
+                    <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
+                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                        <ui:AssignOperation.To>
+                          <OutArgument x:TypeArguments="x:String">[io_TransactionDetails("TransactieNummer")]</OutArgument>
+                        </ui:AssignOperation.To>
+                        <ui:AssignOperation.Value>
+                          <InArgument x:TypeArguments="x:String">[CType(in_TransactionNumber, String)]</InArgument>
+                        </ui:AssignOperation.Value>
+                      </ui:AssignOperation>
+                      <ui:AssignOperation sap:VirtualizedContainerService.HintSize="334,25" sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                        <ui:AssignOperation.To>
+                          <OutArgument x:TypeArguments="x:String">[io_TransactionDetails("Documentnummer")]</OutArgument>
+                        </ui:AssignOperation.To>
+                        <ui:AssignOperation.Value>
+                          <InArgument x:TypeArguments="x:String">[in_strDocumentnummer]</InArgument>
+                        </ui:AssignOperation.Value>
+                      </ui:AssignOperation>
+                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+                        <ui:AssignOperation.To>
+                          <OutArgument x:TypeArguments="x:String">[io_TransactionDetails("DeCodeerStatus")]</OutArgument>
+                        </ui:AssignOperation.To>
+                        <ui:AssignOperation.Value>
+                          <InArgument x:TypeArguments="x:String">Leeg</InArgument>
+                        </ui:AssignOperation.Value>
+                      </ui:AssignOperation>
+                      <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+                        <ui:AssignOperation.To>
+                          <OutArgument x:TypeArguments="x:String">[io_TransactionDetails("AfkeurStatus")]</OutArgument>
+                        </ui:AssignOperation.To>
+                        <ui:AssignOperation.Value>
+                          <InArgument x:TypeArguments="x:String">Leeg</InArgument>
+                        </ui:AssignOperation.Value>
+                      </ui:AssignOperation>
+                      <ui:AssignOperation sap:VirtualizedContainerService.HintSize="334,25" sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+                        <ui:AssignOperation.To>
+                          <OutArgument x:TypeArguments="x:String">[io_TransactionDetails("Foutmelding")]</OutArgument>
+                        </ui:AssignOperation.To>
+                        <ui:AssignOperation.Value>
+                          <InArgument x:TypeArguments="x:String">Leeg</InArgument>
+                        </ui:AssignOperation.Value>
+                      </ui:AssignOperation>
+                    </scg:List>
+                  </ui:MultipleAssign.AssignOperations>
+                </ui:MultipleAssign>
+                <uix:NApplicationCard sap2010:Annotation.AnnotationText="Openstaande AFS activeren.&#xA;Eerst de openstaande toepassingen sluiten zodat de tegels zichtbaar zijn.&#xA;Dan de tegel Coderen openen.&#xA;Tegels werkten vroeger niet, daarom is altijd bladeren gebruikt, of een Favoriet." AttachMode="ByInstance" CloseMode="Never" DisplayName="Private: Use Browser Chrome: openstaande AFS" sap:VirtualizedContainerService.HintSize="484,290" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InUiElement="[in_uieOpenBrowserAFS]" IsIncognito="True" OpenMode="Never" ScopeGuid="074901e8-ceb6-471b-b236-9e6fe98b1153" Version="V2" WindowResize="Maximize">
+                  <uix:NApplicationCard.Body>
+                    <ActivityAction x:TypeArguments="x:Object">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="Acties in de geopende browser" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NClick ActivateBefore="True" sap2010:Annotation.AnnotationText="Klik in het veld 'oorspronkelijk doc nr'" ClickType="Single" DisplayName="Click 'INPUT Document nr'" sap:VirtualizedContainerService.HintSize="1046,188" sap2010:WorkflowViewState.IdRef="NClick_46" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="074901e8-ceb6-471b-b236-9e6fe98b1153" Version="V1">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="https://afs.acc.amsterdam.nl/jde/RunApp.mafService?e1UserActInfo=true&amp;e1.mode=view&amp;e1.namespace=&amp;RENDER_MAFLET=E1Menu&amp;e1.state=maximized&amp;e1.service=RunApp&amp;RID=702a0d0043589e29" DesignTimeRectangle="283, 424, 84, 17" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl id='jdeGridHeaderData0_1' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tag='INPUT' aaname='Document nummer' uipath-html-title='Document nummer' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl id='jdeGridHeaderData0_1' tag='TABLE' /&gt;&lt;webctrl tag='INPUT' aaname='Document nummer' uipath-html-title='Document nummer' type='text' class='textfield' /&gt;" Guid="ba0e5613-a878-4874-b666-2f7054cd3218" ImageBase64="" InformativeScreenshot="8b712dc9ce61c4ab4fcbe097cac8be1e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='E1MENUMAIN_*' title='Factuurverwerking - Raadplegen - Facturen workbench' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="286, 454, 50, 24" FriendlyName="'Documentnummer'" FullSelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl parentid='HDR_DIV0_1.0' tableRow='2' tag='TABLE' /&gt;&lt;webctrl id='GC0_1.0' tag='SPAN' aaname='Documentnummer' colName='Documentnummer' innertext='Documentnummer' /&gt;" FuzzySelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl parentid='HDR_DIV0_1.0' tag='TABLE' /&gt;&lt;webctrl id='GC0_1.0' tag='SPAN' aaname='Documentnummer' colName='Documentnummer' innertext='Documentnummer' type='' class='' check:text='Documentnummer' /&gt;" SearchSteps="Selector" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NClick.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NClick>
+                        <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="Typ het documentnummer in dit veld" ClickBeforeMode="Single" DisplayName="Type Into 'Document nummer'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1046,249" sap2010:WorkflowViewState.IdRef="NTypeInto_16" ScopeIdentifier="074901e8-ceb6-471b-b236-9e6fe98b1153" Text="[in_strDocumentNummer]" Version="V1">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable BrowserURL="https://afs.acc.amsterdam.nl/jde/RunApp.mafService?e1UserActInfo=true&amp;e1.mode=view&amp;e1.namespace=&amp;RENDER_MAFLET=E1Menu&amp;e1.state=maximized&amp;e1.service=RunApp&amp;RID=19bb3cdac520bdf9" DesignTimeRectangle="283, 424, 84, 17" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl id='jdeGridHeaderData0_1' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tag='INPUT' aaname='Document nummer' uipath-html-title='Document nummer' /&gt;" FuzzySelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl id='jdeGridHeaderData0_1' tag='TABLE' /&gt;&lt;webctrl tag='INPUT' aaname='Document nummer' uipath-html-title='Document nummer' type='text' class='textfield' /&gt;" Guid="f5c61d10-4d38-4ebf-b704-03d090324870" InformativeScreenshot="8b712dc9ce61c4ab4fcbe097cac8be1e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='E1MENUMAIN_*' title='Factuurverwerking - Raadplegen - Facturen workbench' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="286, 454, 50, 24" FriendlyName="'Documentnummer'" FullSelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl parentid='HDR_DIV0_1.0' tableRow='2' tag='TABLE' /&gt;&lt;webctrl id='GC0_1.0' tag='SPAN' aaname='Documentnummer' colName='Documentnummer' visibleinnertext='Document&amp;#xA;nummer' /&gt;" FuzzySelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl parentid='HDR_DIV0_1.0' tag='TABLE' /&gt;&lt;webctrl id='GC0_1.0' tag='SPAN' aaname='Documentnummer' colName='Documentnummer' visibleinnertext='Document&amp;#xA;nummer' type='' class='' check:text='Documentnummer' /&gt;" SearchSteps="Selector" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NTypeInto.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NTypeInto>
+                        <uix:NClick ActivateBefore="True" sap2010:Annotation.AnnotationText="Klik op zoeken" ClickType="Single" DisplayName="Click 'Zoeken opgegeven Docnr'" sap:VirtualizedContainerService.HintSize="1046,188" sap2010:WorkflowViewState.IdRef="NClick_47" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="074901e8-ceb6-471b-b236-9e6fe98b1153" Version="V1">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="https://prd.afs.amsterdam.nl/jde/RunApp.mafService?e1UserActInfo=true&amp;e1.mode=view&amp;e1.namespace=&amp;RENDER_MAFLET=E1Menu&amp;e1.state=maximized&amp;e1.service=RunApp&amp;RID=7f768da0429cc532" DesignTimeRectangle="239, 281, 20, 20" DesignTimeScaleFactor="1" ElementType="Icon" FriendlyName="'IMG hc_Find'" FullSelectorArgument="&lt;webctrl id='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl id='WebMenuBar' tableRow='1' tag='TABLE' /&gt;&lt;webctrl aria-role='button' id='hc_Find' tableRow='1' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl id='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl id='WebMenuBar' tag='TABLE' /&gt;&lt;webctrl aria-role='button' id='hc_Find' type='' tag='IMG' class='' aaname='Zoeken (Ctrl+Alt+I)' /&gt;" Guid="3c81fd15-9eb1-4223-9e78-93ad354ac4b4" InformativeScreenshot="99f70b767f9b304cd42fd0a954036c41.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='E1MENUMAIN_1273383633198074880' title='VTMO - Raadplegen facturen - Werken met debiteuren subgrootboek' /&gt;" SearchSteps="Selector" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="322, 279, 30, 22" ElementType="Text" FriendlyName="'Rij (R)'" FullSelectorArgument="&lt;webctrl id='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl parentid='WebMenuBar' tableRow='1' tag='TABLE' /&gt;&lt;webctrl aaname='Rij (R)' tableRow='1' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl parentid='WebMenuBar' tag='TABLE' /&gt;&lt;webctrl aaname='Rij (R)' type='' tag='A' class='' check:innerText='Rij (R)' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACIAAAAaCAYAAADSbo4CAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEDSURBVEhL7ZdBDoQgDEW9HMfhDF6Bu3ARtrOahQtOYTq2ZQQ7Qh0nk7DgJSQK9ff7hYXT47lAD2OCThhGJMOIZBiRFEYieGvAGDFc4OXgwFi/VXGd9ZHnD+Cag6BpRQ/2fZ34MHJogA8YC6c9T4jeAuvrWrmWaRtJc/SAmkgAR+uIokWU9d8kohnB9b2LokVgTb5X98guphjBqPOcopUILidUT0S+wQ0jVa3ENSMINjd4CtL1L5+m1CKwpvFpZAN0TQKaEdx8eyNFC28wJdJjCiNX4SZ592fkkWxRPb7zPNOGqo11XbcqNnGMuKRMpYFIA7mRyH8YRiTDiGQYkXTyg7XAC/Z43LWocKMlAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NClick.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NClick>
+                        <uix:NCheckState sap2010:Annotation.AnnotationText="Controleren of er GEEN factuur is gevonden, dan komt er de tekst: 'Geen records gevonden' in beeld" DisplayName="Check App State 'Of er een document NIET gevonden is." sap:VirtualizedContainerService.HintSize="1046,781" sap2010:WorkflowViewState.IdRef="NCheckState_6" ScopeIdentifier="074901e8-ceb6-471b-b236-9e6fe98b1153" Timeout="10" Version="V1">
+                          <uix:NCheckState.IfExists>
+                            <Sequence DisplayName="Target appears, dus wel gevonden." sap:VirtualizedContainerService.HintSize="496,533" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <Assign sap2010:Annotation.AnnotationText="Goedmelding toevoegen aan io_TransactionDetails" sap:VirtualizedContainerService.HintSize="434,113" sap2010:WorkflowViewState.IdRef="Assign_8">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">[io_TransactionDetails("Foutmelding")]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">["Documentnummer " &amp; in_strDocumentnummer &amp; " gevonden"]</InArgument>
+                                </Assign.Value>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </Assign>
+                              <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_12">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:Boolean">[blnFactuurGevonden]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <ui:LogMessage DisplayName="Log Message factuur wel gevonden" sap:VirtualizedContainerService.HintSize="434,143" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Factuur gevonden, &quot; &amp; in_strDocumentNummer]" />
+                            </Sequence>
+                          </uix:NCheckState.IfExists>
+                          <uix:NCheckState.IfNotExists>
+                            <Sequence DisplayName="Target does not appear, dus niets gevonden." sap:VirtualizedContainerService.HintSize="496,533" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <Assign sap2010:Annotation.AnnotationText="Foutmelding toevoegen aan io_TransactionDetails" sap:VirtualizedContainerService.HintSize="434,113" sap2010:WorkflowViewState.IdRef="Assign_11">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">[io_TransactionDetails("Foutmelding")]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">["Documentnummer " &amp; in_strDocumentnummer &amp; " niet gevonden"]</InArgument>
+                                </Assign.Value>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </Assign>
+                              <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_13">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:Boolean">[blnFactuurGevonden]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <ui:LogMessage DisplayName="Log Message factuur niet gevonden" sap:VirtualizedContainerService.HintSize="434,143" sap2010:WorkflowViewState.IdRef="LogMessage_14" Level="Info" Message="[&quot;Factuur niet gevonden, &quot; &amp; in_strDocumentNummer]" />
+                            </Sequence>
+                          </uix:NCheckState.IfNotExists>
+                          <uix:NCheckState.Target>
+                            <uix:TargetAnchorable BrowserURL="https://afs.acc.amsterdam.nl/jde/E1Client.mafService?jdemafjascacheUID=9&amp;jdemafjasLauncher=PSFT_TE_V3_SW&amp;jdemafjasUID=1&amp;e1UserActInfo=true&amp;e1.mode=view&amp;jdemafjasComponent=JDE_HTMLCLIENT&amp;e1.namespace=&amp;RENDER_MAFLET=E1Menu&amp;e1.state=maximized&amp;e1.service=E1Client" DesignTimeRectangle="277, 403, 29, 15" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'1 - 1'" FullSelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl parentid='jdeGridScrollOptions0_1' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableCol='2' tableRow='1' tag='TD' innertext='1 - 1 ' visibleinnertext='1 - 1 ' /&gt;" FuzzySelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl parentid='jdeGridScrollOptions0_1' tag='TABLE' /&gt;&lt;webctrl type='' class='gridheader' tag='TD' innertext='1 - 1 ' visibleinnertext='1 - 1 ' aaname='1 - 1 ' check:text='1 - 1' /&gt;" Guid="4f0782ed-726f-4848-b4a9-ab91d05d8ae7" InformativeScreenshot="5ff5dadbd1857b7983bc80487e8e6d0e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='E1MENUMAIN_*' title='Factuurverwerking - Raadplegen - Facturen workbench' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target DesignTimeRectangle="212, 205, 370, 16" ElementType="Text" FriendlyName="'Factuurverwerking - Raa…'" FullSelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl id='formTitleTable' tag='TABLE' /&gt;&lt;webctrl id='jdeFormTitle0' tableRow='1' tag='SPAN' aaname=' Factuurverwerking - Raadplegen - Facturen workbench' innertext=' Factuurverwerking - Raadplegen - Facturen workbench' /&gt;" FuzzySelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl id='formTitleTable' tag='TABLE' /&gt;&lt;webctrl id='jdeFormTitle0' type='' tag='SPAN' aaname=' Factuurverwerking - Raadplegen - Facturen workbench' innertext=' Factuurverwerking - Raadplegen - Facturen workbench' class='' check:text='Factuurverwerking - Raadplegen - Facturen workbench' /&gt;" SearchSteps="Selector" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NCheckState.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NCheckState>
+                      </Sequence>
+                    </ActivityAction>
+                  </uix:NApplicationCard.Body>
+                  <uix:NApplicationCard.TargetApp>
+                    <uix:TargetApp Area="-8, -8, 1936, 1176" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACbSURBVDhPtZPBCYAwDEUzlacencUVvDiBdCNX8NYZPBVcIeYbirW00ioGHoL+/0rBEBMZYRKc4CtBFh0DgRU2gRtBx0LgeBi4OPlywEHgeRw1jGdKXFgW5Xrv74I4nIJimGbBvuv3ME2CvlcBMuuquaIgN7EsXKMowGkpTYI4nON/wecr5KZCgMW4B5+4yuD8lT8v09t1npmoOwB59XBDS4/tzQAAAABJRU5ErkJggg==" InformativeScreenshot="14252debf4ea240b470e24d7216ba58d.png" Selector="&lt;html app='chrome.exe' htmlwindowname='E1MENUMAIN_1273383633198074880' title='VTMO - Raadplegen facturen - Werken met debiteuren subgrootboek' /&gt;" Title="VTMO - Raadplegen facturen - Werken met debiteuren subgrootboek" />
+                  </uix:NApplicationCard.TargetApp>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </uix:NApplicationCard>
+              </Sequence>
+              <FlowStep.Next>
+                <FlowDecision x:Name="__ReferenceID3" Condition="[blnFactuurGevonden]" DisplayName="Factuur gevonden" sap:VirtualizedContainerService.HintSize="102,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <av:Point x:Key="ShapeLocation">270.64166666666665,506.5</av:Point>
+                      <av:Size x:Key="ShapeSize">102,87</av:Size>
+                      <av:PointCollection x:Key="TrueConnector">270.64166666666665,550 150,550 150,613</av:PointCollection>
+                      <av:PointCollection x:Key="FalseConnector">372.64166666666665,550 580,550 580,562.5</av:PointCollection>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <FlowDecision.True>
+                    <FlowStep x:Name="__ReferenceID4">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <av:Point x:Key="ShapeLocation">50,613</av:Point>
+                          <av:Size x:Key="ShapeSize">200,75</av:Size>
+                          <av:PointCollection x:Key="ConnectorLocation">150,688 150,718 140,718 140,739.5</av:PointCollection>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:Comment sap:VirtualizedContainerService.HintSize="200,75" sap2010:WorkflowViewState.IdRef="Comment_2" Text="De factuur wordt wel gevonden.">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:Comment>
+                      <FlowStep.Next>
+                        <FlowStep x:Name="__ReferenceID8">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <av:Point x:Key="ShapeLocation">40,739.5</av:Point>
+                              <av:Size x:Key="ShapeSize">200,153</av:Size>
+                              <av:PointCollection x:Key="ConnectorLocation">240,816 330,816 330,916.5</av:PointCollection>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Sequence sap2010:Annotation.AnnotationText="Poging om tabblad Coderen te openen.&#xA;Soms loopt het proces herop vast." DisplayName="Sequence Codering zoeken" sap:VirtualizedContainerService.HintSize="546,443" sap2010:WorkflowViewState.IdRef="Sequence_52">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <uix:NApplicationCard sap2010:Annotation.AnnotationText="Openstaande AFS activeren.&#xA;Eerst de openstaande toepassingen sluiten zodat de tegels zichtbaar zijn.&#xA;Dan de tegel Coderen openen.&#xA;Tegels werkten vroeger niet, daarom is altijd bladeren gebruikt, of een Favoriet." AttachMode="ByInstance" CloseMode="Never" ContinueOnError="True" DisplayName="Private: Use Browser Chrome: openstaande AFS" sap:VirtualizedContainerService.HintSize="484,290" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" InUiElement="[in_uieOpenBrowserAFS]" IsIncognito="True" OpenMode="Never" ScopeGuid="074901e8-ceb6-471b-b236-9e6fe98b1153" Version="V2" WindowResize="Maximize">
+                              <uix:NApplicationCard.Body>
+                                <ActivityAction x:TypeArguments="x:Object">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                  </ActivityAction.Argument>
+                                  <Sequence DisplayName="Acties in de geopende browser" sap:VirtualizedContainerService.HintSize="1108,1436" sap2010:WorkflowViewState.IdRef="Sequence_51">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1046,141" sap2010:WorkflowViewState.IdRef="LogMessage_24" Level="[UiPath.Core.Activities.LogLevel.Trace]" Message="[&quot;Rij-uitgang Codering gestart.&quot;]" />
+                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Rij (R)'" sap:VirtualizedContainerService.HintSize="1046,157" sap2010:WorkflowViewState.IdRef="NClick_38" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="074901e8-ceb6-471b-b236-9e6fe98b1153" Version="V3">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://afs.acc.amsterdam.nl/jde/RunApp.mafService?e1UserActInfo=true&amp;e1.mode=view&amp;e1.namespace=&amp;RENDER_MAFLET=E1Menu&amp;e1.state=maximized&amp;e1.service=RunApp&amp;RID=3b5b29a400a3f8b4" DesignTimeRectangle="322, 283, 30, 12" DesignTimeScaleFactor="1" FriendlyName="'Rij (R)'" FullSelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl parentid='WebMenuBar' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='SPAN' aaname='ij (R)' innertext='Rij (R)' visibleinnertext='Rij (R)' /&gt;" FuzzySelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl parentid='WebMenuBar' tag='TABLE' /&gt;&lt;webctrl type='' tag='SPAN' aaname='ij (R)' innertext='Rij (R)' visibleinnertext='Rij (R)' class='FieldLabelSmall' check:text='Rij (R)' /&gt;" Guid="a141ba3e-78bc-48c6-89a7-ea92e0abdf89" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACIAAAAQCAYAAABz9a1kAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADpSURBVEhL7ZPBDcMwCEW7HOOwi09ZxItkCctjUAOqG6gMaaRKOfRJPoDh+5s4D7oJfyOeexrZCxCAW1ip6y4VQKq9U0UgrJq18F4ZlYlWr4SFq958GjEFfDiQ61nSK87aTOtYyyRGNKe3zyYy9uf0Mi2JTP0XE0mM7MX0xloM67CeRvkbmZ2xER71MRdrKVzzSgUT8Te4YGSppZw0MuDXLYdzEBsZzaY31mKyT+Ns801BBBIjYlR/XYlCLQkIV4/1HGrEnSH4XzLC104j27bZh+VWa21UqQk43Nxip7LETYO5MJHfcBMjRE9/4asflQFqXQAAAABJRU5ErkJggg==" InformativeScreenshot="418ee16527e6f5b87e2e0913300893be.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='E1MENUMAIN_*' title='Factuurverwerking - Raadplegen - Facturen workbench' /&gt;" SearchSteps="Selector, Image" Version="V2" Visibility="Interactive">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                              <uix:Target DesignTimeRectangle="209, 281, 20, 20" ElementType="Icon" FriendlyName="'IMG hc_Select'" FullSelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl id='WebMenuBar' tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='hc_Select' tableRow='1' tag='IMG' aaname='Selecteren (Ctrl+Alt+S)' /&gt;" FuzzySelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl id='WebMenuBar' tag='TABLE' /&gt;&lt;webctrl id='hc_Select' type='' tag='IMG' aaname='Selecteren (Ctrl+Alt+S)' class='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEISURBVEhLYxB3EfpPSzBqAUEwagEc7Ly6879TnxOUhwBUsWDvjb3/efJ4/i89uRQqggAUW3Di3on/3Hnc/5ecXAIVQQUUWQAynL+A//+0A9OgIpiAbAsuPbn0X7BQ8P/k/ZOhItgBVgs8J3uCwxUXABkuUizyv317O1QEN8BqASg8QZF24OYBqAgC3H51+79UmdT/xi2NUBH8AGcQzT48Gxy+oHCGgbuv7/6XLpf+X76uHCpCGOCNA1DkwSx5/O7xf+Ua5f/5K/OhssQBgpE8ce/E/8JFwv+VqpX+ZyzN+P/v3z+oDHGAoAUgAIrM2HmxJBsOAkRZQAkYtYAgGCYW3Lz/mEb48X8APV51tGN/RpMAAAAASUVORK5CYII=" SearchSteps="Selector, Image" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NClick.Target>
+                                    </uix:NClick>
+                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Codering'" sap:VirtualizedContainerService.HintSize="1046,157" sap2010:WorkflowViewState.IdRef="NClick_39" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="074901e8-ceb6-471b-b236-9e6fe98b1153" Version="V3">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://afs.acc.amsterdam.nl/jde/RunApp.mafService?e1UserActInfo=true&amp;e1.mode=view&amp;e1.namespace=&amp;RENDER_MAFLET=E1Menu&amp;e1.state=maximized&amp;e1.service=RunApp&amp;RID=3b5b29a400a3f8b4" DesignTimeRectangle="346, 489, 52, 14" DesignTimeScaleFactor="1" FriendlyName="'Codering'" FullSelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl id='HE0_166' tableRow='1' tag='TABLE' /&gt;&lt;webctrl isleaf='1' tableRow='1' tag='NOBR' aaname='Codering ' innertext='Codering ' /&gt;" FuzzySelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl id='HE0_166' tag='TABLE' /&gt;&lt;webctrl isleaf='1' type='' tag='NOBR' aaname='Codering ' innertext='Codering ' class='' check:text='Codering' /&gt;" Guid="de67ad06-eede-40aa-bcd8-55619031a816" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADgAAAASCAYAAAAOsR1OAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGISURBVFhH7VTRrcMgDKwyIZ3qsQndJN9vCdgifmBssN2kTZAaKXpFOrXU5nxnQ2/wobUsyybOXF+Do2vNGOPM9f8Mpscdpmlq8DMFjqzZ57Me5hVz2wYTPO6D9V6smywcgzPCZvBosufswhuDZ0IY3DBTxLoACfcJgpPTFXkpgOPfvTGIhulc41ryoCdwrjQ1f4Zf5EZO5PKZZ71WwkGU313Oyd/z2Dlm0Q3u6HoR1ARivoOQSqw2x4XU85grFrGcRw0iQYqPYt2g4eM8jOm6+w1mkiiCGhEF/LRO1r0LkUyI5og9XnvJK+qg8CZO8HNT4vMZ5BOG7N7iwASfr3ARiF22Z+mKNYN4nSRqrJ3Hc3aCgo8MlgnqptB13WVw6w2WYkguBGCs7lGgFWQNbggYMWgNHTDIj1cQr70tKlSnpt+WymMe9QY1x4jBGht5g4T+D1XRBRRUERxT08bCfCbkwkYgxWQDhwxmdI0ewpEJXg/65qzhegbVbch4Mb2Ci0/wPb4Gr40F/gC1TSfqR9lkigAAAABJRU5ErkJggg==" InformativeScreenshot="e480a754fcd6cee649183c41ddac2da7.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='E1MENUMAIN_*' title='Factuurverwerking - Raadplegen - Facturen workbench' /&gt;" SearchSteps="Selector, Image" Version="V2" Visibility="Interactive">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                              <uix:Target DesignTimeRectangle="343, 308, 69, 14" FriendlyName="'Favorieten'" FullSelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl id='FavoritesLabel2' tableRow='1' tag='TABLE' /&gt;&lt;webctrl isleaf='1' tableRow='1' tag='NOBR' aaname='Favorieten ' innertext='Favorieten ' /&gt;" FuzzySelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl id='FavoritesLabel2' tag='TABLE' /&gt;&lt;webctrl isleaf='1' type='' tag='NOBR' aaname='Favorieten ' innertext='Favorieten ' class='' check:text='Favorieten' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEkAAAASCAYAAAAXOvPoAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAN/SURBVFhH7VWhcuMwEO34LwQDA8POrGFnFjNDQ0NDf4LZmbWsZjELNDQ0NAw0a1jMYpZ3by05VVM115keuJnLm9kZrVbSrt7uSg/n8xl3uS13kr4gd5K+IHeSviA3SRqbFJ7nXckKRede//dlRJMpeCpH67RbMvSoiwL14LB9U26QNKBOSMqqQOe0/0vSoVgx1qTG4LR/Tz4nadghZuWsy95pH9oCsb/Q1bUIkDcD5w/YbqhvtjhM60Z0uU+iM7Sj3ndo3vYtghR1b87sCqw4t0kSrBX9Fh2GOrEqd8R+myJYsrK8BYK01j5MnHOl63gHtEUMf8E5tUT03GGc4jGJXyYoighL+lHrHM0fqu9Tkl63Gzr9iZf5Epac2hw/Nk/YH6kfdZAq72gzJKUNTrKu4zrPR96eaDuhzR+h/Az1K/edGqQSZN5OtqmtprVH4+eIXcyzHl/QT3tJts+2o8+TIe+Xafs2l5bM0JxE77GNFFS05b4z9k+PXJugtmONXqbY+xexbbCVeCafbnmAEz3KQGfmTRQvYMwYsG93KLPEZFYha0bOH1CFXCsLxw6578EneWKR902RBBaIgWkREjqODTIhTMbGClMhAStD75WK0ib9Voao+knRe01wfRnQFmM3TCr1NXVWMsfDLuY4AI8k+N6l9C/Piag34CapLxEwwHj2ZKNn8CxjP37GrutQSbYvjkgMA/by2mR+njekxzvSa2D50Jd+I0GgL0siDob4S7KMGJ9jk1kEttr/9Vp5q+YYwoqpJIYaCW0r2+kncJLUFSsezhL9wNGVo0OFkI4k2xoMkrofhvDnTAsOO0ScDy8TI9qMPtg+3TjotlqXPH2GReqHvTasz0VUtrfi2uxS8RauEv++qm7DQZLVBmbmAkOKJ1EMe5Tsfc9bW440SdJ+kX0pc9EVW08I6qsYCxVpEq22uoAXWs8XMnvXz3sxoJL3JighmrRaSps/2QhDUlIz8oGxSLvzHkKLbru5DU118pwvcOQgafpl5jfmGh2eA/mZFJZRjnRqAz6mxjqTpKLqyjl/pjKefhP5bYK0RGeq9FCFPON9RnUlp9AhsOqKAAue6y18xEWjq1jAlknlB+NvF9cy27MqlxNRahkgrfamva8Sb6oqrC4n3cQnD/f/CdfPJnInyYKLIJE7SRZcBIncSbLgIkjkTpIFF0Hn8xm/ASebVp0LwOhRAAAAAElFTkSuQmCC" SearchSteps="Selector, Image" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NClick.Target>
+                                    </uix:NClick>
+                                    <uix:NCheckState DisplayName="Check App State 'Definitieve koppelingen'" sap:VirtualizedContainerService.HintSize="1046,750" sap2010:WorkflowViewState.IdRef="NCheckState_12" ScopeIdentifier="074901e8-ceb6-471b-b236-9e6fe98b1153" Timeout="10" Version="V3">
+                                      <uix:NCheckState.IfExists>
+                                        <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="496,197" sap2010:WorkflowViewState.IdRef="Sequence_53">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_23">
+                                            <Assign.To>
+                                              <OutArgument x:TypeArguments="x:Boolean">[blnDefCoderingGevonden]</OutArgument>
+                                            </Assign.To>
+                                            <Assign.Value>
+                                              <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                                            </Assign.Value>
+                                          </Assign>
+                                        </Sequence>
+                                      </uix:NCheckState.IfExists>
+                                      <uix:NCheckState.IfNotExists>
+                                        <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="496,533" sap2010:WorkflowViewState.IdRef="Sequence_54">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_24">
+                                            <Assign.To>
+                                              <OutArgument x:TypeArguments="x:Boolean">[blnDefCoderingGevonden]</OutArgument>
+                                            </Assign.To>
+                                            <Assign.Value>
+                                              <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                                            </Assign.Value>
+                                          </Assign>
+                                          <Assign sap2010:Annotation.AnnotationText="Foutmelding toevoegen aan io_TransactionDetails" sap:VirtualizedContainerService.HintSize="434,113" sap2010:WorkflowViewState.IdRef="Assign_36">
+                                            <Assign.To>
+                                              <OutArgument x:TypeArguments="x:String">[io_TransactionDetails("Toelichting")]</OutArgument>
+                                            </Assign.To>
+                                            <Assign.Value>
+                                              <InArgument x:TypeArguments="x:String">AFS vastgelopen bij openen pagina Codering.</InArgument>
+                                            </Assign.Value>
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </Assign>
+                                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,143" sap2010:WorkflowViewState.IdRef="LogMessage_30" Level="[UiPath.Core.Activities.LogLevel.Warn]" Message="[&quot;Rij-uitgang Codering opent niet goed&quot; &amp; in_strDocumentnummer]" />
+                                        </Sequence>
+                                      </uix:NCheckState.IfNotExists>
+                                      <uix:NCheckState.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://afs.acc.amsterdam.nl/jde/E1Client.mafService?jdemafjascacheUID=39&amp;jdemafjasLauncher=PSFT_TE_V3_SW&amp;jdemafjasUID=1&amp;e1UserActInfo=true&amp;e1.mode=view&amp;jdemafjasComponent=JDE_HTMLCLIENT&amp;e1.namespace=&amp;RENDER_MAFLET=E1Menu&amp;e1.state=maximized&amp;e1.service=E1Client" DesignTimeRectangle="249, 721, 123, 13" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Definitieve koppelingen'" FullSelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl id='Tbl0_29' tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='jdeFormTitle0_29' tableRow='1' tag='SPAN' aaname='Definitieve koppelingen' visibleinnertext='Definitieve koppelingen' /&gt;" FuzzySelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl id='Tbl0_29' tag='TABLE' /&gt;&lt;webctrl id='jdeFormTitle0_29' type='' tag='SPAN' aaname='Definitieve koppelingen' visibleinnertext='Definitieve koppelingen' class='SubForm_header-title' check:text='Definitieve koppelingen' /&gt;" Guid="eea5d153-054a-4197-99c4-02493bee6c2e" InformativeScreenshot="f135d8c7de934b4decff30adec2db51f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='E1MENUMAIN_*' title='Factuurverwerking - Raadplegen - Coderen facturen' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                              <uix:Target DesignTimeRectangle="212, 205, 349, 16" ElementType="Text" FriendlyName="'Factuurverwerking - Raa…'" FullSelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl id='formTitleTable' tag='TABLE' /&gt;&lt;webctrl id='jdeFormTitle0' tableRow='1' tag='SPAN' aaname=' Factuurverwerking - Raadplegen - Coderen facturen' innertext=' Factuurverwerking - Raadplegen - Coderen facturen' visibleinnertext=' Factuurverwerking - Raadplegen - Coderen facturen' /&gt;" FuzzySelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl id='formTitleTable' tag='TABLE' /&gt;&lt;webctrl id='jdeFormTitle0' type='' tag='SPAN' aaname=' Factuurverwerking - Raadplegen - Coderen facturen' innertext=' Factuurverwerking - Raadplegen - Coderen facturen' visibleinnertext=' Factuurverwerking - Raadplegen - Coderen facturen' class='' check:text='Factuurverwerking - Raadplegen - Coderen facturen' /&gt;" SearchSteps="Selector" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NCheckState.Target>
+                                    </uix:NCheckState>
+                                  </Sequence>
+                                </ActivityAction>
+                              </uix:NApplicationCard.Body>
+                              <uix:NApplicationCard.TargetApp>
+                                <uix:TargetApp Area="-8, -8, 1936, 1176" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACbSURBVDhPtZPBCYAwDEUzlacencUVvDiBdCNX8NYZPBVcIeYbirW00ioGHoL+/0rBEBMZYRKc4CtBFh0DgRU2gRtBx0LgeBi4OPlywEHgeRw1jGdKXFgW5Xrv74I4nIJimGbBvuv3ME2CvlcBMuuquaIgN7EsXKMowGkpTYI4nON/wecr5KZCgMW4B5+4yuD8lT8v09t1npmoOwB59XBDS4/tzQAAAABJRU5ErkJggg==" InformativeScreenshot="14252debf4ea240b470e24d7216ba58d.png" Selector="&lt;html app='chrome.exe' htmlwindowname='E1MENUMAIN_1273383633198074880' title='VTMO - Raadplegen facturen - Werken met debiteuren subgrootboek' /&gt;" Title="VTMO - Raadplegen facturen - Werken met debiteuren subgrootboek" />
+                              </uix:NApplicationCard.TargetApp>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </uix:NApplicationCard>
+                          </Sequence>
+                          <FlowStep.Next>
+                            <FlowDecision x:Name="__ReferenceID9" Condition="[blnDefCoderingGevonden]" DisplayName="Definitieve koppelingen beschikbaar" sap:VirtualizedContainerService.HintSize="160,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <av:Point x:Key="ShapeLocation">290,916.5</av:Point>
+                                  <av:Size x:Key="ShapeSize">160,87</av:Size>
+                                  <av:PointCollection x:Key="TrueConnector">290,960 140,960 140,1069.5</av:PointCollection>
+                                  <av:PointCollection x:Key="FalseConnector">450,960 600,960 600,1063.5</av:PointCollection>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <FlowDecision.True>
+                                <FlowStep x:Name="__ReferenceID0">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <av:Point x:Key="ShapeLocation">40,1069.5</av:Point>
+                                      <av:Size x:Key="ShapeSize">200,81</av:Size>
+                                      <av:PointCollection x:Key="ConnectorLocation">140,1150.5 140,1232</av:PointCollection>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <Sequence DisplayName="Sequence Factuur decoderen starten" sap:VirtualizedContainerService.HintSize="200,81" sap2010:WorkflowViewState.IdRef="Sequence_1">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Openstaande AFS activeren.&#xA;Eerst de openstaande toepassingen sluiten zodat de tegels zichtbaar zijn.&#xA;Dan de tegel Coderen openen.&#xA;Tegels werkten vroeger niet, daarom is altijd bladeren gebruikt, of een Favoriet." AttachMode="ByInstance" CloseMode="Never" ContinueOnError="True" DisplayName="Private: Use Browser Chrome: openstaande AFS" sap:VirtualizedContainerService.HintSize="484,290" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="[in_uieOpenBrowserAFS]" IsIncognito="True" OpenMode="Never" ScopeGuid="074901e8-ceb6-471b-b236-9e6fe98b1153" Version="V2" WindowResize="Maximize">
+                                      <uix:NApplicationCard.Body>
+                                        <ActivityAction x:TypeArguments="x:Object">
+                                          <ActivityAction.Argument>
+                                            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                          </ActivityAction.Argument>
+                                          <Sequence DisplayName="Acties in de geopende browser" sap:VirtualizedContainerService.HintSize="708,2460" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="646,141" sap2010:WorkflowViewState.IdRef="LogMessage_26" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Zoeken naar bestaande codering&quot;]" />
+                                            <uix:NGetText DisplayName="Get Text 'Gekoppeld'" sap:VirtualizedContainerService.HintSize="646,157" sap2010:WorkflowViewState.IdRef="NGetText_7" ScopeIdentifier="074901e8-ceb6-471b-b236-9e6fe98b1153" TextString="[strGekoppeld]" Version="V3">
+                                              <uix:NGetText.Target>
+                                                <uix:TargetAnchorable BrowserURL="https://afs.acc.amsterdam.nl/jde/E1Client.mafService?jdemafjascacheUID=104&amp;jdemafjasLauncher=PSFT_TE_V3_SW&amp;jdemafjasUID=3&amp;e1UserActInfo=true&amp;e1.mode=view&amp;jdemafjasComponent=JDE_HTMLCLIENT&amp;e1.namespace=&amp;RENDER_MAFLET=E1Menu&amp;e1.state=maximized&amp;e1.service=E1Client" DesignTimeRectangle="570, 597, 59, 16" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'246,30'" FullSelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl id='SFContainer0_29' tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='C0_29_150' tableRow='1' tag='INPUT' aaname='Gekoppeld' /&gt;" FuzzySelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl id='SFContainer0_29' tag='TABLE' /&gt;&lt;webctrl id='C0_29_150' type='text' tag='INPUT' aaname='Gekoppeld' class='tfdisabled associated0_29_151' /&gt;" Guid="95c9d3b4-e6e8-4690-bde1-051bec8cad60" ImageBase64="" InformativeScreenshot="e24c233f17d82ef539009a5a415c7551.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='E1MENUMAIN_*' title='Factuurverwerking - Raadplegen - Coderen facturen' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                                                  <uix:TargetAnchorable.Anchors>
+                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                      <uix:Target DesignTimeRectangle="249, 573, 123, 13" ElementType="Text" FriendlyName="'Definitieve koppelingen'" FullSelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl id='Tbl0_29' tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='jdeFormTitle0_29' tableRow='1' tag='SPAN' aaname='Definitieve koppelingen' innertext='Definitieve koppelingen' /&gt;" FuzzySelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl id='Tbl0_29' tag='TABLE' /&gt;&lt;webctrl id='jdeFormTitle0_29' type='' tag='SPAN' aaname='Definitieve koppelingen' innertext='Definitieve koppelingen' class='SubForm_header-title' check:text='Definitieve koppelingen' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAH8AAAARCAYAAAD0Q3M5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANeSURBVGhD7VTblZswEHUzbgt3Ar3kLC4hFSz+ypawsCXY2P5WNE/NSICdE28+Ah9zhDTve2fY3e/3cLvdVLb7eu47q9hkXYLkX69XvGznus7ds4bb+f+dbvO7Zh/2ey/NaTkAnl2T7H/AdxWOXw/8Tt7u63gITQf6r9BWMVZzWvb/i3Noq5j7ENrhOfvXn0M4HqDHLt6/v9+5EzdfBMmv2jDIG5JaIUjWLpfC709laEMFgxPJn9S/WIj8x319nwxMeDeh+3eySP44dqGBjeYiCbR457dxHP3bvgmdGZixZ1Kb9Geo2oHyqR3nUP2HAgPxr1erZ8J4WOoO9DaW6UPjcT4jSn6f6tfBM38xG1N8mkb6JX+tL/aodTJeBT5KNpNfw90OgnybWIaP1JfUUYeu0KWex642tqSzC7a8+VIMvCEokVx8p4YlifOzRDBJ0jQVyDEm7KiwEgzJQ0CCv7Xx+dFGapn5owiRbUtE64CwveuL6xUSy55lOLkvm3MWs7JH9+0wsrEyjGxtUz2zj8spdlGQfNqw2FBNyp7v49irw08EIhOc3MzPkCqbLxvaC3mLdgkMefd5o49uLEx+F+r4Dg1qvZlP1fbcj61D9FxPXh/Ym7p0YKDeqE93yo/1ol+6Iy6ahwXtuM5s8/37VH7a9JQf7jIIXhAP3nz6Q5X87iCQiFVSIxw4FkONxGTGHguMp/OzCXkKoXiwI3A5hrGzTToAdBN7zakiPjXEkbrSsKYBzvyiKPlV5eK7+qLY+knH9aot3JnsWC/FT3f6c3jMSLjOjHD/PZU/xaI7DKrv2ebRBeOac35nyUfgLEH4zQQ5smbIzzYa7GwDrrAp8i0wHDuvD+/RLwFvSIH8tn7WO5v47kDlOuRPQfFJR3ZpUOS33wvZWQz47c5jNkd4+kb8rY+NJXauNu7T4p/1n+NXkh8TWKFkE3oDuA3qErqGM6BdYQIggPvLgJFiUN7UCIoDRESAkXjlX8OBZTYV9Rwzzyc+dU1DUPrX2kOBTfH+mHy0y/BLsaQOxnKu5wXy4Y7kXy4XvGzn/GkHxuvT8Ez5vew0gw53u0iLfgvn7lnDtZ+fb0T+22euf2fy3yf9Xnd+uu22g/Ccf3lum7/iEzd/k3UKkn8+n93jdl/D/RJ+Axqm4Ev/a7mmAAAAAElFTkSuQmCC" SearchSteps="Selector, Image" />
+                                                    </scg:List>
+                                                  </uix:TargetAnchorable.Anchors>
+                                                </uix:TargetAnchorable>
+                                              </uix:NGetText.Target>
+                                            </uix:NGetText>
+                                            <If Condition="[strGekoppeld &lt;&gt; &quot;&quot;]" DisplayName="If Als de gekoppelde codering aanwezig is, dan verwijderen." sap:VirtualizedContainerService.HintSize="646,1971" sap2010:WorkflowViewState.IdRef="If_5">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <If.Then>
+                                                <Sequence sap:VirtualizedContainerService.HintSize="612,1560" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[strGekoppeld &lt;&gt; &quot;&quot;]" DisplayName="While zolang bedrag gekoppeld &gt; 0 is, zijn er coderings regels aanwezig om te verwijderen." sap:VirtualizedContainerService.HintSize="570,1138" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_4">
+                                                    <ui:InterruptibleWhile.Body>
+                                                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="536,1002" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Verwijderen'" sap:VirtualizedContainerService.HintSize="494,157" sap2010:WorkflowViewState.IdRef="NClick_30" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="074901e8-ceb6-471b-b236-9e6fe98b1153" Version="V3">
+                                                          <uix:NClick.Target>
+                                                            <uix:TargetAnchorable BrowserURL="https://afs.acc.amsterdam.nl/jde/E1Client.mafService?jdemafjascacheUID=104&amp;jdemafjasLauncher=PSFT_TE_V3_SW&amp;jdemafjasUID=3&amp;e1UserActInfo=true&amp;e1.mode=view&amp;jdemafjasComponent=JDE_HTMLCLIENT&amp;e1.namespace=&amp;RENDER_MAFLET=E1Menu&amp;e1.state=maximized&amp;e1.service=E1Client" DesignTimeRectangle="364, 620, 112, 22" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Verwijderen'" FullSelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl id='SFContainer0_29' tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='C0_29_152' tableRow='1' tag='BUTTON' aaname='Verwijderen' innertext='Verwijderen' /&gt;" FuzzySelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl id='SFContainer0_29' tag='TABLE' /&gt;&lt;webctrl id='C0_29_152' type='' tag='BUTTON' aaname='Verwijderen' innertext='Verwijderen' class='button' check:text='Verwijderen' /&gt;" Guid="d0795198-d284-4e03-b82c-710706794fd2" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHQAAAAaCAYAAABmZHgNAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUvSURBVGhD7VpbU1pXFD4/z2g4/J8oTlM98Nq3eGu0SvCt0werYKcZVFpf2s40EUyMl0ZrUFDkJlfp17X25QjocYpKUpizZtYs132zvr02OqMBl/qKXED7jGxAy9Uqfo/vIfbHtss9xL/FdwV2mmxA2ZHOZJXmUq9QijDjRdRkA8poFy9LyOaLxIUmqbjQbnf93fU72Vv9xVJZYKepBVAOuMjlXdlj0hHQTDYvAjKaXf3L6B3m3Qno+UWOZE5JrbdL199dv5O8Pc8R0LOLrM0c6OpfTney36Y7A0q/MaUzFyJQSK23ywf64zNDMAZnEG+zh0cNPJl59yj9t2YGYYz+RPoqfIaBkUirPx0ZpTN8iy2H/Bb9c/udpEOeI6Cp8wukiVlq7oZeqP2KgGFiNtHkT8zAY3gROizdiL+PXqj9A1xVSa+iTp+vXmmLX7NgeIPY1bri+/Z7bL2TvDsBPT3LkMwo2S29gljAgGfune1/O2fSgEP4WMxga5q2i7ZKsC8i88O8UaMYfsK2bzBsDGKSLsTp2TYmBw0Mh2X9ZR9t+fQ23k5RDd8q+SMYoTrCT5dmQNUdHpOAflD9OU/35Hw+lziHb1TkD0zxfFapr45r609xOn8k8tD5dJbnCOhJ+pwCzpXMdFUvxQIwzDm8FXoCL00DgV9qyId9ZA8hKU6VxCLZh1coL0oA0FYHj8lcv5IXYjZB9V5j3B+ANRYRdb6jeP9GER+CXhjWGvnXYNGQreg2JoYMeBdl5ZhFwxeAnuMNg29tCjuwCb/xFBPxjKxhWIiRtVHbxwRdpuswP4yhaTr/Hha8VMviKDrxIuV42P7Qef33vDsB1ZxMnXVXL8fo2TXwFYF1sjVHz20AsTINd542Vd10mwmspADUj/WCzN/nYY+/xsnKGMxgDEFrHm/SBK6qs7MgAT1JK0C/5x78pBdFvrhQDCj9/PN4Wz9iz2xcAup9hX0+b4prt8eZeLklAfUGD0Td/AYBTXV3HjgfJ/ttuiOgOjipuau6fHYZrD9nCcRADCXyiyEG9BooqlcUoBaiKj93GILXnMeP8xaBVMG6RcOdHJN1yL8jNjRK/RSgPwThJUAXdlV/rqcAjdK26s3V1KgV5aVgcERPruNFa1gD1YIGdE9+PlVX5HQ0jya9wzxnQFXw55Klo0UasgdDJg3qqCzsuXW64WR7scVxCbygZ25gKnENqM4vbNDTaOKpxxJbW4r54TFNsSns1xuaTEUloBuHCNHgefPYvzRGl0ltkth24zmWxLnCeEbxz5bP5KWwwTlAkJ/W52HZf5m+GgwfllIK0AUClO0a0Fs+b7ekI6CfOIhYS83t9kfzF+SQxS9DBWUvX8nvIf2s+TfRqBZbAJX5Zbnh/CSyfvBKbGDoY1H4JaBRilOARouoHPMFknW/tuSTy4PPVhvY5FrKZ9Ia1suqBsW8F/0ov7EpviZknEnbekWvyh7mFaDiXM2AKtaft106+Z3sTn7nDeWg07QtOaFZf3w/D4maN2rINtlzNGCb6rS5bC/xHx9XuGyKu2QT5eZYz9foAWygkpd+BolzP50yoF4E98le4BhJ9TolN/UVtRTxBeL6ooauL+LK4k8gSdSLL+FpASKsWrg+p6p73/l0mue8oU3BNve0viKeT34B/iKgb/r/x3oHeXcCeqyC+kOWUeMPpzfmhr8/pCOg7HS59/hOQP8+Sbmyx+StgPK/Mbw/OBIBLvcOM2b870OabEDLlapwMNou9w7zIjJ2mmxAXeoPcgHtKwL+BSiVFjLOFV52AAAAAElFTkSuQmCC" InformativeScreenshot="19fabe90810fbb678b9f077673e6ac99.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='E1MENUMAIN_*' title='Factuurverwerking - Raadplegen - Coderen facturen' /&gt;" SearchSteps="Selector, Image" Version="V2" Visibility="Interactive">
+                                                              <uix:TargetAnchorable.Anchors>
+                                                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                                  <uix:Target DesignTimeRectangle="249, 573, 123, 13" ElementType="Text" FriendlyName="'Definitieve koppelingen'" FullSelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl id='Tbl0_29' tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='jdeFormTitle0_29' tableRow='1' tag='SPAN' aaname='Definitieve koppelingen' innertext='Definitieve koppelingen' /&gt;" FuzzySelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl id='Tbl0_29' tag='TABLE' /&gt;&lt;webctrl id='jdeFormTitle0_29' type='' tag='SPAN' aaname='Definitieve koppelingen' innertext='Definitieve koppelingen' class='SubForm_header-title' check:text='Definitieve koppelingen' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAH8AAAARCAYAAAD0Q3M5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANeSURBVGhD7VTblZswEHUzbgt3Ar3kLC4hFSz+ypawsCXY2P5WNE/NSICdE28+Ah9zhDTve2fY3e/3cLvdVLb7eu47q9hkXYLkX69XvGznus7ds4bb+f+dbvO7Zh/2ey/NaTkAnl2T7H/AdxWOXw/8Tt7u63gITQf6r9BWMVZzWvb/i3Noq5j7ENrhOfvXn0M4HqDHLt6/v9+5EzdfBMmv2jDIG5JaIUjWLpfC709laEMFgxPJn9S/WIj8x319nwxMeDeh+3eySP44dqGBjeYiCbR457dxHP3bvgmdGZixZ1Kb9Geo2oHyqR3nUP2HAgPxr1erZ8J4WOoO9DaW6UPjcT4jSn6f6tfBM38xG1N8mkb6JX+tL/aodTJeBT5KNpNfw90OgnybWIaP1JfUUYeu0KWex642tqSzC7a8+VIMvCEokVx8p4YlifOzRDBJ0jQVyDEm7KiwEgzJQ0CCv7Xx+dFGapn5owiRbUtE64CwveuL6xUSy55lOLkvm3MWs7JH9+0wsrEyjGxtUz2zj8spdlGQfNqw2FBNyp7v49irw08EIhOc3MzPkCqbLxvaC3mLdgkMefd5o49uLEx+F+r4Dg1qvZlP1fbcj61D9FxPXh/Ym7p0YKDeqE93yo/1ol+6Iy6ahwXtuM5s8/37VH7a9JQf7jIIXhAP3nz6Q5X87iCQiFVSIxw4FkONxGTGHguMp/OzCXkKoXiwI3A5hrGzTToAdBN7zakiPjXEkbrSsKYBzvyiKPlV5eK7+qLY+knH9aot3JnsWC/FT3f6c3jMSLjOjHD/PZU/xaI7DKrv2ebRBeOac35nyUfgLEH4zQQ5smbIzzYa7GwDrrAp8i0wHDuvD+/RLwFvSIH8tn7WO5v47kDlOuRPQfFJR3ZpUOS33wvZWQz47c5jNkd4+kb8rY+NJXauNu7T4p/1n+NXkh8TWKFkE3oDuA3qErqGM6BdYQIggPvLgJFiUN7UCIoDRESAkXjlX8OBZTYV9Rwzzyc+dU1DUPrX2kOBTfH+mHy0y/BLsaQOxnKu5wXy4Y7kXy4XvGzn/GkHxuvT8Ez5vew0gw53u0iLfgvn7lnDtZ+fb0T+22euf2fy3yf9Xnd+uu22g/Ccf3lum7/iEzd/k3UKkn8+n93jdl/D/RJ+Axqm4Ev/a7mmAAAAAElFTkSuQmCC" SearchSteps="Selector, Image" />
+                                                                </scg:List>
+                                                              </uix:TargetAnchorable.Anchors>
+                                                            </uix:TargetAnchorable>
+                                                          </uix:NClick.Target>
+                                                        </uix:NClick>
+                                                        <uix:NCheckState sap2010:Annotation.AnnotationText="Als factuur in proces goedkeuring zit, dan een 'Ja' aanklikken om verder te gaan." DisplayName="Check App State 'Factuur in proces goedkeuring?'" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="494,520" sap2010:WorkflowViewState.IdRef="NCheckState_7" ScopeIdentifier="074901e8-ceb6-471b-b236-9e6fe98b1153" Version="V3">
+                                                          <uix:NCheckState.IfExists>
+                                                            <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,272" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                                                              <sap:WorkflowViewStateService.ViewState>
+                                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                </scg:Dictionary>
+                                                              </sap:WorkflowViewStateService.ViewState>
+                                                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Ja'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_31" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="074901e8-ceb6-471b-b236-9e6fe98b1153" Version="V3">
+                                                                <uix:NClick.Target>
+                                                                  <uix:TargetAnchorable BrowserURL="https://afs.acc.amsterdam.nl/jde/E1Client.mafService?jdemafjascacheUID=108&amp;jdemafjasLauncher=PSFT_TE_V3_SW&amp;jdemafjasUID=1&amp;e1UserActInfo=true&amp;e1.mode=view&amp;jdemafjasComponent=JDE_HTMLCLIENT&amp;e1.namespace=&amp;RENDER_MAFLET=E1Menu&amp;e1.state=maximized&amp;e1.service=E1Client" DesignTimeRectangle="337, 654, 106, 22" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Ja'" FullSelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl parentid='modalForm0' tag='TABLE' /&gt;&lt;webctrl id='C0_15' tableRow='3' tag='BUTTON' aaname='Ja' innertext='Ja' /&gt;" FuzzySelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl parentid='modalForm0' tag='TABLE' /&gt;&lt;webctrl id='C0_15' type='' tag='BUTTON' aaname='Ja' innertext='Ja' class='button' check:text='Ja' /&gt;" Guid="99082f3f-4ea8-47b3-a158-f0c5acf14125" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAG4AAAAaCAYAAABW6GksAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJoSURBVGhD7ZrNbtpAFIUr8US8Q7rgDWDVsGPbdtH2aZoFT1BFbRo1VELdVNA0bZOmpSjYIiTBPxjbmNhR4HbuxGMl2GMhFcqMNJaODveeucPi04BBfhRFESitUGFGbw1S4FapMIQwq78GJeB8P4DW8R/4dHiqJKBax13KKAWuTQLT8UBdYl7IBg9WChxSDabXMPZ8cP2JcsF8Ekwpo0xwjuuDQxY6rhc7qxdd5ZvIc8B5MBqTIequqgWrueBsEuICdCZVi1PzwTkuWKPxnTuxq1qYmgvOJIvu5NABGevdd3uwtfUYOt2zzFzmmg/OdsAgwoWGPZKybjQ+QqlUgp6mr2Q/kWouuKE1AoPogZMBdCbR80ajkYDT+gPYrlahUChQPdmugk56efP/+v7rzHPBXZm21H4QgzvTNPjx8xR0Xac/YC3LgnK5Ap9b7aX2EdG54DCUXffBeZMAhqZFTxqeuGKxCIdfjzLnZFAuuEvDks7f7L6FFy9f0ToB19NoH4E1m0164iqVCnyJwS2zr2jOBYehjDr69p18DJbh5FcHXu/sQK1Wg8srg0LE1zb5ct97v09PHILL2kMG5YK7iBfJ5H4whXq9ntyE0BNGfvv0zwf09GHv6bPnFOL+h4Ol9xXNueAwzNTQzO4zCZBHNzf0JgSv4DqkffyPbz6f097t7Qxms1mSLc6nevclSJ4LbhAvYs6GFvsq//85FxxdTITOpGpx6lxwA/KlrlxM54I7jxcxZ0OLfZVvJs8E1z7pQke/eDDMpOrN1797ffrcSQocPoiCz50gVSXxhAfL8ydpcEpySYGTUhH8Bauy0LzkC52AAAAAAElFTkSuQmCC" InformativeScreenshot="2827a52c79162ddf4bd9cc226deb9ae2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='E1MENUMAIN_*' title='Bericht' /&gt;" SearchSteps="Selector, Image" Version="V2" Visibility="Interactive">
+                                                                    <uix:TargetAnchorable.Anchors>
+                                                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                                        <uix:Target DesignTimeRectangle="304, 532, 306, 23" ElementType="Text" FriendlyName="'Bericht'" FullSelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl parentid='popupTitleBar' tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='popupWindowTitlemodalForm0' tableRow='1' tag='DIV' aaname='Bericht' innertext='Bericht' /&gt;" FuzzySelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl parentid='popupTitleBar' tag='TABLE' /&gt;&lt;webctrl id='popupWindowTitlemodalForm0' type='' tag='DIV' aaname='Bericht' innertext='Bericht' class='popupTitle' check:text='Bericht' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAATYAAAAbCAYAAAD2+aP1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAATYSURBVHhe7V1NUuNKDPZlkpwqhJPgHIaEg2APrN52Vkk4QuKEBat++mm1ZbvNZIA3b3B9i6/U8tdSy12lr+RhKIrn5+fw9PSUAB8+fPjf3S+qf34GAACAKaF4fX0NAAAAU0JxuVxkAQsLCzsVKxObf2jIbf4cfwlNc478OZzP+X2GYfwX81RDQzW8H891Ekb5X8WDBw/+/+D/4MQ2LmZ/r2UxbsLl6v2wsLB/gxVhu5wbaWBBFB/GWXwSpAFH0w75PM1YHE81Fufztc95bzuxtWs9ZyxXe7bWkeVcLjmb96YaHOch+/z6nfccrFs/f8YI16/N3TUAAF+H4tycOs3XnE6pebnRTyeaWJzPjZkalxqTBUl9zSFN6xq2zad7hvujoMSYTj2U65RqszNjHK05r+RzZ773PsLHeItJ8akeXrdidorxVqPFD87PxvM+qsfug7j8fUaen8GHD//TPglbr7m4+axJM83cHB7CajEPs9kszBeLsBBE//YhvEjzsrhog7di1BO/EfH5seZc87D+oecl8WCb/Jh3vwk3dO5seR/2ls/VbzH77SrcPry0zzgf5/BiaOJD6IqxvY/L2auf81lt/fNVHKOYxTPtfQZ+BHz48D/nF9bERlqTs8/NmkTO/P023I4JG6/Lx06ztlbFQP222S1vmsTcvu5z78dJ6oVFls4kQT3YPlc/+/v7pdS12h5SnsE+J0a5c3jN99Tm7dbPNt1j7/zOe/fOGfiwsLBfYuVTlJuUHzC0gdv1gDtsdWKjKWlnAsQNutuoyCzK8JhiqnBH01cSv7tquH+1DuVSRZHFp7aJraZ9XFtzCNtVjGfxXG1FxKQ2ElnJcUO1VGs9Zz4Ly81BzjnQpDb3AhxjpQbJnVkT2jugOjvr/D1179DHRM6fM5YDAIAvQ8GfWtpwimOv8Y7cfJHjBm1ETFTY9hR7PB61kUXwonhIvkcStf5UNyfx2lNuL4SLKD6rsD2cQ106YTsfwoZEjwVtNp+3IiUCxTnuw5K5JJ4EErbZXHPlhI1rlveLgpPeP4qPfOLy+8gd6Pt5kWrvRwVM39/dmeRXTnma5DrxlFvux51vfIqHDx/+Z/zCPzQYKYJm04bBJjYvGAkqKBJf6wTFU5jG2uS1DjXzJoQxxvLXa83FwtZUdyRS5KcpbRc2kiPGZHL4ePZZ3Lp1tO83hv+KF0HLiFkf4MHnnhvA/5rXiS06fasTW++5TWxZYWOUoaZ9/A/2Q44Rxc8+I020Yv661H1l3ZAo3cg5y/udTkZOFMS6KdEmMTuX472vk2Iv/k/bOLFdvR8WFvZDVoTtt+AEicWk5fZxIlNRGRc25cfyeGHzotSe45DJ4YXN+6M5AACYHDrCZor3rp+ZtBRdYWvqciAonXwZUWLeC5t9zsoUmOM/OLEZ4MOHP03/4xPbKFSEmqYOZY43IbtiYvNieW2OsYlNYbUBADBlFPITTVpcbd1PM4coQ9XZ3xc3x6f/7rERUbL8lQlbZXl2PXFTcZL9Tth2MX63icKW4itXQ78+WFjYKVqZ2NgxjG0GDx48+O/CZyc2Q/85ePDgwX8HXoQNAABgSijsNwdgYWFhp2JlYrt2MywsLOx3sJjYYGFhJ2dF2AAAAKYE/F1RAAAmh+Lt7S0AAABMB2/hX3XS280kmEIAAAAAAElFTkSuQmCC" SearchSteps="Selector, Image" />
+                                                                      </scg:List>
+                                                                    </uix:TargetAnchorable.Anchors>
+                                                                  </uix:TargetAnchorable>
+                                                                </uix:NClick.Target>
+                                                              </uix:NClick>
+                                                            </Sequence>
+                                                          </uix:NCheckState.IfExists>
+                                                          <uix:NCheckState.IfNotExists>
+                                                            <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,258" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                                                              <sap:WorkflowViewStateService.ViewState>
+                                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                </scg:Dictionary>
+                                                              </sap:WorkflowViewStateService.ViewState>
+                                                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_15" Level="[UiPath.Core.Activities.LogLevel.Trace]" Message="[&quot;Target did not appear&quot;]" />
+                                                            </Sequence>
+                                                          </uix:NCheckState.IfNotExists>
+                                                          <uix:NCheckState.Target>
+                                                            <uix:TargetAnchorable BrowserURL="https://afs.acc.amsterdam.nl/jde/E1Client.mafService?jdemafjascacheUID=108&amp;jdemafjasLauncher=PSFT_TE_V3_SW&amp;jdemafjasUID=1&amp;e1UserActInfo=true&amp;e1.mode=view&amp;jdemafjasComponent=JDE_HTMLCLIENT&amp;e1.namespace=&amp;RENDER_MAFLET=E1Menu&amp;e1.state=maximized&amp;e1.service=E1Client" DesignTimeRectangle="326, 595, 267, 12" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Factuur zit'" FullSelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl parentid='modalForm0' tag='TABLE' /&gt;&lt;webctrl parentid='divTC0_14' tableRow='3' tag='SPAN' aaname='Factuur zit in goedkeuringsproces,  alsnog aanpassen?' innertext='Factuur zit in goedkeuringsproces,  alsnog aanpassen?' /&gt;" FuzzySelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl parentid='modalForm0' tag='TABLE' /&gt;&lt;webctrl parentid='divTC0_14' type='' tag='SPAN' aaname='Factuur zit in goedkeuringsproces,  alsnog aanpassen?' innertext='Factuur zit in goedkeuringsproces,  alsnog aanpassen?' class='FieldLabel' check:text='Factuur zit in goedkeuringsproces,  alsnog aanpassen?' /&gt;" Guid="f72cbed7-a707-446c-9e96-47225818282a" InformativeScreenshot="87a9c5d20d5a678600ce25c5cb2730b7.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='E1MENUMAIN_*' title='Bericht' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                                                              <uix:TargetAnchorable.Anchors>
+                                                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                                  <uix:Target DesignTimeRectangle="304, 532, 306, 23" ElementType="Text" FriendlyName="'Bericht'" FullSelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl parentid='popupTitleBar' tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='popupWindowTitlemodalForm0' tableRow='1' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl parentid='popupTitleBar' tag='TABLE' /&gt;&lt;webctrl id='popupWindowTitlemodalForm0' type='' tag='DIV' class='popupTitle' aaname='Bericht' check:text='Bericht' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAATYAAAAbCAYAAAD2+aP1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAATYSURBVHhe7V1NUuNKDPZlkpwqhJPgHIaEg2APrN52Vkk4QuKEBat++mm1ZbvNZIA3b3B9i6/U8tdSy12lr+RhKIrn5+fw9PSUAB8+fPjf3S+qf34GAACAKaF4fX0NAAAAU0JxuVxkAQsLCzsVKxObf2jIbf4cfwlNc478OZzP+X2GYfwX81RDQzW8H891Ekb5X8WDBw/+/+D/4MQ2LmZ/r2UxbsLl6v2wsLB/gxVhu5wbaWBBFB/GWXwSpAFH0w75PM1YHE81Fufztc95bzuxtWs9ZyxXe7bWkeVcLjmb96YaHOch+/z6nfccrFs/f8YI16/N3TUAAF+H4tycOs3XnE6pebnRTyeaWJzPjZkalxqTBUl9zSFN6xq2zad7hvujoMSYTj2U65RqszNjHK05r+RzZ773PsLHeItJ8akeXrdidorxVqPFD87PxvM+qsfug7j8fUaen8GHD//TPglbr7m4+axJM83cHB7CajEPs9kszBeLsBBE//YhvEjzsrhog7di1BO/EfH5seZc87D+oecl8WCb/Jh3vwk3dO5seR/2ls/VbzH77SrcPry0zzgf5/BiaOJD6IqxvY/L2auf81lt/fNVHKOYxTPtfQZ+BHz48D/nF9bERlqTs8/NmkTO/P023I4JG6/Lx06ztlbFQP222S1vmsTcvu5z78dJ6oVFls4kQT3YPlc/+/v7pdS12h5SnsE+J0a5c3jN99Tm7dbPNt1j7/zOe/fOGfiwsLBfYuVTlJuUHzC0gdv1gDtsdWKjKWlnAsQNutuoyCzK8JhiqnBH01cSv7tquH+1DuVSRZHFp7aJraZ9XFtzCNtVjGfxXG1FxKQ2ElnJcUO1VGs9Zz4Ly81BzjnQpDb3AhxjpQbJnVkT2jugOjvr/D1179DHRM6fM5YDAIAvQ8GfWtpwimOv8Y7cfJHjBm1ETFTY9hR7PB61kUXwonhIvkcStf5UNyfx2lNuL4SLKD6rsD2cQ106YTsfwoZEjwVtNp+3IiUCxTnuw5K5JJ4EErbZXHPlhI1rlveLgpPeP4qPfOLy+8gd6Pt5kWrvRwVM39/dmeRXTnma5DrxlFvux51vfIqHDx/+Z/zCPzQYKYJm04bBJjYvGAkqKBJf6wTFU5jG2uS1DjXzJoQxxvLXa83FwtZUdyRS5KcpbRc2kiPGZHL4ePZZ3Lp1tO83hv+KF0HLiFkf4MHnnhvA/5rXiS06fasTW++5TWxZYWOUoaZ9/A/2Q44Rxc8+I020Yv661H1l3ZAo3cg5y/udTkZOFMS6KdEmMTuX472vk2Iv/k/bOLFdvR8WFvZDVoTtt+AEicWk5fZxIlNRGRc25cfyeGHzotSe45DJ4YXN+6M5AACYHDrCZor3rp+ZtBRdYWvqciAonXwZUWLeC5t9zsoUmOM/OLEZ4MOHP03/4xPbKFSEmqYOZY43IbtiYvNieW2OsYlNYbUBADBlFPITTVpcbd1PM4coQ9XZ3xc3x6f/7rERUbL8lQlbZXl2PXFTcZL9Tth2MX63icKW4itXQ78+WFjYKVqZ2NgxjG0GDx48+O/CZyc2Q/85ePDgwX8HXoQNAABgSijsNwdgYWFhp2JlYrt2MywsLOx3sJjYYGFhJ2dF2AAAAKYE/F1RAAAmh+Lt7S0AAABMB2/hX3XS280kmEIAAAAAAElFTkSuQmCC" SearchSteps="Selector" />
+                                                                </scg:List>
+                                                              </uix:TargetAnchorable.Anchors>
+                                                            </uix:TargetAnchorable>
+                                                          </uix:NCheckState.Target>
+                                                          <sap:WorkflowViewStateService.ViewState>
+                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                            </scg:Dictionary>
+                                                          </sap:WorkflowViewStateService.ViewState>
+                                                        </uix:NCheckState>
+                                                        <uix:NGetText DisplayName="Get Text 'Gekoppeld'" sap:VirtualizedContainerService.HintSize="494,157" sap2010:WorkflowViewState.IdRef="NGetText_8" ScopeIdentifier="074901e8-ceb6-471b-b236-9e6fe98b1153" TextString="[strGekoppeld]" Version="V3">
+                                                          <uix:NGetText.Target>
+                                                            <uix:TargetAnchorable BrowserURL="https://afs.acc.amsterdam.nl/jde/E1Client.mafService?jdemafjascacheUID=104&amp;jdemafjasLauncher=PSFT_TE_V3_SW&amp;jdemafjasUID=3&amp;e1UserActInfo=true&amp;e1.mode=view&amp;jdemafjasComponent=JDE_HTMLCLIENT&amp;e1.namespace=&amp;RENDER_MAFLET=E1Menu&amp;e1.state=maximized&amp;e1.service=E1Client" DesignTimeRectangle="570, 597, 59, 16" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'246,30'" FullSelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl id='SFContainer0_29' tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='C0_29_150' tableRow='1' tag='INPUT' aaname='Gekoppeld' /&gt;" FuzzySelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl id='SFContainer0_29' tag='TABLE' /&gt;&lt;webctrl id='C0_29_150' type='text' tag='INPUT' aaname='Gekoppeld' class='tfdisabled associated0_29_151' /&gt;" Guid="95c9d3b4-e6e8-4690-bde1-051bec8cad60" ImageBase64="" InformativeScreenshot="e24c233f17d82ef539009a5a415c7551.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='E1MENUMAIN_*' title='Factuurverwerking - Raadplegen - Coderen facturen' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                                                              <uix:TargetAnchorable.Anchors>
+                                                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                                  <uix:Target DesignTimeRectangle="249, 573, 123, 13" ElementType="Text" FriendlyName="'Definitieve koppelingen'" FullSelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl id='Tbl0_29' tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='jdeFormTitle0_29' tableRow='1' tag='SPAN' aaname='Definitieve koppelingen' innertext='Definitieve koppelingen' /&gt;" FuzzySelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl id='Tbl0_29' tag='TABLE' /&gt;&lt;webctrl id='jdeFormTitle0_29' type='' tag='SPAN' aaname='Definitieve koppelingen' innertext='Definitieve koppelingen' class='SubForm_header-title' check:text='Definitieve koppelingen' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAH8AAAARCAYAAAD0Q3M5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANeSURBVGhD7VTblZswEHUzbgt3Ar3kLC4hFSz+ypawsCXY2P5WNE/NSICdE28+Ah9zhDTve2fY3e/3cLvdVLb7eu47q9hkXYLkX69XvGznus7ds4bb+f+dbvO7Zh/2ey/NaTkAnl2T7H/AdxWOXw/8Tt7u63gITQf6r9BWMVZzWvb/i3Noq5j7ENrhOfvXn0M4HqDHLt6/v9+5EzdfBMmv2jDIG5JaIUjWLpfC709laEMFgxPJn9S/WIj8x319nwxMeDeh+3eySP44dqGBjeYiCbR457dxHP3bvgmdGZixZ1Kb9Geo2oHyqR3nUP2HAgPxr1erZ8J4WOoO9DaW6UPjcT4jSn6f6tfBM38xG1N8mkb6JX+tL/aodTJeBT5KNpNfw90OgnybWIaP1JfUUYeu0KWex642tqSzC7a8+VIMvCEokVx8p4YlifOzRDBJ0jQVyDEm7KiwEgzJQ0CCv7Xx+dFGapn5owiRbUtE64CwveuL6xUSy55lOLkvm3MWs7JH9+0wsrEyjGxtUz2zj8spdlGQfNqw2FBNyp7v49irw08EIhOc3MzPkCqbLxvaC3mLdgkMefd5o49uLEx+F+r4Dg1qvZlP1fbcj61D9FxPXh/Ym7p0YKDeqE93yo/1ol+6Iy6ahwXtuM5s8/37VH7a9JQf7jIIXhAP3nz6Q5X87iCQiFVSIxw4FkONxGTGHguMp/OzCXkKoXiwI3A5hrGzTToAdBN7zakiPjXEkbrSsKYBzvyiKPlV5eK7+qLY+knH9aot3JnsWC/FT3f6c3jMSLjOjHD/PZU/xaI7DKrv2ebRBeOac35nyUfgLEH4zQQ5smbIzzYa7GwDrrAp8i0wHDuvD+/RLwFvSIH8tn7WO5v47kDlOuRPQfFJR3ZpUOS33wvZWQz47c5jNkd4+kb8rY+NJXauNu7T4p/1n+NXkh8TWKFkE3oDuA3qErqGM6BdYQIggPvLgJFiUN7UCIoDRESAkXjlX8OBZTYV9Rwzzyc+dU1DUPrX2kOBTfH+mHy0y/BLsaQOxnKu5wXy4Y7kXy4XvGzn/GkHxuvT8Ez5vew0gw53u0iLfgvn7lnDtZ+fb0T+22euf2fy3yf9Xnd+uu22g/Ccf3lum7/iEzd/k3UKkn8+n93jdl/D/RJ+Axqm4Ev/a7mmAAAAAElFTkSuQmCC" SearchSteps="Selector, Image" />
+                                                                </scg:List>
+                                                              </uix:TargetAnchorable.Anchors>
+                                                            </uix:TargetAnchorable>
+                                                          </uix:NGetText.Target>
+                                                        </uix:NGetText>
+                                                      </Sequence>
+                                                    </ui:InterruptibleWhile.Body>
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                  </ui:InterruptibleWhile>
+                                                  <Assign sap2010:Annotation.AnnotationText="Foutmelding toevoegen aan io_TransactionDetails" sap:VirtualizedContainerService.HintSize="570,113" sap2010:WorkflowViewState.IdRef="Assign_14">
+                                                    <Assign.To>
+                                                      <OutArgument x:TypeArguments="x:String">[io_TransactionDetails("DeCodeerStatus")]</OutArgument>
+                                                    </Assign.To>
+                                                    <Assign.Value>
+                                                      <InArgument x:TypeArguments="x:String">["DeCoderen geslaagd, " &amp; in_strDocumentnummer]</InArgument>
+                                                    </Assign.Value>
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                  </Assign>
+                                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="570,141" sap2010:WorkflowViewState.IdRef="LogMessage_27" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Factuur is niet (meer) gecodeerd.&quot;]" />
+                                                </Sequence>
+                                              </If.Then>
+                                              <If.Else>
+                                                <Sequence sap:VirtualizedContainerService.HintSize="376,229" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,141" sap2010:WorkflowViewState.IdRef="LogMessage_16" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Factuur is niet (meer) gecodeerd.&quot;]" />
+                                                </Sequence>
+                                              </If.Else>
+                                            </If>
+                                          </Sequence>
+                                        </ActivityAction>
+                                      </uix:NApplicationCard.Body>
+                                      <uix:NApplicationCard.TargetApp>
+                                        <uix:TargetApp Area="-8, -8, 1936, 1176" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACbSURBVDhPtZPBCYAwDEUzlacencUVvDiBdCNX8NYZPBVcIeYbirW00ioGHoL+/0rBEBMZYRKc4CtBFh0DgRU2gRtBx0LgeBi4OPlywEHgeRw1jGdKXFgW5Xrv74I4nIJimGbBvuv3ME2CvlcBMuuquaIgN7EsXKMowGkpTYI4nON/wecr5KZCgMW4B5+4yuD8lT8v09t1npmoOwB59XBDS4/tzQAAAABJRU5ErkJggg==" InformativeScreenshot="14252debf4ea240b470e24d7216ba58d.png" Selector="&lt;html app='chrome.exe' htmlwindowname='E1MENUMAIN_1273383633198074880' title='VTMO - Raadplegen facturen - Werken met debiteuren subgrootboek' /&gt;" Title="VTMO - Raadplegen facturen - Werken met debiteuren subgrootboek" />
+                                      </uix:NApplicationCard.TargetApp>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </uix:NApplicationCard>
+                                  </Sequence>
+                                  <FlowStep.Next>
+                                    <FlowStep x:Name="__ReferenceID7">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <av:Point x:Key="ShapeLocation">40,1232</av:Point>
+                                          <av:Size x:Key="ShapeSize">200,56</av:Size>
+                                          <av:PointCollection x:Key="ConnectorLocation">140,1288 140,1369.5</av:PointCollection>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:Comment sap:VirtualizedContainerService.HintSize="200,56" sap2010:WorkflowViewState.IdRef="Comment_4" Text="De factuur Afkeuren">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </ui:Comment>
+                                      <FlowStep.Next>
+                                        <FlowStep x:Name="__ReferenceID6">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <av:Point x:Key="ShapeLocation">40,1369.5</av:Point>
+                                              <av:Size x:Key="ShapeSize">200,81</av:Size>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <Sequence sap:VirtualizedContainerService.HintSize="200,81" sap2010:WorkflowViewState.IdRef="Sequence_43">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <uix:NApplicationCard sap2010:Annotation.AnnotationText="Openstaande AFS activeren.&#xA;Afkeuren factuur die zojuist is gedecodeerd." AttachMode="ByInstance" CloseMode="Never" ContinueOnError="True" DisplayName="Private: Use Browser Chrome: openstaande AFS" sap:VirtualizedContainerService.HintSize="484,260" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InUiElement="[in_uieOpenBrowserAFS]" IsIncognito="True" OpenMode="Never" ScopeGuid="074901e8-ceb6-471b-b236-9e6fe98b1153" Version="V2" WindowResize="Maximize">
+                                              <uix:NApplicationCard.Body>
+                                                <ActivityAction x:TypeArguments="x:Object">
+                                                  <ActivityAction.Argument>
+                                                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                                  </ActivityAction.Argument>
+                                                  <Sequence DisplayName="Acties in de geopende browser" sap:VirtualizedContainerService.HintSize="496,1134" sap2010:WorkflowViewState.IdRef="Sequence_42">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Afkeuren factuur'" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="NClick_44" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="074901e8-ceb6-471b-b236-9e6fe98b1153" Version="V3">
+                                                      <uix:NClick.Target>
+                                                        <uix:TargetAnchorable BrowserURL="https://afs.acc.amsterdam.nl/jde/E1Client.mafService?jdemafjascacheUID=11&amp;jdemafjasLauncher=PSFT_TE_V3_SW&amp;jdemafjasUID=1&amp;e1UserActInfo=true&amp;e1.mode=view&amp;jdemafjasComponent=JDE_HTMLCLIENT&amp;e1.namespace=&amp;RENDER_MAFLET=E1Menu&amp;e1.state=maximized&amp;e1.service=E1Client" DesignTimeRectangle="498, 313, 122, 22" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Afkeuren factuur'" FullSelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl id='WGBContainer0_25' tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='C0_38' tableRow='1' tag='BUTTON' aaname='Afkeuren factuur' innertext='Afkeuren factuur' /&gt;" FuzzySelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl id='WGBContainer0_25' tag='TABLE' /&gt;&lt;webctrl id='C0_38' type='' tag='BUTTON' aaname='Afkeuren factuur' innertext='Afkeuren factuur' class='button' check:text='Afkeuren factuur' /&gt;" Guid="60f0f850-9693-404b-9fac-41e837b7d3a7" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAH4AAAAaCAYAAABxRujEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUvSURBVGhD7VrpUhtHEN7HM5f0DslbxAZXEIveIDEK5TggWy9gECSxjYlc/ElSjpFMOO0Kh0BC941Qdbp7ZvaQdlSVeHNIbFd19U5/PT09882M5ocMCOROSkD8HRWL+FanA79kjiH1616gY6g/Z46YYyUW8QTkimXZCmTcJI/c0sFWYhFPu6LRbEG5WoNKrR7YMbP1RpM5VuIivlSpcmCporQKJdVmG+CjjA8lvljGYJetaPwBPmq4lvgCBumUEnj5lQa4t1/p/wHXE1+qwHWpLCw+BoL2eLW1xOeLJQ6gF6BQn9qbD8EwpiC258aTcwb6UT/7HO1DSPo1ni/tfYhNivomlvc9cH07vTwFxtwPWvy/ag8lPlcoQr5AtmS32TrafxFPRgyIRhch9OR3B/49RIwwJLI4+JtFXGATtv5m/n8Ef/8dhIwo7GB5vZvmID6k/4sF3DDmthb/V+r3wLXEX10XIYfqr92EeVzA1G0KFo15WGf/HixNyNNuzMH6limIRywdm8TvSVjKUNwmPOAY0kl4hD7Ku0sxE8uwK/Pfl/Hsn53DNp7SGM3Hq/8ePMKxH2Cc8Btwf8NZb9+4PI6zXuFLy/j1WdvPeTaceUW/e1gL5yXMkW/QL+ePtdH4Fo7qhx1K/GW+4K9NRiCUOINmvg2pqAHzSfI3oNPbgSif+FtoKuJpAULPIAs96NTeM0EmHTmSHbwVppfhHeY9jIfBCMfhkMd5DSbmWT2SfsyTwvDezbGm/zGshpEYk6IAsgnsMyPy2nW3oZtNQJhOfO8GqplXsH3O4ShUdwgepzGOSRa3AibCG2IO1lq3sIPzNKI70G2d8Fjh+InIS/PkunX+Yt8cGvY6+mC1xBPot65FQvDsjzp/N1NRMCKbErMJu2Ti6ZSEIHGOC834S1iQJ8dWseAW8X15hP8pnAztL4gPxz9yHdWfcENYuRx6FEficTPSd60NTbkRRR4x3ruVEBKcwk1NMTe4XXET4/eWiTHma8yjxjoWORXBWn//HPzVocRnc9f+2fQ3MD2w+BFYY3xLEoZxTDyeHDqVUzE+fQrnN4AldBNcu4h35vHyD/aXi74qFj0rF/2gv35FPLWTs1z7whvKIW4qazxza2Degnjy2wQz7kG821+Ag1Uxh4F6fLBa4gn0U3/7lk6EumuF0DU4vZRB3CaMF58Wma7JRQOmGP8AcVwc48sNkW+dFn8WnuN3ZZsegwvwI/sj+C3yOBdN398mnv0O4lXdrA7iRUwCTlv47RhP1BHhmrLpGNwzJuDrtE18NleHbZyPsfCScz7HR64YS+fvn4O/OpT4Cxl0cZX/xHYaHs/gaz7VcuENuu5nnsDbK0H8ipN4wk/pt3UavtqtyXcALgor/gzge6BB+Vsp2x8x+QSuHOZdi3ZxpeuviD8SdUni9/vrPxTEv6K2a7ynkMD+kRcYjxs1m8DNLbFw4hzaeCOd0E2A7S/W5XwlPm/it6xP59+Xcxiox4e2lngCKdDST2rXod0DfOD04bhY+GqBcq4FXbx6aaHYh7+PDcL5t1L6ryhGCfqqKr/D37218pQ7OCDnVuN59Rd19Tr1vnooXuVH5Tq6vNHc493Y88J4HlNKr1PjvsrXbcr8UrpdzKLGcvllDSqfVz0+tPXEI3gugwM7flZLPIFKabd42QAfXXw48Ze5wI6p1RJ/5gxGdbXRBvho457E099yDj6eWcEui+rpD/CRwfc/nPLf65RYxLfaHQZoVwQ6fkoHmzhWYhEfyN2SgPg7KQB/Alx6bEn5hprsAAAAAElFTkSuQmCC" InformativeScreenshot="dda3f5ee4740e89056475047796676a3.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='E1MENUMAIN_*' title='Factuurverwerking - Raadplegen - Coderen facturen' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive">
+                                                          <uix:TargetAnchorable.Anchors>
+                                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                              <uix:Target DesignTimeRectangle="212, 205, 349, 16" ElementType="Text" FriendlyName="'Factuurverwerking - Raa…'" FullSelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl id='formTitleTable' tag='TABLE' /&gt;&lt;webctrl id='jdeFormTitle0' tableRow='1' tag='SPAN' aaname=' Factuurverwerking - Raadplegen - Coderen facturen' innertext=' Factuurverwerking - Raadplegen - Coderen facturen' /&gt;" FuzzySelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl id='formTitleTable' tag='TABLE' /&gt;&lt;webctrl id='jdeFormTitle0' type='' tag='SPAN' aaname=' Factuurverwerking - Raadplegen - Coderen facturen' innertext=' Factuurverwerking - Raadplegen - Coderen facturen' class='' check:text='Factuurverwerking - Raadplegen - Coderen facturen' /&gt;" ImageBase64="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" SearchSteps="Selector, FuzzySelector, Image" />
+                                                            </scg:List>
+                                                          </uix:TargetAnchorable.Anchors>
+                                                        </uix:TargetAnchorable>
+                                                      </uix:NClick.Target>
+                                                    </uix:NClick>
+                                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Factuurverwerking - Raa…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="434,218" sap2010:WorkflowViewState.IdRef="NTypeInto_14" InteractionMode="DebuggerApi" ScopeIdentifier="074901e8-ceb6-471b-b236-9e6fe98b1153" Text="1OV" Version="V3">
+                                                      <uix:NTypeInto.Target>
+                                                        <uix:TargetAnchorable BrowserURL="https://afs.acc.amsterdam.nl/jde/E1Client.mafService?jdemafjascacheUID=11&amp;jdemafjasLauncher=PSFT_TE_V3_SW&amp;jdemafjasUID=1&amp;e1UserActInfo=true&amp;e1.mode=view&amp;jdemafjasComponent=JDE_HTMLCLIENT&amp;e1.namespace=&amp;RENDER_MAFLET=E1Menu&amp;e1.state=maximized&amp;e1.service=E1Client" DesignTimeRectangle="352, 248, 49, 17" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT C0_15'" FullSelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl id='WGBContainer0_14' tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='C0_15' tableRow='1' tag='INPUT' aaname='Reden code' colName='  Reden code        Omschrijving     Terug naar behandelaar    Opslaan  Sluiten  ' rowName='  Reden code        Omschrijving     Terug naar behandelaar    Opslaan  Sluiten  ' /&gt;" FuzzySelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl id='WGBContainer0_14' tag='TABLE' /&gt;&lt;webctrl id='C0_15' type='text' tag='INPUT' aaname='Reden code' colName='  Reden code        Omschrijving     Terug naar behandelaar    Opslaan  Sluiten  ' rowName='  Reden code        Omschrijving     Terug naar behandelaar    Opslaan  Sluiten  ' class='textfield associated0_16 associated0_17' /&gt;" Guid="05c4b06a-7970-4c52-9387-1ae64dc40b4c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADUAAAAVCAYAAADmSqZGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABuSURBVFhH7c+hCoAwFIVh3/9hTFbzgiathoHFIKyNIYMryDQM9wD/5f5w0klfJwrTjeqHET03L0VSoTbvsfP7USQV6gwBuyYqpoRdE3XljF0TRc5QlAxFyVCUDEXJUJR+UW5an4O8tw+lKYUokRv1d+Yj5AiVNgAAAABJRU5ErkJggg==" InformativeScreenshot="773250f6a6142d0dd72a2e976a6e196f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='E1MENUMAIN_*' title='Factuurverwerking - Raadplegen - Afkeuren factuur' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive">
+                                                          <uix:TargetAnchorable.Anchors>
+                                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                              <uix:Target DesignTimeRectangle="212, 204, 345, 16" ElementType="Text" FriendlyName="'Factuurverwerking - Raa…'" FullSelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl id='formTitleTable' tag='TABLE' /&gt;&lt;webctrl id='jdeFormTitle0' tableRow='1' tag='SPAN' aaname=' Factuurverwerking - Raadplegen - Afkeuren factuur' innertext=' Factuurverwerking - Raadplegen - Afkeuren factuur' /&gt;" FuzzySelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl id='formTitleTable' tag='TABLE' /&gt;&lt;webctrl id='jdeFormTitle0' type='' tag='SPAN' aaname=' Factuurverwerking - Raadplegen - Afkeuren factuur' innertext=' Factuurverwerking - Raadplegen - Afkeuren factuur' class='' check:text='Factuurverwerking - Raadplegen - Afkeuren factuur' /&gt;" ImageBase64="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" SearchSteps="Selector, FuzzySelector, Image" />
+                                                            </scg:List>
+                                                          </uix:TargetAnchorable.Anchors>
+                                                        </uix:TargetAnchorable>
+                                                      </uix:NTypeInto.Target>
+                                                    </uix:NTypeInto>
+                                                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Omschrijving'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="434,218" sap2010:WorkflowViewState.IdRef="NTypeInto_15" InteractionMode="DebuggerApi" ScopeIdentifier="074901e8-ceb6-471b-b236-9e6fe98b1153" Text="[in_strRedenAfkeuring]" Version="V3">
+                                                      <uix:NTypeInto.Target>
+                                                        <uix:TargetAnchorable BrowserURL="https://afs.acc.amsterdam.nl/jde/E1Client.mafService?jdemafjascacheUID=11&amp;jdemafjasLauncher=PSFT_TE_V3_SW&amp;jdemafjasUID=1&amp;e1UserActInfo=true&amp;e1.mode=view&amp;jdemafjasComponent=JDE_HTMLCLIENT&amp;e1.namespace=&amp;RENDER_MAFLET=E1Menu&amp;e1.state=maximized&amp;e1.service=E1Client" DesignTimeRectangle="352, 280, 614, 17" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT C0_18'" FullSelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl id='WGBContainer0_14' tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='C0_18' tableRow='1' tag='INPUT' aaname='Omschrijving' /&gt;" FuzzySelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl id='WGBContainer0_14' tag='TABLE' /&gt;&lt;webctrl id='C0_18' type='text' tag='INPUT' aaname='Omschrijving' class='textfield associated0_19' /&gt;" Guid="299d3af5-c68a-428f-a459-4a1ad2c7d9c9" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAmoAAAAVCAYAAAD2OcJCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF1SURBVHhe7d2/asJQGIfhXoK7+Odm1Fuoi3cpGm+gdCpO4tSl4FJwa03aesoXVJCmWxsjPg+8Sw7Zf2TIuUsAADfg+WWT3nf5VWWoAQA0xNd+n/Lio3qoTafTNBwOU7fbTa1WS5IkSTUU2ys22Hw+LzfZcaydhlocVL0oSZKk+sqyrPyydjbUYsXF4f14nB4eH9PrditJkqQaiu0VGyy2WGyycDbU2u12efi0XKa33U6SJEk1Fhsstli/3y+32dlQi4Oo+PyUJEnSBTrusVA51AAAuAxDDQCgoQw1AICGMtQAABrKUAMAaChDDQCgoQw1AICGMtQAABrq16EWf8GNg9VqdXgCAEBdYoPFFqu8meB41+dkMknr9frwFACA/xYjLTZYbLHKuz5ns1l5KEmSpMu1WCzS135/PtRCjLXBYJA6nU7li5IkSfr7er1eGo1GKcuycpPlRfFzqAEAcDnxJS0vPsqRZqgBADfj+WVzGkDXUZ6+AesQ2QBXLijlAAAAAElFTkSuQmCC" InformativeScreenshot="cc44c33442362d8a4730a260ce3a2a91.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='E1MENUMAIN_*' title='Factuurverwerking - Raadplegen - Afkeuren factuur' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive">
+                                                          <uix:TargetAnchorable.Anchors>
+                                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                              <uix:Target DesignTimeRectangle="245, 280, 64, 12" ElementType="Text" FriendlyName="'Omschrijving'" FullSelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl id='WGBContainer0_14' tableRow='1' tag='TABLE' /&gt;&lt;webctrl parentid='divTC0_19' tableRow='1' tag='SPAN' aaname='Omschrijving' innertext='Omschrijving' /&gt;" FuzzySelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl id='WGBContainer0_14' tag='TABLE' /&gt;&lt;webctrl parentid='divTC0_19' type='' tag='SPAN' aaname='Omschrijving' innertext='Omschrijving' class='FieldLabel' check:text='Omschrijving' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEQAAAAQCAYAAACvDNlTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGISURBVFhH7ZSNbcQgDIW7XMZhF3ZhkahLZAzXfjZgCM2lzeWkSDwpUjDgn89Ovmiq0QTSaQLpNIF02gFZ40LLkp9AabONG7SlQEtIdBxioxQWiiu/rpFziiSvQ8n+S3/HaoAAhneIBO6Dcg7IZ1WBbInCoHhAQnusU0nO6QTFVW2YJpyRY3W/gQm47VkFEil2PmCPbGdbSN/7CUGMOikFbJmQle8GipHtfR4uv8gx+oZUIDmYLYtKECveHCCJHMjdFYDBomthsKI4rbd+Ao0P1xC151xGn4yzwez2C5CaR9/Uxn4VSHZW7SzfMfgZdWXvu3QWK+1qAVLsIyB6RnORey427vkGmD9ZOOiQr8H050/mJRCTdtk6cAMQxJQzYsuVvxUIazdCSCA7OAekjK9omGD1cwkI7DwleU80jGf+sGhrOP5kTLgsncXjJ+YcEC1scB9nzG73rgFhjda49xsQLEoexz/VJ8g34Q2qv4Oq5wDBNLgJ/Zd02nR65XHTZXrWhHxAE0gjoh9lSnQfulcOWgAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector, Image" />
+                                                            </scg:List>
+                                                          </uix:TargetAnchorable.Anchors>
+                                                        </uix:TargetAnchorable>
+                                                      </uix:NTypeInto.Target>
+                                                    </uix:NTypeInto>
+                                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Opslaan'" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="NClick_45" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="074901e8-ceb6-471b-b236-9e6fe98b1153" Version="V3">
+                                                      <uix:NClick.Target>
+                                                        <uix:TargetAnchorable BrowserURL="https://afs.acc.amsterdam.nl/jde/E1Client.mafService?jdemafjascacheUID=11&amp;jdemafjasLauncher=PSFT_TE_V3_SW&amp;jdemafjasUID=1&amp;e1UserActInfo=true&amp;e1.mode=view&amp;jdemafjasComponent=JDE_HTMLCLIENT&amp;e1.namespace=&amp;RENDER_MAFLET=E1Menu&amp;e1.state=maximized&amp;e1.service=E1Client" DesignTimeRectangle="245, 374, 106, 22" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Opslaan'" FullSelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl id='WGBContainer0_14' tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='C0_21' tableRow='1' tag='BUTTON' aaname='Opslaan' innertext='Opslaan' /&gt;" FuzzySelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl id='WGBContainer0_14' tag='TABLE' /&gt;&lt;webctrl id='C0_21' type='' tag='BUTTON' aaname='Opslaan' innertext='Opslaan' class='button' check:text='Opslaan' /&gt;" Guid="e3d99a50-90ab-4ac7-ac89-5a8d7bf3757a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAG4AAAAaCAYAAABW6GksAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQZSURBVGhD7VptbxpHEL6fF78A/ycxlpIY8xOSJiRq4wv+Ay0tqZriNBZfkkiVgEiO3SZN8QXzbs7gM0JPZ3b3zmDfAj2a+NzcSKO5mWdmdtmHWfhwBiK5lhIRd03FI85xhnhVPsDLN28jDaG+Ku9j4DiKrTHiXlcOUG8fKy+SsEm91cFrGixXPOKYVftkgM5xj9SObMisfdIXHLkyQVy7eywSIxtOO5W4lqud42B+0LrIn+lriWu2uyJx0nY18Vl40LoI1+Fa4hqU0Gh3RCJbV8/9+XBdfNG+XzuuJa7eaqNB/16u1L59hCXDgOHq+s/z1fnYUmZ5ofqwWT1xzTaOxjSoH7hPJSNI2yyqTcHCdpzISz7zz5/h75sJGKkXc+eH3dcSV2u0KKGlbDugH7SuhdxtIildxHDg4idwqttIGDF8UyH/p3UYyxncT6ppXMqgpOpzbow1mRf17xRxl3BjHTl3/Tz19OIG1vLcL481Yxm3kjSxIr4s17+w3y/tTyXuU73pqevXLviz8GB1FXxH05Uw30/ivb+QTRjY+IWeCylxkBsvecc0jRRfeVBBrZzBqpGGHNQi0kT0/VJTEbdD/fIoiBoWWXfnR9n/h3MA1jbl381T/g5StE7crIp4MU3k3c6LPen3L58/J64lzjpqiIRLltQ3PgvXxX3xA2zRgSbMgwu4jKcK5DNxiW18HDBu40OWDnrjOSxFrpiOtR0MMYLTa2JPEWcdDdAfNPH9msohFf2of39wCiuX9OIyvyCI2/zNFvv4w+szbf8+9j/GtcRdLObCS83mwIPV2XixSQfHRIzHS98iZiRg/km+IM7EnsLlRBUoz4Yz4k/B0yYJuJkbw0sPcYNiq6ZFOXLiUgXuX8G9JcqPPaWomjjKt+py4gS5E+tIP+i5LIpPnTi36Cps/yP/nslDl/Ey7q3QwaZ3xQSJiTPieFxivILHMXm1WqUHuLH0EL/TZA09YmjittSk7JvUN41dx1ZfBJcUOc3p3TN0Vb/xiWNyeR9enzk/x+ey04lTejj2/G/8oHVCe2d0yRXFoXlXF//FHA4kLohLIMZkMkbXZpXJoLpqNj5RM6TrVB44TdD4VbpiIku/WfEnZepp4z1ft6JuFVvZNIz4E/oCnBPH+/P60PNCn29BX0vcYa0uk6/U8tSMCZHm4YK4TeyKa5FkRJOi6rryrpSiiO5wTNT31FVKQjWntMCICJ+sG+HUYeAMnZrcw7Av1z3v47ffL2enEidUJWt1Fq7TRfsK4lL41Q9jXbR/yHEtcVVOoGJhSX3tLFxnF+3LeF/MAU50uF/ctf8DfCpxkYZXtcT9/elIJEQ2nNaXOH7fZO/DoUiKNHzK3Pi+usAvC/F7J8xqpOFTHizmyBWPuEiul0TEXUsB/gHspyskkT83PQAAAABJRU5ErkJggg==" InformativeScreenshot="b38a3b56c2ad351bcf1663006b904590.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='E1MENUMAIN_*' title='Factuurverwerking - Raadplegen - Afkeuren factuur' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V2" Visibility="Interactive">
+                                                          <uix:TargetAnchorable.Anchors>
+                                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                              <uix:Target DesignTimeRectangle="212, 204, 345, 16" ElementType="Text" FriendlyName="'Factuurverwerking - Raa…'" FullSelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl id='formTitleTable' tag='TABLE' /&gt;&lt;webctrl id='jdeFormTitle0' tableRow='1' tag='SPAN' aaname=' Factuurverwerking - Raadplegen - Afkeuren factuur' innertext=' Factuurverwerking - Raadplegen - Afkeuren factuur' /&gt;" FuzzySelectorArgument="&lt;webctrl name='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl id='formTitleTable' tag='TABLE' /&gt;&lt;webctrl id='jdeFormTitle0' type='' tag='SPAN' aaname=' Factuurverwerking - Raadplegen - Afkeuren factuur' innertext=' Factuurverwerking - Raadplegen - Afkeuren factuur' class='' check:text='Factuurverwerking - Raadplegen - Afkeuren factuur' /&gt;" ImageBase64="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" SearchSteps="Selector, FuzzySelector, Image" />
+                                                            </scg:List>
+                                                          </uix:TargetAnchorable.Anchors>
+                                                        </uix:TargetAnchorable>
+                                                      </uix:NClick.Target>
+                                                    </uix:NClick>
+                                                    <Assign sap2010:Annotation.AnnotationText="Foutmelding toevoegen aan io_TransactionDetails" sap:VirtualizedContainerService.HintSize="434,113" sap2010:WorkflowViewState.IdRef="Assign_25">
+                                                      <Assign.To>
+                                                        <OutArgument x:TypeArguments="x:String">[io_TransactionDetails("AfkeurStatus")]</OutArgument>
+                                                      </Assign.To>
+                                                      <Assign.Value>
+                                                        <InArgument x:TypeArguments="x:String">Afkeuren geslaagd.</InArgument>
+                                                      </Assign.Value>
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                    </Assign>
+                                                  </Sequence>
+                                                </ActivityAction>
+                                              </uix:NApplicationCard.Body>
+                                              <uix:NApplicationCard.TargetApp>
+                                                <uix:TargetApp Area="-8, -8, 1936, 1176" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACbSURBVDhPtZPBCYAwDEUzlacencUVvDiBdCNX8NYZPBVcIeYbirW00ioGHoL+/0rBEBMZYRKc4CtBFh0DgRU2gRtBx0LgeBi4OPlywEHgeRw1jGdKXFgW5Xrv74I4nIJimGbBvuv3ME2CvlcBMuuquaIgN7EsXKMowGkpTYI4nON/wecr5KZCgMW4B5+4yuD8lT8v09t1npmoOwB59XBDS4/tzQAAAABJRU5ErkJggg==" InformativeScreenshot="14252debf4ea240b470e24d7216ba58d.png" Selector="&lt;html app='chrome.exe' htmlwindowname='E1MENUMAIN_1273383633198074880' title='VTMO - Raadplegen facturen - Werken met debiteuren subgrootboek' /&gt;" Title="VTMO - Raadplegen facturen - Werken met debiteuren subgrootboek" />
+                                              </uix:NApplicationCard.TargetApp>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </uix:NApplicationCard>
+                                          </Sequence>
+                                        </FlowStep>
+                                      </FlowStep.Next>
+                                    </FlowStep>
+                                  </FlowStep.Next>
+                                </FlowStep>
+                              </FlowDecision.True>
+                              <FlowDecision.False>
+                                <FlowStep x:Name="__ReferenceID10">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <av:Point x:Key="ShapeLocation">500,1063.5</av:Point>
+                                      <av:Size x:Key="ShapeSize">200,94</av:Size>
+                                      <av:PointCollection x:Key="ConnectorLocation">600,1157.5 600,1233</av:PointCollection>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:Comment sap:VirtualizedContainerService.HintSize="200,94" sap2010:WorkflowViewState.IdRef="Comment_5" Text="De rij-uitgang Codering liep vast, Excel en AFS opnieuw starten.">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ui:Comment>
+                                  <FlowStep.Next>
+                                    <FlowStep x:Name="__ReferenceID11">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <av:Point x:Key="ShapeLocation">500,1233</av:Point>
+                                          <av:Size x:Key="ShapeSize">200,94</av:Size>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <Throw sap2010:Annotation.AnnotationText="Oproepen Codering vastgelopen in AFS." DisplayName="Throw Codering vastgelopen" Exception="[New SystemException(&quot;AFS loopt vast op pagina Codering&quot;)]" sap:VirtualizedContainerService.HintSize="334,121" sap2010:WorkflowViewState.IdRef="Throw_1">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </Throw>
+                                    </FlowStep>
+                                  </FlowStep.Next>
+                                </FlowStep>
+                              </FlowDecision.False>
+                            </FlowDecision>
+                          </FlowStep.Next>
+                        </FlowStep>
+                      </FlowStep.Next>
+                    </FlowStep>
+                  </FlowDecision.True>
+                  <FlowDecision.False>
+                    <FlowStep x:Name="__ReferenceID5">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <av:Point x:Key="ShapeLocation">480,562.5</av:Point>
+                          <av:Size x:Key="ShapeSize">200,94</av:Size>
+                          <av:PointCollection x:Key="ConnectorLocation">580,656.5 580,686.5 570,686.5 570,705.5</av:PointCollection>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:Comment sap:VirtualizedContainerService.HintSize="200,94" sap2010:WorkflowViewState.IdRef="Comment_3" Text="Document niet gevonden, naar volgende svp.">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:Comment>
+                      <FlowStep.Next>
+                        <FlowStep x:Name="__ReferenceID12">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <av:Point x:Key="ShapeLocation">470,705.5</av:Point>
+                              <av:Size x:Key="ShapeSize">200,109</av:Size>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Throw sap2010:Annotation.AnnotationText="BRE omdat het documentnummer niet gevonden is in AFS." DisplayName="Throw BRE niet gevonden" Exception="[New BusinessRuleException(&quot;Factuur niet gevonden.&quot;)]" sap:VirtualizedContainerService.HintSize="200,109" sap2010:WorkflowViewState.IdRef="Throw_2">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </Throw>
+                        </FlowStep>
+                      </FlowStep.Next>
+                    </FlowStep>
+                  </FlowDecision.False>
+                </FlowDecision>
+              </FlowStep.Next>
+            </FlowStep>
+          </FlowStep.Next>
+        </FlowStep>
+      </FlowStep.Next>
+    </FlowStep>
+    <x:Reference>__ReferenceID0</x:Reference>
+    <x:Reference>__ReferenceID1</x:Reference>
+    <x:Reference>__ReferenceID2</x:Reference>
+    <x:Reference>__ReferenceID3</x:Reference>
+    <x:Reference>__ReferenceID4</x:Reference>
+    <x:Reference>__ReferenceID5</x:Reference>
+    <x:Reference>__ReferenceID6</x:Reference>
+    <x:Reference>__ReferenceID7</x:Reference>
+    <x:Reference>__ReferenceID8</x:Reference>
+    <x:Reference>__ReferenceID9</x:Reference>
+    <x:Reference>__ReferenceID10</x:Reference>
+    <x:Reference>__ReferenceID11</x:Reference>
+    <x:Reference>__ReferenceID12</x:Reference>
+  </Flowchart>
+</Activity>

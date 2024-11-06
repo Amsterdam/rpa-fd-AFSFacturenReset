@@ -1,0 +1,2497 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+<DocumentProperties xmlns="urn:schemas-microsoft-com:office:office"></DocumentProperties>
+<Styles>
+<Style ss:ID="txtCol">
+<NumberFormat ss:Format="@"/>
+</Style>
+<Style ss:ID="shortDate">
+<NumberFormat ss:Format="dd-mm-yyyy;@"/>
+</Style>
+<Style ss:ID="boldTxt">
+<Font ss:Bold="1"/>
+<NumberFormat ss:Format="@"/>
+</Style>
+</Styles>
+<Worksheet ss:Name="Sheet1">
+<Table ss:ExpandedColumnCount="49" ss:ExpandedRowCount="51" x:FullColumns="1" x:FullRows="1"><Column ss:Index="2" ss:StyleID="txtCol"/>
+<Column ss:Index="3" ss:StyleID="txtCol"/>
+<Column ss:Index="4" ss:StyleID="txtCol"/>
+<Column ss:Index="5" ss:StyleID="txtCol"/>
+<Column ss:Index="6" ss:StyleID="txtCol"/>
+<Column ss:Index="7" ss:StyleID="txtCol"/>
+<Column ss:Index="8" ss:StyleID="txtCol"/>
+<Column ss:Index="9" ss:StyleID="txtCol"/>
+<Column ss:Index="10" ss:StyleID="shortDate"/>
+<Column ss:Index="11" ss:StyleID="shortDate"/>
+<Column ss:Index="12" ss:StyleID="shortDate"/>
+<Column ss:Index="13" ss:StyleID="txtCol"/>
+<Column ss:Index="14" ss:StyleID="shortDate"/>
+<Column ss:Index="15" ss:StyleID="shortDate"/>
+<Column ss:Index="16" ss:StyleID="shortDate"/>
+<Column ss:Index="17" ss:StyleID="shortDate"/>
+<Column ss:Index="18" ss:StyleID="shortDate"/>
+<Column ss:Index="19" ss:StyleID="shortDate"/>
+<Column ss:Index="20" ss:StyleID="txtCol"/>
+<Column ss:Index="21" ss:StyleID="txtCol"/>
+<Column ss:Index="22" ss:StyleID="txtCol"/>
+<Column ss:Index="23" ss:StyleID="txtCol"/>
+<Column ss:Index="24" ss:StyleID="txtCol"/>
+<Column ss:Index="25" ss:StyleID="txtCol"/>
+<Column ss:Index="26" ss:StyleID="txtCol"/>
+<Column ss:Index="27" ss:StyleID="txtCol"/>
+<Column ss:Index="30" ss:StyleID="txtCol"/>
+<Column ss:Index="32" ss:StyleID="txtCol"/>
+<Column ss:Index="33" ss:StyleID="txtCol"/>
+<Column ss:Index="34" ss:StyleID="txtCol"/>
+<Column ss:Index="35" ss:StyleID="txtCol"/>
+<Column ss:Index="36" ss:StyleID="txtCol"/>
+<Column ss:Index="37" ss:StyleID="txtCol"/>
+<Column ss:Index="39" ss:StyleID="shortDate"/>
+<Column ss:Index="40" ss:StyleID="txtCol"/>
+<Column ss:Index="41" ss:StyleID="txtCol"/>
+<Column ss:Index="42" ss:StyleID="txtCol"/>
+<Column ss:Index="43" ss:StyleID="txtCol"/>
+<Column ss:Index="44" ss:StyleID="txtCol"/>
+<Column ss:Index="45" ss:StyleID="txtCol"/>
+<Column ss:Index="47" ss:StyleID="txtCol"/>
+<Column ss:Index="48" ss:StyleID="txtCol"/>
+<Column ss:Index="49" ss:StyleID="txtCol"/>
+<Row>
+<Cell ss:StyleID="boldTxt"><Data ss:Type="String">Document nummer</Data></Cell>
+<Cell ss:StyleID="boldTxt"><Data ss:Type="String">Document type</Data></Cell>
+<Cell ss:StyleID="boldTxt"><Data ss:Type="String">Statuscode factuur</Data></Cell>
+<Cell ss:StyleID="boldTxt"><Data ss:Type="String">Referentie</Data></Cell>
+<Cell ss:StyleID="boldTxt"><Data ss:Type="String">Totale doorlooptijd in dagen</Data></Cell>
+<Cell ss:StyleID="boldTxt"><Data ss:Type="String">Validatie OK</Data></Cell>
+<Cell ss:StyleID="boldTxt"><Data ss:Type="String">Codering compleet</Data></Cell>
+<Cell ss:StyleID="boldTxt"><Data ss:Type="String">Prestatie OK</Data></Cell>
+<Cell ss:StyleID="boldTxt"><Data ss:Type="String">Budget OK</Data></Cell>
+<Cell ss:StyleID="boldTxt"><Data ss:Type="String">Datum verwijdering</Data></Cell>
+<Cell ss:StyleID="boldTxt"><Data ss:Type="String">Betaalbaar gesteld datum</Data></Cell>
+<Cell ss:StyleID="boldTxt"><Data ss:Type="String">Datum doorgeboekt</Data></Cell>
+<Cell ss:StyleID="boldTxt"><Data ss:Type="String">Boeking type</Data></Cell>
+<Cell ss:StyleID="boldTxt"><Data ss:Type="String">GB- datum</Data></Cell>
+<Cell ss:StyleID="boldTxt"><Data ss:Type="String">Factuur- datum</Data></Cell>
+<Cell ss:StyleID="boldTxt"><Data ss:Type="String">Scan datum</Data></Cell>
+<Cell ss:StyleID="boldTxt"><Data ss:Type="String">Verval datum</Data></Cell>
+<Cell ss:StyleID="boldTxt"><Data ss:Type="String">BTW datum</Data></Cell>
+<Cell ss:StyleID="boldTxt"><Data ss:Type="String">Vervaldt. korting</Data></Cell>
+<Cell ss:StyleID="boldTxt"><Data ss:Type="String">Inkooporder</Data></Cell>
+<Cell ss:StyleID="boldTxt"><Data ss:Type="String">Beschrijving</Data></Cell>
+<Cell ss:StyleID="boldTxt"><Data ss:Type="String">Beschrijving 2</Data></Cell>
+<Cell ss:StyleID="boldTxt"><Data ss:Type="String">Beschrijving 3</Data></Cell>
+<Cell ss:StyleID="boldTxt"><Data ss:Type="String">Referentie Type</Data></Cell>
+<Cell ss:StyleID="boldTxt"><Data ss:Type="String">Factuur- nummer</Data></Cell>
+<Cell ss:StyleID="boldTxt"><Data ss:Type="String">Stop code</Data></Cell>
+<Cell ss:StyleID="boldTxt"><Data ss:Type="String">Contract nummer</Data></Cell>
+<Cell ss:StyleID="boldTxt"><Data ss:Type="String">Bruto bedrag</Data></Cell>
+<Cell ss:StyleID="boldTxt"><Data ss:Type="String">Crediteur nummer</Data></Cell>
+<Cell ss:StyleID="boldTxt"><Data ss:Type="String">Crediteur naam</Data></Cell>
+<Cell ss:StyleID="boldTxt"><Data ss:Type="String">Begunstigde</Data></Cell>
+<Cell ss:StyleID="boldTxt"><Data ss:Type="String">Begunstigde naam</Data></Cell>
+<Cell ss:StyleID="boldTxt"><Data ss:Type="String">Vrw. code</Data></Cell>
+<Cell ss:StyleID="boldTxt"><Data ss:Type="String">Bet vrw</Data></Cell>
+<Cell ss:StyleID="boldTxt"><Data ss:Type="String">Bet.- wijze</Data></Cell>
+<Cell ss:StyleID="boldTxt"><Data ss:Type="String">Bet.- stat.</Data></Cell>
+<Cell ss:StyleID="boldTxt"><Data ss:Type="String">Gebr.- ID</Data></Cell>
+<Cell ss:StyleID="boldTxt"><Data ss:Type="String">Bijgew. om</Data></Cell>
+<Cell ss:StyleID="boldTxt"><Data ss:Type="String">Bijgew. op</Data></Cell>
+<Cell ss:StyleID="boldTxt"><Data ss:Type="String">Werkst.- ID</Data></Cell>
+<Cell ss:StyleID="boldTxt"><Data ss:Type="String">Progr.- ID</Data></Cell>
+<Cell ss:StyleID="boldTxt"><Data ss:Type="String">Ingelezen Bankrekening</Data></Cell>
+<Cell ss:StyleID="boldTxt"><Data ss:Type="String">I/O rekening match status</Data></Cell>
+<Cell ss:StyleID="boldTxt"><Data ss:Type="String">I/O rekening match status</Data></Cell>
+<Cell ss:StyleID="boldTxt"><Data ss:Type="String">Status factuur</Data></Cell>
+<Cell ss:StyleID="boldTxt"><Data ss:Type="String">BTW bedrag</Data></Cell>
+<Cell ss:StyleID="boldTxt"><Data ss:Type="String">Inkooporder automatch</Data></Cell>
+<Cell ss:StyleID="boldTxt"><Data ss:Type="String">IBAN</Data></Cell>
+<Cell ss:StyleID="boldTxt"><Data ss:Type="String">Actiehouder</Data></Cell>
+</Row>
+<Row>
+<Cell ss:Index="1"><Data ss:Type="Number">1652798</Data></Cell>
+<Cell ss:Index="2"><Data ss:Type="String">PX</Data></Cell>
+<Cell ss:Index="3"><Data ss:Type="String">270</Data></Cell>
+<Cell ss:Index="4"><Data ss:Type="String">    75722331</Data></Cell>
+<Cell ss:Index="5"><Data ss:Type="String">1031</Data></Cell>
+<Cell ss:Index="6"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="7"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="8"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="9"><Data ss:Type="String">X</Data></Cell>
+<Cell ss:Index="13"><Data ss:Type="String">IO</Data></Cell>
+<Cell ss:Index="14"><Data ss:Type="DateTime">2022-01-03</Data></Cell>
+<Cell ss:Index="15"><Data ss:Type="DateTime">2021-12-22</Data></Cell>
+<Cell ss:Index="16"><Data ss:Type="DateTime">2022-01-03</Data></Cell>
+<Cell ss:Index="17"><Data ss:Type="DateTime">2022-01-21</Data></Cell>
+<Cell ss:Index="18"><Data ss:Type="DateTime">2021-12-22</Data></Cell>
+<Cell ss:Index="20"><Data ss:Type="String">328865</Data></Cell>
+<Cell ss:Index="21"><Data ss:Type="String">Sijben, Isha</Data></Cell>
+<Cell ss:Index="22"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="23"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="24"><Data ss:Type="String">K</Data></Cell>
+<Cell ss:Index="25"><Data ss:Type="String">110-V00006395</Data></Cell>
+<Cell ss:Index="26"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="27"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="28"><Data ss:Type="Number">2718.23</Data></Cell>
+<Cell ss:Index="29"><Data ss:Type="Number">379208</Data></Cell>
+<Cell ss:Index="30"><Data ss:Type="String">Highcare</Data></Cell>
+<Cell ss:Index="31"><Data ss:Type="Number">379208</Data></Cell>
+<Cell ss:Index="32"><Data ss:Type="String">Highcare</Data></Cell>
+<Cell ss:Index="33"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="34"><Data ss:Type="String">30</Data></Cell>
+<Cell ss:Index="35"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="36"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="37"><Data ss:Type="String">SLEEPER</Data></Cell>
+<Cell ss:Index="38"><Data ss:Type="Number">71702</Data></Cell>
+<Cell ss:Index="39"><Data ss:Type="DateTime">2022-01-04</Data></Cell>
+<Cell ss:Index="40"><Data ss:Type="String">SU444P033</Data></Cell>
+<Cell ss:Index="41"><Data ss:Type="String">NHLFV005G</Data></Cell>
+<Cell ss:Index="42"><Data ss:Type="String">NL52RABO0114018642</Data></Cell>
+<Cell ss:Index="43"><Data ss:Type="String">POF</Data></Cell>
+<Cell ss:Index="44"><Data ss:Type="String">Inkooporder Gecodeerd</Data></Cell>
+<Cell ss:Index="45"><Data ss:Type="String">Boeking-Compleet-P</Data></Cell>
+<Cell ss:Index="46"><Data ss:Type="Number">471.76</Data></Cell>
+<Cell ss:Index="47"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="48"><Data ss:Type="String">NL52RABO0114018642</Data></Cell>
+<Cell ss:Index="49"><Data ss:Type="String">GGD ESIZE Prestatieverkl.</Data></Cell>
+</Row>
+<Row>
+<Cell ss:Index="1"><Data ss:Type="Number">1652827</Data></Cell>
+<Cell ss:Index="2"><Data ss:Type="String">PX</Data></Cell>
+<Cell ss:Index="3"><Data ss:Type="String">270</Data></Cell>
+<Cell ss:Index="4"><Data ss:Type="String">     5570039</Data></Cell>
+<Cell ss:Index="5"><Data ss:Type="String">1031</Data></Cell>
+<Cell ss:Index="6"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="7"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="8"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="9"><Data ss:Type="String">X</Data></Cell>
+<Cell ss:Index="13"><Data ss:Type="String">IO</Data></Cell>
+<Cell ss:Index="14"><Data ss:Type="DateTime">2022-01-03</Data></Cell>
+<Cell ss:Index="15"><Data ss:Type="DateTime">2021-12-22</Data></Cell>
+<Cell ss:Index="16"><Data ss:Type="DateTime">2022-01-03</Data></Cell>
+<Cell ss:Index="17"><Data ss:Type="DateTime">2022-01-21</Data></Cell>
+<Cell ss:Index="18"><Data ss:Type="DateTime">2021-12-22</Data></Cell>
+<Cell ss:Index="20"><Data ss:Type="String">331479</Data></Cell>
+<Cell ss:Index="21"><Data ss:Type="String">Chahboun, Safouane</Data></Cell>
+<Cell ss:Index="22"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="23"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="24"><Data ss:Type="String">K</Data></Cell>
+<Cell ss:Index="25"><Data ss:Type="String">110-V00006385</Data></Cell>
+<Cell ss:Index="26"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="27"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="28"><Data ss:Type="Number">2211.69</Data></Cell>
+<Cell ss:Index="29"><Data ss:Type="Number">379208</Data></Cell>
+<Cell ss:Index="30"><Data ss:Type="String">Highcare</Data></Cell>
+<Cell ss:Index="31"><Data ss:Type="Number">379208</Data></Cell>
+<Cell ss:Index="32"><Data ss:Type="String">Highcare</Data></Cell>
+<Cell ss:Index="33"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="34"><Data ss:Type="String">30</Data></Cell>
+<Cell ss:Index="35"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="36"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="37"><Data ss:Type="String">SLEEPER</Data></Cell>
+<Cell ss:Index="38"><Data ss:Type="Number">71828</Data></Cell>
+<Cell ss:Index="39"><Data ss:Type="DateTime">2022-01-04</Data></Cell>
+<Cell ss:Index="40"><Data ss:Type="String">SU444P033</Data></Cell>
+<Cell ss:Index="41"><Data ss:Type="String">NHLFV005G</Data></Cell>
+<Cell ss:Index="42"><Data ss:Type="String">NL52RABO0114018642</Data></Cell>
+<Cell ss:Index="43"><Data ss:Type="String">POF</Data></Cell>
+<Cell ss:Index="44"><Data ss:Type="String">Inkooporder Gecodeerd</Data></Cell>
+<Cell ss:Index="45"><Data ss:Type="String">Boeking-Compleet-P</Data></Cell>
+<Cell ss:Index="46"><Data ss:Type="Number">383.85</Data></Cell>
+<Cell ss:Index="47"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="48"><Data ss:Type="String">NL52RABO0114018642</Data></Cell>
+<Cell ss:Index="49"><Data ss:Type="String">GGD ESIZE Prestatieverkl.</Data></Cell>
+</Row>
+<Row>
+<Cell ss:Index="1"><Data ss:Type="Number">1652891</Data></Cell>
+<Cell ss:Index="2"><Data ss:Type="String">PV</Data></Cell>
+<Cell ss:Index="3"><Data ss:Type="String">270</Data></Cell>
+<Cell ss:Index="4"><Data ss:Type="String">     5360006</Data></Cell>
+<Cell ss:Index="5"><Data ss:Type="String">1032</Data></Cell>
+<Cell ss:Index="6"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="7"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="8"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="9"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="13"><Data ss:Type="String">GB</Data></Cell>
+<Cell ss:Index="14"><Data ss:Type="DateTime">2022-01-03</Data></Cell>
+<Cell ss:Index="15"><Data ss:Type="DateTime">2021-12-30</Data></Cell>
+<Cell ss:Index="16"><Data ss:Type="DateTime">2022-01-03</Data></Cell>
+<Cell ss:Index="17"><Data ss:Type="DateTime">2022-01-29</Data></Cell>
+<Cell ss:Index="18"><Data ss:Type="DateTime">2021-12-30</Data></Cell>
+<Cell ss:Index="19"><Data ss:Type="DateTime">2022-01-29</Data></Cell>
+<Cell ss:Index="20"><Data ss:Type="String">204584</Data></Cell>
+<Cell ss:Index="21"><Data ss:Type="String">Intake gesprek Div. personen</Data></Cell>
+<Cell ss:Index="22"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="23"><Data ss:Type="String">S.Revales T1</Data></Cell>
+<Cell ss:Index="24"><Data ss:Type="String">K</Data></Cell>
+<Cell ss:Index="25"><Data ss:Type="String">4170310007627</Data></Cell>
+<Cell ss:Index="26"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="27"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="28"><Data ss:Type="Number">1500.00</Data></Cell>
+<Cell ss:Index="29"><Data ss:Type="Number">373561</Data></Cell>
+<Cell ss:Index="30"><Data ss:Type="String">Capgemini Educational</Data></Cell>
+<Cell ss:Index="31"><Data ss:Type="Number">373561</Data></Cell>
+<Cell ss:Index="32"><Data ss:Type="String">Capgemini Educational</Data></Cell>
+<Cell ss:Index="33"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="34"><Data ss:Type="String">30</Data></Cell>
+<Cell ss:Index="35"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="36"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="37"><Data ss:Type="String">RANDAM001</Data></Cell>
+<Cell ss:Index="38"><Data ss:Type="Number">91821</Data></Cell>
+<Cell ss:Index="39"><Data ss:Type="DateTime">2022-01-07</Data></Cell>
+<Cell ss:Index="40"><Data ss:Type="String">su444p052</Data></Cell>
+<Cell ss:Index="41"><Data ss:Type="String">PHLFV002</Data></Cell>
+<Cell ss:Index="42"><Data ss:Type="String">NL57INGB0007131598</Data></Cell>
+<Cell ss:Index="43"><Data ss:Type="String">ACF</Data></Cell>
+<Cell ss:Index="44"><Data ss:Type="String">Grootboekrekening Gecodeerd</Data></Cell>
+<Cell ss:Index="45"><Data ss:Type="String">Boeking-Compleet-P</Data></Cell>
+<Cell ss:Index="47"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="48"><Data ss:Type="String">NL57INGB0007131598</Data></Cell>
+<Cell ss:Index="49"><Data ss:Type="String">Tas G.</Data></Cell>
+</Row>
+<Row>
+<Cell ss:Index="1"><Data ss:Type="Number">1653072</Data></Cell>
+<Cell ss:Index="2"><Data ss:Type="String">PX</Data></Cell>
+<Cell ss:Index="3"><Data ss:Type="String">270</Data></Cell>
+<Cell ss:Index="4"><Data ss:Type="String">75532615</Data></Cell>
+<Cell ss:Index="5"><Data ss:Type="String">1031</Data></Cell>
+<Cell ss:Index="6"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="7"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="8"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="9"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="13"><Data ss:Type="String">GB</Data></Cell>
+<Cell ss:Index="14"><Data ss:Type="DateTime">2022-01-03</Data></Cell>
+<Cell ss:Index="15"><Data ss:Type="DateTime">2022-01-01</Data></Cell>
+<Cell ss:Index="16"><Data ss:Type="DateTime">2022-01-03</Data></Cell>
+<Cell ss:Index="17"><Data ss:Type="DateTime">2022-01-31</Data></Cell>
+<Cell ss:Index="18"><Data ss:Type="DateTime">2022-01-01</Data></Cell>
+<Cell ss:Index="19"><Data ss:Type="DateTime">2022-01-31</Data></Cell>
+<Cell ss:Index="20"><Data ss:Type="String">238077</Data></Cell>
+<Cell ss:Index="21"><Data ss:Type="String">Klantnummer	: 03993 Klant		: JGZ OKC Binnenhof (AES-112) Adres en plaats	: Arent</Data></Cell>
+<Cell ss:Index="22"><Data ss:Type="String"> Janszoon Ernststraat 112 1082 LP  Amsterdam Periode		: 01-01-2022 t/m 31-12-202</Data></Cell>
+<Cell ss:Index="23"><Data ss:Type="String">2</Data></Cell>
+<Cell ss:Index="24"><Data ss:Type="String">K</Data></Cell>
+<Cell ss:Index="25"><Data ss:Type="String">VK2200380</Data></Cell>
+<Cell ss:Index="26"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="27"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="28"><Data ss:Type="Number">278.18</Data></Cell>
+<Cell ss:Index="29"><Data ss:Type="Number">34275</Data></Cell>
+<Cell ss:Index="30"><Data ss:Type="String">Intersafe House BV</Data></Cell>
+<Cell ss:Index="31"><Data ss:Type="Number">34275</Data></Cell>
+<Cell ss:Index="32"><Data ss:Type="String">Intersafe House BV</Data></Cell>
+<Cell ss:Index="33"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="34"><Data ss:Type="String">30</Data></Cell>
+<Cell ss:Index="35"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="36"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="37"><Data ss:Type="String">RANDAM001</Data></Cell>
+<Cell ss:Index="38"><Data ss:Type="Number">140534</Data></Cell>
+<Cell ss:Index="39"><Data ss:Type="DateTime">2022-05-30</Data></Cell>
+<Cell ss:Index="40"><Data ss:Type="String">su444p066</Data></Cell>
+<Cell ss:Index="41"><Data ss:Type="String">PHLFV002</Data></Cell>
+<Cell ss:Index="42"><Data ss:Type="String">NL61INGB0438104854</Data></Cell>
+<Cell ss:Index="43"><Data ss:Type="String">ACF</Data></Cell>
+<Cell ss:Index="44"><Data ss:Type="String">Grootboekrekening Gecodeerd</Data></Cell>
+<Cell ss:Index="45"><Data ss:Type="String">Boeking-Compleet-P</Data></Cell>
+<Cell ss:Index="46"><Data ss:Type="Number">48.28</Data></Cell>
+<Cell ss:Index="47"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="48"><Data ss:Type="String">NL45INGB0003613818</Data></Cell>
+<Cell ss:Index="49"><Data ss:Type="String">Visser M.</Data></Cell>
+</Row>
+<Row>
+<Cell ss:Index="1"><Data ss:Type="Number">1653144</Data></Cell>
+<Cell ss:Index="2"><Data ss:Type="String">PX</Data></Cell>
+<Cell ss:Index="3"><Data ss:Type="String">270</Data></Cell>
+<Cell ss:Index="4"><Data ss:Type="String">    75532615</Data></Cell>
+<Cell ss:Index="5"><Data ss:Type="String">1031</Data></Cell>
+<Cell ss:Index="6"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="7"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="8"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="9"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="13"><Data ss:Type="String">GB</Data></Cell>
+<Cell ss:Index="14"><Data ss:Type="DateTime">2022-01-03</Data></Cell>
+<Cell ss:Index="15"><Data ss:Type="DateTime">2022-01-01</Data></Cell>
+<Cell ss:Index="16"><Data ss:Type="DateTime">2022-01-03</Data></Cell>
+<Cell ss:Index="17"><Data ss:Type="DateTime">2022-01-31</Data></Cell>
+<Cell ss:Index="18"><Data ss:Type="DateTime">2022-01-01</Data></Cell>
+<Cell ss:Index="19"><Data ss:Type="DateTime">2022-01-31</Data></Cell>
+<Cell ss:Index="20"><Data ss:Type="String">238077</Data></Cell>
+<Cell ss:Index="21"><Data ss:Type="String">Klantnummer	: 04608 Klant		: JGZ GGD Kramatplantsoen (KMP101D) Adres en plaats	:</Data></Cell>
+<Cell ss:Index="22"><Data ss:Type="String"> Kramatplantsoen 101 D 1095 LB  Amsterdam Periode		: 01-01-2022 t/m 31-12-2022</Data></Cell>
+<Cell ss:Index="23"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="24"><Data ss:Type="String">K</Data></Cell>
+<Cell ss:Index="25"><Data ss:Type="String">VK2200245</Data></Cell>
+<Cell ss:Index="26"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="27"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="28"><Data ss:Type="Number">73.17</Data></Cell>
+<Cell ss:Index="29"><Data ss:Type="Number">34275</Data></Cell>
+<Cell ss:Index="30"><Data ss:Type="String">Intersafe House BV</Data></Cell>
+<Cell ss:Index="31"><Data ss:Type="Number">34275</Data></Cell>
+<Cell ss:Index="32"><Data ss:Type="String">Intersafe House BV</Data></Cell>
+<Cell ss:Index="33"><Data ss:Type="String">X01</Data></Cell>
+<Cell ss:Index="34"><Data ss:Type="String">30</Data></Cell>
+<Cell ss:Index="35"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="36"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="37"><Data ss:Type="String">NEERVO006</Data></Cell>
+<Cell ss:Index="38"><Data ss:Type="Number">112314</Data></Cell>
+<Cell ss:Index="39"><Data ss:Type="DateTime">2022-02-10</Data></Cell>
+<Cell ss:Index="40"><Data ss:Type="String">su444p052</Data></Cell>
+<Cell ss:Index="41"><Data ss:Type="String">PHLFV002</Data></Cell>
+<Cell ss:Index="42"><Data ss:Type="String">NL61INGB0438104854</Data></Cell>
+<Cell ss:Index="43"><Data ss:Type="String">ACF</Data></Cell>
+<Cell ss:Index="44"><Data ss:Type="String">Grootboekrekening Gecodeerd</Data></Cell>
+<Cell ss:Index="45"><Data ss:Type="String">Boeking-Compleet-P</Data></Cell>
+<Cell ss:Index="46"><Data ss:Type="Number">12.70</Data></Cell>
+<Cell ss:Index="47"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="48"><Data ss:Type="String">NL61INGB0438104854</Data></Cell>
+<Cell ss:Index="49"><Data ss:Type="String">Visser M.</Data></Cell>
+</Row>
+<Row>
+<Cell ss:Index="1"><Data ss:Type="Number">1653186</Data></Cell>
+<Cell ss:Index="2"><Data ss:Type="String">PX</Data></Cell>
+<Cell ss:Index="3"><Data ss:Type="String">270</Data></Cell>
+<Cell ss:Index="4"><Data ss:Type="String">    75532615</Data></Cell>
+<Cell ss:Index="5"><Data ss:Type="String">1031</Data></Cell>
+<Cell ss:Index="6"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="7"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="8"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="9"><Data ss:Type="String">X</Data></Cell>
+<Cell ss:Index="13"><Data ss:Type="String">IO</Data></Cell>
+<Cell ss:Index="14"><Data ss:Type="DateTime">2022-01-03</Data></Cell>
+<Cell ss:Index="15"><Data ss:Type="DateTime">2022-01-01</Data></Cell>
+<Cell ss:Index="16"><Data ss:Type="DateTime">2022-01-03</Data></Cell>
+<Cell ss:Index="17"><Data ss:Type="DateTime">2022-01-31</Data></Cell>
+<Cell ss:Index="18"><Data ss:Type="DateTime">2022-01-01</Data></Cell>
+<Cell ss:Index="19"><Data ss:Type="DateTime">2022-01-31</Data></Cell>
+<Cell ss:Index="20"><Data ss:Type="String">233880</Data></Cell>
+<Cell ss:Index="21"><Data ss:Type="String">Klantnummer	: 04905 Klant		: JGZ OKC J. vd Heijden  (TJH75) Adres en plaats	: Tw</Data></Cell>
+<Cell ss:Index="22"><Data ss:Type="String">eede Jan van der Heijdenstraat 75 1074 XR  Amsterdam Periode		: 01-01-2022 t/m 3</Data></Cell>
+<Cell ss:Index="23"><Data ss:Type="String">1-12-2022</Data></Cell>
+<Cell ss:Index="24"><Data ss:Type="String">K</Data></Cell>
+<Cell ss:Index="25"><Data ss:Type="String">VK2200184</Data></Cell>
+<Cell ss:Index="26"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="27"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="28"><Data ss:Type="Number">278.18</Data></Cell>
+<Cell ss:Index="29"><Data ss:Type="Number">34275</Data></Cell>
+<Cell ss:Index="30"><Data ss:Type="String">Intersafe House BV</Data></Cell>
+<Cell ss:Index="31"><Data ss:Type="Number">34275</Data></Cell>
+<Cell ss:Index="32"><Data ss:Type="String">Intersafe House BV</Data></Cell>
+<Cell ss:Index="33"><Data ss:Type="String">X01</Data></Cell>
+<Cell ss:Index="34"><Data ss:Type="String">30</Data></Cell>
+<Cell ss:Index="35"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="36"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="37"><Data ss:Type="String">AVELOO003</Data></Cell>
+<Cell ss:Index="38"><Data ss:Type="Number">105640</Data></Cell>
+<Cell ss:Index="39"><Data ss:Type="DateTime">2022-06-13</Data></Cell>
+<Cell ss:Index="40"><Data ss:Type="String">su444p052</Data></Cell>
+<Cell ss:Index="41"><Data ss:Type="String">PHLFV002</Data></Cell>
+<Cell ss:Index="42"><Data ss:Type="String">NL61INGB0438104854</Data></Cell>
+<Cell ss:Index="43"><Data ss:Type="String">POF</Data></Cell>
+<Cell ss:Index="44"><Data ss:Type="String">Inkooporder Gecodeerd</Data></Cell>
+<Cell ss:Index="45"><Data ss:Type="String">Boeking-Compleet-P</Data></Cell>
+<Cell ss:Index="46"><Data ss:Type="Number">48.28</Data></Cell>
+<Cell ss:Index="47"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="48"><Data ss:Type="String">NL61INGB0438104854</Data></Cell>
+<Cell ss:Index="49"><Data ss:Type="String">Bork R. van</Data></Cell>
+</Row>
+<Row>
+<Cell ss:Index="1"><Data ss:Type="Number">1655453</Data></Cell>
+<Cell ss:Index="2"><Data ss:Type="String">PX</Data></Cell>
+<Cell ss:Index="3"><Data ss:Type="String">270</Data></Cell>
+<Cell ss:Index="4"><Data ss:Type="String">     5570046</Data></Cell>
+<Cell ss:Index="5"><Data ss:Type="String">1029</Data></Cell>
+<Cell ss:Index="6"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="7"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="8"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="9"><Data ss:Type="String">X</Data></Cell>
+<Cell ss:Index="13"><Data ss:Type="String">IO</Data></Cell>
+<Cell ss:Index="14"><Data ss:Type="DateTime">2022-01-05</Data></Cell>
+<Cell ss:Index="15"><Data ss:Type="DateTime">2022-01-05</Data></Cell>
+<Cell ss:Index="16"><Data ss:Type="DateTime">2022-01-05</Data></Cell>
+<Cell ss:Index="17"><Data ss:Type="DateTime">2022-02-04</Data></Cell>
+<Cell ss:Index="18"><Data ss:Type="DateTime">2022-01-05</Data></Cell>
+<Cell ss:Index="20"><Data ss:Type="String">339647</Data></Cell>
+<Cell ss:Index="21"><Data ss:Type="String">Marco Pennings week 52 t/m 52 Wij verzoeken u het factuurbedrag over te maken op</Data></Cell>
+<Cell ss:Index="22"><Data ss:Type="String"> NL89INGB0006662512 ten name van Manpower B.V., onder vermelding van het factuur</Data></Cell>
+<Cell ss:Index="23"><Data ss:Type="String">nummer.   is geregistreerd bij de KvK onder nr. 33138744 en BTW nr. NL003156126B</Data></Cell>
+<Cell ss:Index="24"><Data ss:Type="String">K</Data></Cell>
+<Cell ss:Index="25"><Data ss:Type="String">1717709</Data></Cell>
+<Cell ss:Index="26"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="27"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="28"><Data ss:Type="Number">229.26</Data></Cell>
+<Cell ss:Index="29"><Data ss:Type="Number">37335</Data></Cell>
+<Cell ss:Index="30"><Data ss:Type="String">Manpower BV</Data></Cell>
+<Cell ss:Index="31"><Data ss:Type="Number">37335</Data></Cell>
+<Cell ss:Index="32"><Data ss:Type="String">Manpower BV</Data></Cell>
+<Cell ss:Index="33"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="34"><Data ss:Type="String">30</Data></Cell>
+<Cell ss:Index="35"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="36"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="37"><Data ss:Type="String">ROS012</Data></Cell>
+<Cell ss:Index="38"><Data ss:Type="Number">63106</Data></Cell>
+<Cell ss:Index="39"><Data ss:Type="DateTime">2022-01-21</Data></Cell>
+<Cell ss:Index="40"><Data ss:Type="String">su444p052</Data></Cell>
+<Cell ss:Index="41"><Data ss:Type="String">PHLFV002</Data></Cell>
+<Cell ss:Index="42"><Data ss:Type="String">NL89INGB0006662512</Data></Cell>
+<Cell ss:Index="43"><Data ss:Type="String">POF</Data></Cell>
+<Cell ss:Index="44"><Data ss:Type="String">Inkooporder Gecodeerd</Data></Cell>
+<Cell ss:Index="45"><Data ss:Type="String">Boeking-Compleet-P</Data></Cell>
+<Cell ss:Index="46"><Data ss:Type="Number">39.79</Data></Cell>
+<Cell ss:Index="47"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="48"><Data ss:Type="String">NL89INGB0006662512</Data></Cell>
+<Cell ss:Index="49"><Data ss:Type="String">GGD ESIZE Prestatieverkl.</Data></Cell>
+</Row>
+<Row>
+<Cell ss:Index="1"><Data ss:Type="Number">1655851</Data></Cell>
+<Cell ss:Index="2"><Data ss:Type="String">PV</Data></Cell>
+<Cell ss:Index="3"><Data ss:Type="String">270</Data></Cell>
+<Cell ss:Index="4"><Data ss:Type="String">    85621806</Data></Cell>
+<Cell ss:Index="5"><Data ss:Type="String">1030</Data></Cell>
+<Cell ss:Index="6"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="7"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="8"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="9"><Data ss:Type="String">X</Data></Cell>
+<Cell ss:Index="13"><Data ss:Type="String">IO</Data></Cell>
+<Cell ss:Index="14"><Data ss:Type="DateTime">2022-01-05</Data></Cell>
+<Cell ss:Index="15"><Data ss:Type="DateTime">2022-01-03</Data></Cell>
+<Cell ss:Index="16"><Data ss:Type="DateTime">2022-01-05</Data></Cell>
+<Cell ss:Index="17"><Data ss:Type="DateTime">2022-02-02</Data></Cell>
+<Cell ss:Index="18"><Data ss:Type="DateTime">2022-01-03</Data></Cell>
+<Cell ss:Index="20"><Data ss:Type="String">235540</Data></Cell>
+<Cell ss:Index="21"><Data ss:Type="String">Spp Loopveld veld 10</Data></Cell>
+<Cell ss:Index="22"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="23"><Data ss:Type="String">S. Badal T3</Data></Cell>
+<Cell ss:Index="24"><Data ss:Type="String">K</Data></Cell>
+<Cell ss:Index="25"><Data ss:Type="String">MM22003</Data></Cell>
+<Cell ss:Index="26"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="27"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="28"><Data ss:Type="Number">13437.05</Data></Cell>
+<Cell ss:Index="29"><Data ss:Type="Number">30201</Data></Cell>
+<Cell ss:Index="30"><Data ss:Type="String">VCS Multimedia BV</Data></Cell>
+<Cell ss:Index="31"><Data ss:Type="Number">30201</Data></Cell>
+<Cell ss:Index="32"><Data ss:Type="String">VCS Multimedia BV</Data></Cell>
+<Cell ss:Index="33"><Data ss:Type="String">X01</Data></Cell>
+<Cell ss:Index="34"><Data ss:Type="String">30</Data></Cell>
+<Cell ss:Index="35"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="36"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="37"><Data ss:Type="String">TOELSI001</Data></Cell>
+<Cell ss:Index="38"><Data ss:Type="Number">81842</Data></Cell>
+<Cell ss:Index="39"><Data ss:Type="DateTime">2022-01-11</Data></Cell>
+<Cell ss:Index="40"><Data ss:Type="String">su444p052</Data></Cell>
+<Cell ss:Index="41"><Data ss:Type="String">PHLFV002</Data></Cell>
+<Cell ss:Index="42"><Data ss:Type="String">NL72INGB0650466950</Data></Cell>
+<Cell ss:Index="43"><Data ss:Type="String">POF</Data></Cell>
+<Cell ss:Index="44"><Data ss:Type="String">Inkooporder Gecodeerd</Data></Cell>
+<Cell ss:Index="45"><Data ss:Type="String">Boeking-Compleet-P</Data></Cell>
+<Cell ss:Index="46"><Data ss:Type="Number">2332.05</Data></Cell>
+<Cell ss:Index="47"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="48"><Data ss:Type="String">NL72INGB0650466950</Data></Cell>
+<Cell ss:Index="49"><Data ss:Type="String">Soelen G. van</Data></Cell>
+</Row>
+<Row>
+<Cell ss:Index="1"><Data ss:Type="Number">1655853</Data></Cell>
+<Cell ss:Index="2"><Data ss:Type="String">PV</Data></Cell>
+<Cell ss:Index="3"><Data ss:Type="String">270</Data></Cell>
+<Cell ss:Index="4"><Data ss:Type="String">    85621808</Data></Cell>
+<Cell ss:Index="5"><Data ss:Type="String">1030</Data></Cell>
+<Cell ss:Index="6"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="7"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="8"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="9"><Data ss:Type="String">X</Data></Cell>
+<Cell ss:Index="13"><Data ss:Type="String">IO</Data></Cell>
+<Cell ss:Index="14"><Data ss:Type="DateTime">2022-01-05</Data></Cell>
+<Cell ss:Index="15"><Data ss:Type="DateTime">2022-01-03</Data></Cell>
+<Cell ss:Index="16"><Data ss:Type="DateTime">2022-01-05</Data></Cell>
+<Cell ss:Index="17"><Data ss:Type="DateTime">2022-02-02</Data></Cell>
+<Cell ss:Index="18"><Data ss:Type="DateTime">2022-01-03</Data></Cell>
+<Cell ss:Index="20"><Data ss:Type="String">235543</Data></Cell>
+<Cell ss:Index="21"><Data ss:Type="String">Projectn r.MM21 -0007-11450</Data></Cell>
+<Cell ss:Index="22"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="23"><Data ss:Type="String">G.Kerpens T1</Data></Cell>
+<Cell ss:Index="24"><Data ss:Type="String">K</Data></Cell>
+<Cell ss:Index="25"><Data ss:Type="String">MM22005</Data></Cell>
+<Cell ss:Index="26"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="27"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="28"><Data ss:Type="Number">13437.05</Data></Cell>
+<Cell ss:Index="29"><Data ss:Type="Number">30201</Data></Cell>
+<Cell ss:Index="30"><Data ss:Type="String">VCS Multimedia BV</Data></Cell>
+<Cell ss:Index="31"><Data ss:Type="Number">30201</Data></Cell>
+<Cell ss:Index="32"><Data ss:Type="String">VCS Multimedia BV</Data></Cell>
+<Cell ss:Index="33"><Data ss:Type="String">X01</Data></Cell>
+<Cell ss:Index="34"><Data ss:Type="String">30</Data></Cell>
+<Cell ss:Index="35"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="36"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="37"><Data ss:Type="String">LONT002</Data></Cell>
+<Cell ss:Index="38"><Data ss:Type="Number">85901</Data></Cell>
+<Cell ss:Index="39"><Data ss:Type="DateTime">2022-01-13</Data></Cell>
+<Cell ss:Index="40"><Data ss:Type="String">su444p066</Data></Cell>
+<Cell ss:Index="41"><Data ss:Type="String">PHLFV002</Data></Cell>
+<Cell ss:Index="42"><Data ss:Type="String">NL72INGB0650466950</Data></Cell>
+<Cell ss:Index="43"><Data ss:Type="String">POF</Data></Cell>
+<Cell ss:Index="44"><Data ss:Type="String">Inkooporder Gecodeerd</Data></Cell>
+<Cell ss:Index="45"><Data ss:Type="String">Boeking-Compleet-P</Data></Cell>
+<Cell ss:Index="46"><Data ss:Type="Number">2332.05</Data></Cell>
+<Cell ss:Index="47"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="48"><Data ss:Type="String">NL72INGB0650466950</Data></Cell>
+<Cell ss:Index="49"><Data ss:Type="String">Soelen G. van</Data></Cell>
+</Row>
+<Row>
+<Cell ss:Index="1"><Data ss:Type="Number">1655854</Data></Cell>
+<Cell ss:Index="2"><Data ss:Type="String">PV</Data></Cell>
+<Cell ss:Index="3"><Data ss:Type="String">270</Data></Cell>
+<Cell ss:Index="4"><Data ss:Type="String">    85621807</Data></Cell>
+<Cell ss:Index="5"><Data ss:Type="String">1030</Data></Cell>
+<Cell ss:Index="6"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="7"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="8"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="9"><Data ss:Type="String">X</Data></Cell>
+<Cell ss:Index="13"><Data ss:Type="String">IO</Data></Cell>
+<Cell ss:Index="14"><Data ss:Type="DateTime">2022-01-05</Data></Cell>
+<Cell ss:Index="15"><Data ss:Type="DateTime">2022-01-03</Data></Cell>
+<Cell ss:Index="16"><Data ss:Type="DateTime">2022-01-05</Data></Cell>
+<Cell ss:Index="17"><Data ss:Type="DateTime">2022-02-02</Data></Cell>
+<Cell ss:Index="18"><Data ss:Type="DateTime">2022-01-03</Data></Cell>
+<Cell ss:Index="20"><Data ss:Type="String">235542</Data></Cell>
+<Cell ss:Index="21"><Data ss:Type="String">r.MM21 -0007-11450</Data></Cell>
+<Cell ss:Index="22"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="23"><Data ss:Type="String">G.Kerpens T1</Data></Cell>
+<Cell ss:Index="24"><Data ss:Type="String">K</Data></Cell>
+<Cell ss:Index="25"><Data ss:Type="String">MM22006</Data></Cell>
+<Cell ss:Index="26"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="27"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="28"><Data ss:Type="Number">13437.05</Data></Cell>
+<Cell ss:Index="29"><Data ss:Type="Number">30201</Data></Cell>
+<Cell ss:Index="30"><Data ss:Type="String">VCS Multimedia BV</Data></Cell>
+<Cell ss:Index="31"><Data ss:Type="Number">30201</Data></Cell>
+<Cell ss:Index="32"><Data ss:Type="String">VCS Multimedia BV</Data></Cell>
+<Cell ss:Index="33"><Data ss:Type="String">X01</Data></Cell>
+<Cell ss:Index="34"><Data ss:Type="String">30</Data></Cell>
+<Cell ss:Index="35"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="36"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="37"><Data ss:Type="String">LONT002</Data></Cell>
+<Cell ss:Index="38"><Data ss:Type="Number">83851</Data></Cell>
+<Cell ss:Index="39"><Data ss:Type="DateTime">2022-01-13</Data></Cell>
+<Cell ss:Index="40"><Data ss:Type="String">su444p066</Data></Cell>
+<Cell ss:Index="41"><Data ss:Type="String">PHLFV002</Data></Cell>
+<Cell ss:Index="42"><Data ss:Type="String">NL72INGB0650466950</Data></Cell>
+<Cell ss:Index="43"><Data ss:Type="String">POF</Data></Cell>
+<Cell ss:Index="44"><Data ss:Type="String">Inkooporder Gecodeerd</Data></Cell>
+<Cell ss:Index="45"><Data ss:Type="String">Boeking-Compleet-P</Data></Cell>
+<Cell ss:Index="46"><Data ss:Type="Number">2332.05</Data></Cell>
+<Cell ss:Index="47"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="48"><Data ss:Type="String">NL72INGB0650466950</Data></Cell>
+<Cell ss:Index="49"><Data ss:Type="String">Soelen G. van</Data></Cell>
+</Row>
+<Row>
+<Cell ss:Index="1"><Data ss:Type="Number">1660176</Data></Cell>
+<Cell ss:Index="2"><Data ss:Type="String">PV</Data></Cell>
+<Cell ss:Index="3"><Data ss:Type="String">270</Data></Cell>
+<Cell ss:Index="4"><Data ss:Type="String">    77078404</Data></Cell>
+<Cell ss:Index="5"><Data ss:Type="String">1028</Data></Cell>
+<Cell ss:Index="6"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="7"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="8"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="9"><Data ss:Type="String">X</Data></Cell>
+<Cell ss:Index="13"><Data ss:Type="String">IO</Data></Cell>
+<Cell ss:Index="14"><Data ss:Type="DateTime">2022-01-07</Data></Cell>
+<Cell ss:Index="15"><Data ss:Type="DateTime">2022-01-07</Data></Cell>
+<Cell ss:Index="16"><Data ss:Type="DateTime">2022-01-07</Data></Cell>
+<Cell ss:Index="17"><Data ss:Type="DateTime">2022-02-06</Data></Cell>
+<Cell ss:Index="18"><Data ss:Type="DateTime">2022-01-07</Data></Cell>
+<Cell ss:Index="20"><Data ss:Type="String">179201</Data></Cell>
+<Cell ss:Index="21"><Data ss:Type="String">FPG Datacommuniicatie Rokin</Data></Cell>
+<Cell ss:Index="22"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="23"><Data ss:Type="String">S.Revales T1</Data></Cell>
+<Cell ss:Index="24"><Data ss:Type="String">K</Data></Cell>
+<Cell ss:Index="25"><Data ss:Type="String">V50/22000015</Data></Cell>
+<Cell ss:Index="26"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="27"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="28"><Data ss:Type="Number">2215.51</Data></Cell>
+<Cell ss:Index="29"><Data ss:Type="Number">139324</Data></Cell>
+<Cell ss:Index="30"><Data ss:Type="String">Vialis BV</Data></Cell>
+<Cell ss:Index="31"><Data ss:Type="Number">139324</Data></Cell>
+<Cell ss:Index="32"><Data ss:Type="String">Vialis BV</Data></Cell>
+<Cell ss:Index="33"><Data ss:Type="String">X01</Data></Cell>
+<Cell ss:Index="34"><Data ss:Type="String">30</Data></Cell>
+<Cell ss:Index="35"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="36"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="37"><Data ss:Type="String">SLEEPER</Data></Cell>
+<Cell ss:Index="38"><Data ss:Type="Number">114635</Data></Cell>
+<Cell ss:Index="39"><Data ss:Type="DateTime">2022-01-07</Data></Cell>
+<Cell ss:Index="40"><Data ss:Type="String">SU444P033</Data></Cell>
+<Cell ss:Index="41"><Data ss:Type="String">NHLFV005G</Data></Cell>
+<Cell ss:Index="42"><Data ss:Type="String">NL42ABNA0526576138</Data></Cell>
+<Cell ss:Index="43"><Data ss:Type="String">POF</Data></Cell>
+<Cell ss:Index="44"><Data ss:Type="String">Inkooporder Gecodeerd</Data></Cell>
+<Cell ss:Index="45"><Data ss:Type="String">Boeking-Compleet-P</Data></Cell>
+<Cell ss:Index="46"><Data ss:Type="Number">384.51</Data></Cell>
+<Cell ss:Index="47"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="48"><Data ss:Type="String">NL42ABNA0526576138</Data></Cell>
+<Cell ss:Index="49"><Data ss:Type="String">Silva R.G.</Data></Cell>
+</Row>
+<Row>
+<Cell ss:Index="1"><Data ss:Type="Number">1660863</Data></Cell>
+<Cell ss:Index="2"><Data ss:Type="String">PX</Data></Cell>
+<Cell ss:Index="3"><Data ss:Type="String">270</Data></Cell>
+<Cell ss:Index="4"><Data ss:Type="String">     5570046</Data></Cell>
+<Cell ss:Index="5"><Data ss:Type="String">1026</Data></Cell>
+<Cell ss:Index="6"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="7"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="8"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="9"><Data ss:Type="String">X</Data></Cell>
+<Cell ss:Index="13"><Data ss:Type="String">IO</Data></Cell>
+<Cell ss:Index="14"><Data ss:Type="DateTime">2022-01-08</Data></Cell>
+<Cell ss:Index="15"><Data ss:Type="DateTime">2022-01-08</Data></Cell>
+<Cell ss:Index="16"><Data ss:Type="DateTime">2022-01-08</Data></Cell>
+<Cell ss:Index="17"><Data ss:Type="DateTime">2022-02-07</Data></Cell>
+<Cell ss:Index="18"><Data ss:Type="DateTime">2022-01-08</Data></Cell>
+<Cell ss:Index="19"><Data ss:Type="DateTime">2022-02-07</Data></Cell>
+<Cell ss:Index="20"><Data ss:Type="String">332322</Data></Cell>
+<Cell ss:Index="21"><Data ss:Type="String">Tije Veldman-2021 week 51</Data></Cell>
+<Cell ss:Index="22"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="23"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="24"><Data ss:Type="String">K</Data></Cell>
+<Cell ss:Index="25"><Data ss:Type="String">21322705</Data></Cell>
+<Cell ss:Index="26"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="27"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="28"><Data ss:Type="Number">372.87</Data></Cell>
+<Cell ss:Index="29"><Data ss:Type="Number">271342</Data></Cell>
+<Cell ss:Index="30"><Data ss:Type="String">PDZ Uitzendbureau BV</Data></Cell>
+<Cell ss:Index="31"><Data ss:Type="Number">271342</Data></Cell>
+<Cell ss:Index="32"><Data ss:Type="String">PDZ Uitzendbureau BV</Data></Cell>
+<Cell ss:Index="33"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="34"><Data ss:Type="String">30</Data></Cell>
+<Cell ss:Index="35"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="36"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="37"><Data ss:Type="String">ROS012</Data></Cell>
+<Cell ss:Index="38"><Data ss:Type="Number">71909</Data></Cell>
+<Cell ss:Index="39"><Data ss:Type="DateTime">2022-01-21</Data></Cell>
+<Cell ss:Index="40"><Data ss:Type="String">su444p052</Data></Cell>
+<Cell ss:Index="41"><Data ss:Type="String">PHLFV002</Data></Cell>
+<Cell ss:Index="42"><Data ss:Type="String">NL13INGB0665338694</Data></Cell>
+<Cell ss:Index="43"><Data ss:Type="String">POF</Data></Cell>
+<Cell ss:Index="44"><Data ss:Type="String">Inkooporder Gecodeerd</Data></Cell>
+<Cell ss:Index="45"><Data ss:Type="String">Boeking-Compleet-P</Data></Cell>
+<Cell ss:Index="46"><Data ss:Type="Number">64.71</Data></Cell>
+<Cell ss:Index="47"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="48"><Data ss:Type="String">NL13INGB0665338694</Data></Cell>
+<Cell ss:Index="49"><Data ss:Type="String">GGD ESIZE Prestatieverkl.</Data></Cell>
+</Row>
+<Row>
+<Cell ss:Index="1"><Data ss:Type="Number">1660995</Data></Cell>
+<Cell ss:Index="2"><Data ss:Type="String">PX</Data></Cell>
+<Cell ss:Index="3"><Data ss:Type="String">270</Data></Cell>
+<Cell ss:Index="4"><Data ss:Type="String">     5570038</Data></Cell>
+<Cell ss:Index="5"><Data ss:Type="String">1025</Data></Cell>
+<Cell ss:Index="6"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="7"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="8"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="9"><Data ss:Type="String">X</Data></Cell>
+<Cell ss:Index="13"><Data ss:Type="String">IO</Data></Cell>
+<Cell ss:Index="14"><Data ss:Type="DateTime">2022-01-09</Data></Cell>
+<Cell ss:Index="15"><Data ss:Type="DateTime">2022-01-07</Data></Cell>
+<Cell ss:Index="16"><Data ss:Type="DateTime">2022-01-09</Data></Cell>
+<Cell ss:Index="17"><Data ss:Type="DateTime">2022-02-06</Data></Cell>
+<Cell ss:Index="18"><Data ss:Type="DateTime">2022-01-07</Data></Cell>
+<Cell ss:Index="19"><Data ss:Type="DateTime">2022-02-06</Data></Cell>
+<Cell ss:Index="20"><Data ss:Type="String">338561</Data></Cell>
+<Cell ss:Index="21"><Data ss:Type="String">Gilbert van Sprang; week 49; periode van 2021-12-06 t/m 2021-12-12</Data></Cell>
+<Cell ss:Index="22"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="23"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="24"><Data ss:Type="String">K</Data></Cell>
+<Cell ss:Index="25"><Data ss:Type="String">294V00477823</Data></Cell>
+<Cell ss:Index="26"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="27"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="28"><Data ss:Type="Number">6025.68</Data></Cell>
+<Cell ss:Index="29"><Data ss:Type="Number">496445</Data></Cell>
+<Cell ss:Index="30"><Data ss:Type="String">Unique Diensten BV</Data></Cell>
+<Cell ss:Index="31"><Data ss:Type="Number">496445</Data></Cell>
+<Cell ss:Index="32"><Data ss:Type="String">Unique Diensten BV</Data></Cell>
+<Cell ss:Index="33"><Data ss:Type="String">X01</Data></Cell>
+<Cell ss:Index="34"><Data ss:Type="String">30</Data></Cell>
+<Cell ss:Index="35"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="36"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="37"><Data ss:Type="String">DO001</Data></Cell>
+<Cell ss:Index="38"><Data ss:Type="Number">113239</Data></Cell>
+<Cell ss:Index="39"><Data ss:Type="DateTime">2022-03-09</Data></Cell>
+<Cell ss:Index="40"><Data ss:Type="String">su444p066</Data></Cell>
+<Cell ss:Index="41"><Data ss:Type="String">PHLFV002</Data></Cell>
+<Cell ss:Index="42"><Data ss:Type="String">NL13ABNA0578313162</Data></Cell>
+<Cell ss:Index="43"><Data ss:Type="String">POF</Data></Cell>
+<Cell ss:Index="44"><Data ss:Type="String">Inkooporder Gecodeerd</Data></Cell>
+<Cell ss:Index="45"><Data ss:Type="String">Boeking-Compleet-P</Data></Cell>
+<Cell ss:Index="46"><Data ss:Type="Number">1045.78</Data></Cell>
+<Cell ss:Index="47"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="48"><Data ss:Type="String">NL13ABNA0578313162</Data></Cell>
+<Cell ss:Index="49"><Data ss:Type="String">GGD ESIZE Prestatieverkl.</Data></Cell>
+</Row>
+<Row>
+<Cell ss:Index="1"><Data ss:Type="Number">1661777</Data></Cell>
+<Cell ss:Index="2"><Data ss:Type="String">PV</Data></Cell>
+<Cell ss:Index="3"><Data ss:Type="String">270</Data></Cell>
+<Cell ss:Index="4"><Data ss:Type="String">    77380301</Data></Cell>
+<Cell ss:Index="5"><Data ss:Type="String">1025</Data></Cell>
+<Cell ss:Index="6"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="7"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="8"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="9"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="13"><Data ss:Type="String">MIX</Data></Cell>
+<Cell ss:Index="14"><Data ss:Type="DateTime">2022-01-10</Data></Cell>
+<Cell ss:Index="15"><Data ss:Type="DateTime">2021-12-31</Data></Cell>
+<Cell ss:Index="16"><Data ss:Type="DateTime">2022-01-10</Data></Cell>
+<Cell ss:Index="17"><Data ss:Type="DateTime">2022-01-30</Data></Cell>
+<Cell ss:Index="18"><Data ss:Type="DateTime">2021-12-31</Data></Cell>
+<Cell ss:Index="20"><Data ss:Type="String">201496</Data></Cell>
+<Cell ss:Index="21"><Data ss:Type="String">Service en Ondersteuning</Data></Cell>
+<Cell ss:Index="22"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="23"><Data ss:Type="String">a.hasselbaink T3</Data></Cell>
+<Cell ss:Index="24"><Data ss:Type="String">K</Data></Cell>
+<Cell ss:Index="25"><Data ss:Type="String">202100534</Data></Cell>
+<Cell ss:Index="26"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="27"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="28"><Data ss:Type="Number">32072.00</Data></Cell>
+<Cell ss:Index="29"><Data ss:Type="Number">238633</Data></Cell>
+<Cell ss:Index="30"><Data ss:Type="String">Gemeente Velsen</Data></Cell>
+<Cell ss:Index="31"><Data ss:Type="Number">238633</Data></Cell>
+<Cell ss:Index="32"><Data ss:Type="String">Gemeente Velsen</Data></Cell>
+<Cell ss:Index="33"><Data ss:Type="String">X01</Data></Cell>
+<Cell ss:Index="34"><Data ss:Type="String">30</Data></Cell>
+<Cell ss:Index="35"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="36"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="37"><Data ss:Type="String">VALPOO001</Data></Cell>
+<Cell ss:Index="38"><Data ss:Type="Number">122221</Data></Cell>
+<Cell ss:Index="39"><Data ss:Type="DateTime">2022-01-11</Data></Cell>
+<Cell ss:Index="40"><Data ss:Type="String">su444p066</Data></Cell>
+<Cell ss:Index="41"><Data ss:Type="String">PHLFV002</Data></Cell>
+<Cell ss:Index="42"><Data ss:Type="String">NL82INGB0000181486</Data></Cell>
+<Cell ss:Index="43"><Data ss:Type="String">MXF</Data></Cell>
+<Cell ss:Index="44"><Data ss:Type="String">Mix IO en GB Gecodeerd</Data></Cell>
+<Cell ss:Index="45"><Data ss:Type="String">Boeking-Compleet-P</Data></Cell>
+<Cell ss:Index="47"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="48"><Data ss:Type="String">NL82INGB0000181486</Data></Cell>
+<Cell ss:Index="49"><Data ss:Type="String">Seegers M.</Data></Cell>
+</Row>
+<Row>
+<Cell ss:Index="1"><Data ss:Type="Number">1663868</Data></Cell>
+<Cell ss:Index="2"><Data ss:Type="String">PV</Data></Cell>
+<Cell ss:Index="3"><Data ss:Type="String">270</Data></Cell>
+<Cell ss:Index="4"><Data ss:Type="String">7130200</Data></Cell>
+<Cell ss:Index="5"><Data ss:Type="String">1023</Data></Cell>
+<Cell ss:Index="6"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="7"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="8"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="9"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="13"><Data ss:Type="String">GB</Data></Cell>
+<Cell ss:Index="14"><Data ss:Type="DateTime">2022-01-12</Data></Cell>
+<Cell ss:Index="15"><Data ss:Type="DateTime">2021-12-31</Data></Cell>
+<Cell ss:Index="16"><Data ss:Type="DateTime">2022-01-12</Data></Cell>
+<Cell ss:Index="17"><Data ss:Type="DateTime">2022-01-14</Data></Cell>
+<Cell ss:Index="18"><Data ss:Type="DateTime">2021-12-31</Data></Cell>
+<Cell ss:Index="19"><Data ss:Type="DateTime">2022-01-14</Data></Cell>
+<Cell ss:Index="20"><Data ss:Type="String">190482</Data></Cell>
+<Cell ss:Index="21"><Data ss:Type="String">Salade II 21 december</Data></Cell>
+<Cell ss:Index="22"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="23"><Data ss:Type="String">A.Noslin T5</Data></Cell>
+<Cell ss:Index="24"><Data ss:Type="String">K</Data></Cell>
+<Cell ss:Index="25"><Data ss:Type="String">21586</Data></Cell>
+<Cell ss:Index="26"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="27"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="28"><Data ss:Type="Number">555.05</Data></Cell>
+<Cell ss:Index="29"><Data ss:Type="Number">43929</Data></Cell>
+<Cell ss:Index="30"><Data ss:Type="String">Sterk Staaltje VoF</Data></Cell>
+<Cell ss:Index="31"><Data ss:Type="Number">43929</Data></Cell>
+<Cell ss:Index="32"><Data ss:Type="String">Sterk Staaltje VoF</Data></Cell>
+<Cell ss:Index="33"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="34"><Data ss:Type="String">14</Data></Cell>
+<Cell ss:Index="35"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="36"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="37"><Data ss:Type="String">BRUIJN008</Data></Cell>
+<Cell ss:Index="38"><Data ss:Type="Number">110717</Data></Cell>
+<Cell ss:Index="39"><Data ss:Type="DateTime">2022-02-28</Data></Cell>
+<Cell ss:Index="40"><Data ss:Type="String">su444p052</Data></Cell>
+<Cell ss:Index="41"><Data ss:Type="String">PHLFV002</Data></Cell>
+<Cell ss:Index="42"><Data ss:Type="String">NL92RABO0324670494</Data></Cell>
+<Cell ss:Index="43"><Data ss:Type="String">ACF</Data></Cell>
+<Cell ss:Index="44"><Data ss:Type="String">Grootboekrekening Gecodeerd</Data></Cell>
+<Cell ss:Index="45"><Data ss:Type="String">Boeking-Compleet-P</Data></Cell>
+<Cell ss:Index="46"><Data ss:Type="Number">45.83</Data></Cell>
+<Cell ss:Index="47"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="48"><Data ss:Type="String">NL92RABO0324670494</Data></Cell>
+<Cell ss:Index="49"><Data ss:Type="String">Ramsodit R.</Data></Cell>
+</Row>
+<Row>
+<Cell ss:Index="1"><Data ss:Type="Number">1665066</Data></Cell>
+<Cell ss:Index="2"><Data ss:Type="String">PV</Data></Cell>
+<Cell ss:Index="3"><Data ss:Type="String">270</Data></Cell>
+<Cell ss:Index="4"><Data ss:Type="String">    79108104</Data></Cell>
+<Cell ss:Index="5"><Data ss:Type="String">1022</Data></Cell>
+<Cell ss:Index="6"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="7"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="8"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="9"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="13"><Data ss:Type="String">GB</Data></Cell>
+<Cell ss:Index="14"><Data ss:Type="DateTime">2022-01-13</Data></Cell>
+<Cell ss:Index="15"><Data ss:Type="DateTime">2022-01-11</Data></Cell>
+<Cell ss:Index="16"><Data ss:Type="DateTime">2022-01-13</Data></Cell>
+<Cell ss:Index="17"><Data ss:Type="DateTime">2022-02-10</Data></Cell>
+<Cell ss:Index="18"><Data ss:Type="DateTime">2022-01-11</Data></Cell>
+<Cell ss:Index="19"><Data ss:Type="DateTime">2022-02-10</Data></Cell>
+<Cell ss:Index="20"><Data ss:Type="String">236632</Data></Cell>
+<Cell ss:Index="21"><Data ss:Type="String">Soc.domeinTrekkersrol PIZ 2022</Data></Cell>
+<Cell ss:Index="22"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="23"><Data ss:Type="String">G.Kerpens T1</Data></Cell>
+<Cell ss:Index="24"><Data ss:Type="String">K</Data></Cell>
+<Cell ss:Index="25"><Data ss:Type="String">2022.01</Data></Cell>
+<Cell ss:Index="26"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="27"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="28"><Data ss:Type="Number">10720.00</Data></Cell>
+<Cell ss:Index="29"><Data ss:Type="Number">111694</Data></Cell>
+<Cell ss:Index="30"><Data ss:Type="String">St Kerk & Buurt Westerpark, Ma</Data></Cell>
+<Cell ss:Index="31"><Data ss:Type="Number">111694</Data></Cell>
+<Cell ss:Index="32"><Data ss:Type="String">St Kerk & Buurt Westerpark, Ma</Data></Cell>
+<Cell ss:Index="33"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="34"><Data ss:Type="String">30</Data></Cell>
+<Cell ss:Index="35"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="36"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="37"><Data ss:Type="String">DO001</Data></Cell>
+<Cell ss:Index="38"><Data ss:Type="Number">161554</Data></Cell>
+<Cell ss:Index="39"><Data ss:Type="DateTime">2022-04-05</Data></Cell>
+<Cell ss:Index="40"><Data ss:Type="String">su444p066</Data></Cell>
+<Cell ss:Index="41"><Data ss:Type="String">PHLFV002</Data></Cell>
+<Cell ss:Index="42"><Data ss:Type="String">NL50INGB0000120952</Data></Cell>
+<Cell ss:Index="43"><Data ss:Type="String">ACF</Data></Cell>
+<Cell ss:Index="44"><Data ss:Type="String">Grootboekrekening Gecodeerd</Data></Cell>
+<Cell ss:Index="45"><Data ss:Type="String">Boeking-Compleet-P</Data></Cell>
+<Cell ss:Index="47"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="48"><Data ss:Type="String">NL50INGB0000120952</Data></Cell>
+<Cell ss:Index="49"><Data ss:Type="String">Olde Monnikhof S.</Data></Cell>
+</Row>
+<Row>
+<Cell ss:Index="1"><Data ss:Type="Number">1665873</Data></Cell>
+<Cell ss:Index="2"><Data ss:Type="String">PX</Data></Cell>
+<Cell ss:Index="3"><Data ss:Type="String">270</Data></Cell>
+<Cell ss:Index="4"><Data ss:Type="String">    77074301</Data></Cell>
+<Cell ss:Index="5"><Data ss:Type="String">1020</Data></Cell>
+<Cell ss:Index="6"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="7"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="8"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="9"><Data ss:Type="String">X</Data></Cell>
+<Cell ss:Index="13"><Data ss:Type="String">IO</Data></Cell>
+<Cell ss:Index="14"><Data ss:Type="DateTime">2022-01-14</Data></Cell>
+<Cell ss:Index="15"><Data ss:Type="DateTime">2021-09-26</Data></Cell>
+<Cell ss:Index="16"><Data ss:Type="DateTime">2022-01-14</Data></Cell>
+<Cell ss:Index="17"><Data ss:Type="DateTime">2021-10-26</Data></Cell>
+<Cell ss:Index="18"><Data ss:Type="DateTime">2021-09-26</Data></Cell>
+<Cell ss:Index="19"><Data ss:Type="DateTime">2021-10-26</Data></Cell>
+<Cell ss:Index="20"><Data ss:Type="String">196349</Data></Cell>
+<Cell ss:Index="21"><Data ss:Type="String">Privacy Officer / jurist</Data></Cell>
+<Cell ss:Index="22"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="23"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="24"><Data ss:Type="String">K</Data></Cell>
+<Cell ss:Index="25"><Data ss:Type="String">210006</Data></Cell>
+<Cell ss:Index="26"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="27"><Data ss:Type="String">APO-2020-0782</Data></Cell>
+<Cell ss:Index="28"><Data ss:Type="Number">22080.73</Data></Cell>
+<Cell ss:Index="29"><Data ss:Type="Number">500628</Data></Cell>
+<Cell ss:Index="30"><Data ss:Type="String">PrivacyVision BV</Data></Cell>
+<Cell ss:Index="31"><Data ss:Type="Number">500628</Data></Cell>
+<Cell ss:Index="32"><Data ss:Type="String">PrivacyVision BV</Data></Cell>
+<Cell ss:Index="33"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="34"><Data ss:Type="String">30</Data></Cell>
+<Cell ss:Index="35"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="36"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="37"><Data ss:Type="String">ERNST002</Data></Cell>
+<Cell ss:Index="38"><Data ss:Type="Number">74131</Data></Cell>
+<Cell ss:Index="39"><Data ss:Type="DateTime">2022-03-11</Data></Cell>
+<Cell ss:Index="40"><Data ss:Type="String">su444p066</Data></Cell>
+<Cell ss:Index="41"><Data ss:Type="String">PHLFV002</Data></Cell>
+<Cell ss:Index="42"><Data ss:Type="String">NL22BUNQ2043974939</Data></Cell>
+<Cell ss:Index="43"><Data ss:Type="String">POF</Data></Cell>
+<Cell ss:Index="44"><Data ss:Type="String">Inkooporder Gecodeerd</Data></Cell>
+<Cell ss:Index="45"><Data ss:Type="String">Boeking-Compleet-P</Data></Cell>
+<Cell ss:Index="46"><Data ss:Type="Number">3832.19</Data></Cell>
+<Cell ss:Index="47"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="48"><Data ss:Type="String">NL22BUNQ2043974939</Data></Cell>
+<Cell ss:Index="49"><Data ss:Type="String">Bijl P.H.</Data></Cell>
+</Row>
+<Row>
+<Cell ss:Index="1"><Data ss:Type="Number">1666809</Data></Cell>
+<Cell ss:Index="2"><Data ss:Type="String">PV</Data></Cell>
+<Cell ss:Index="3"><Data ss:Type="String">270</Data></Cell>
+<Cell ss:Index="4"><Data ss:Type="String">    77350103</Data></Cell>
+<Cell ss:Index="5"><Data ss:Type="String">1018</Data></Cell>
+<Cell ss:Index="6"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="7"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="8"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="9"><Data ss:Type="String">X</Data></Cell>
+<Cell ss:Index="13"><Data ss:Type="String">IO</Data></Cell>
+<Cell ss:Index="14"><Data ss:Type="DateTime">2022-01-17</Data></Cell>
+<Cell ss:Index="15"><Data ss:Type="DateTime">2021-12-29</Data></Cell>
+<Cell ss:Index="16"><Data ss:Type="DateTime">2022-01-17</Data></Cell>
+<Cell ss:Index="17"><Data ss:Type="DateTime">2022-01-28</Data></Cell>
+<Cell ss:Index="18"><Data ss:Type="DateTime">2021-12-29</Data></Cell>
+<Cell ss:Index="19"><Data ss:Type="DateTime">2022-01-28</Data></Cell>
+<Cell ss:Index="20"><Data ss:Type="String">223031</Data></Cell>
+<Cell ss:Index="21"><Data ss:Type="String">str.ger te aaanp KKKS 11-2021t</Data></Cell>
+<Cell ss:Index="22"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="23"><Data ss:Type="String">J.M. SmitT1</Data></Cell>
+<Cell ss:Index="24"><Data ss:Type="String">K</Data></Cell>
+<Cell ss:Index="25"><Data ss:Type="String">2021-0032</Data></Cell>
+<Cell ss:Index="26"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="27"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="28"><Data ss:Type="Number">1936.00</Data></Cell>
+<Cell ss:Index="29"><Data ss:Type="Number">758253</Data></Cell>
+<Cell ss:Index="30"><Data ss:Type="String">JNJ Diensten</Data></Cell>
+<Cell ss:Index="31"><Data ss:Type="Number">758253</Data></Cell>
+<Cell ss:Index="32"><Data ss:Type="String">JNJ Diensten</Data></Cell>
+<Cell ss:Index="33"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="34"><Data ss:Type="String">30</Data></Cell>
+<Cell ss:Index="35"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="36"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="37"><Data ss:Type="String">GUNNIN001</Data></Cell>
+<Cell ss:Index="38"><Data ss:Type="Number">112033</Data></Cell>
+<Cell ss:Index="39"><Data ss:Type="DateTime">2022-04-06</Data></Cell>
+<Cell ss:Index="40"><Data ss:Type="String">su444p066</Data></Cell>
+<Cell ss:Index="41"><Data ss:Type="String">PHLFV002</Data></Cell>
+<Cell ss:Index="42"><Data ss:Type="String">NL43INGB0007130007</Data></Cell>
+<Cell ss:Index="43"><Data ss:Type="String">POF</Data></Cell>
+<Cell ss:Index="44"><Data ss:Type="String">Inkooporder Gecodeerd</Data></Cell>
+<Cell ss:Index="45"><Data ss:Type="String">Boeking-Compleet-P</Data></Cell>
+<Cell ss:Index="46"><Data ss:Type="Number">336.00</Data></Cell>
+<Cell ss:Index="47"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="48"><Data ss:Type="String">NL43INGB0007130007</Data></Cell>
+<Cell ss:Index="49"><Data ss:Type="String">Pouw M</Data></Cell>
+</Row>
+<Row>
+<Cell ss:Index="1"><Data ss:Type="Number">1668107</Data></Cell>
+<Cell ss:Index="2"><Data ss:Type="String">PX</Data></Cell>
+<Cell ss:Index="3"><Data ss:Type="String">270</Data></Cell>
+<Cell ss:Index="4"><Data ss:Type="String">    87000901</Data></Cell>
+<Cell ss:Index="5"><Data ss:Type="String">1016</Data></Cell>
+<Cell ss:Index="6"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="7"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="8"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="9"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="13"><Data ss:Type="String">GB</Data></Cell>
+<Cell ss:Index="14"><Data ss:Type="DateTime">2022-01-18</Data></Cell>
+<Cell ss:Index="15"><Data ss:Type="DateTime">2022-01-18</Data></Cell>
+<Cell ss:Index="16"><Data ss:Type="DateTime">2022-01-18</Data></Cell>
+<Cell ss:Index="17"><Data ss:Type="DateTime">2022-01-18</Data></Cell>
+<Cell ss:Index="18"><Data ss:Type="DateTime">2022-01-18</Data></Cell>
+<Cell ss:Index="19"><Data ss:Type="DateTime">2022-01-18</Data></Cell>
+<Cell ss:Index="20"><Data ss:Type="String">235908</Data></Cell>
+<Cell ss:Index="21"><Data ss:Type="String">Creditfactuur voor factuur F001742</Data></Cell>
+<Cell ss:Index="22"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="23"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="24"><Data ss:Type="String">K</Data></Cell>
+<Cell ss:Index="25"><Data ss:Type="String">F001747</Data></Cell>
+<Cell ss:Index="26"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="27"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="28"><Data ss:Type="Number">-21954.24</Data></Cell>
+<Cell ss:Index="29"><Data ss:Type="Number">437428</Data></Cell>
+<Cell ss:Index="30"><Data ss:Type="String">ProZZPect BV</Data></Cell>
+<Cell ss:Index="31"><Data ss:Type="Number">437428</Data></Cell>
+<Cell ss:Index="32"><Data ss:Type="String">ProZZPect BV</Data></Cell>
+<Cell ss:Index="33"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="34"><Data ss:Type="String">30</Data></Cell>
+<Cell ss:Index="35"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="36"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="37"><Data ss:Type="String">ERNST002</Data></Cell>
+<Cell ss:Index="38"><Data ss:Type="Number">92721</Data></Cell>
+<Cell ss:Index="39"><Data ss:Type="DateTime">2022-04-28</Data></Cell>
+<Cell ss:Index="40"><Data ss:Type="String">su444p052</Data></Cell>
+<Cell ss:Index="41"><Data ss:Type="String">PHLFV002</Data></Cell>
+<Cell ss:Index="42"><Data ss:Type="String">NL78INGB0007524167</Data></Cell>
+<Cell ss:Index="43"><Data ss:Type="String">ACF</Data></Cell>
+<Cell ss:Index="44"><Data ss:Type="String">Grootboekrekening Gecodeerd</Data></Cell>
+<Cell ss:Index="45"><Data ss:Type="String">Boeking-Compleet-P</Data></Cell>
+<Cell ss:Index="46"><Data ss:Type="Number">-3810.24</Data></Cell>
+<Cell ss:Index="47"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="48"><Data ss:Type="String">NL78INGB0007524167</Data></Cell>
+<Cell ss:Index="49"><Data ss:Type="String">Folten E.</Data></Cell>
+</Row>
+<Row>
+<Cell ss:Index="1"><Data ss:Type="Number">1668451</Data></Cell>
+<Cell ss:Index="2"><Data ss:Type="String">PX</Data></Cell>
+<Cell ss:Index="3"><Data ss:Type="String">270</Data></Cell>
+<Cell ss:Index="4"><Data ss:Type="String">    92603199</Data></Cell>
+<Cell ss:Index="5"><Data ss:Type="String">1015</Data></Cell>
+<Cell ss:Index="6"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="7"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="8"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="9"><Data ss:Type="String">X</Data></Cell>
+<Cell ss:Index="13"><Data ss:Type="String">IO</Data></Cell>
+<Cell ss:Index="14"><Data ss:Type="DateTime">2022-01-19</Data></Cell>
+<Cell ss:Index="15"><Data ss:Type="DateTime">2022-01-01</Data></Cell>
+<Cell ss:Index="16"><Data ss:Type="DateTime">2022-01-19</Data></Cell>
+<Cell ss:Index="17"><Data ss:Type="DateTime">2022-01-31</Data></Cell>
+<Cell ss:Index="18"><Data ss:Type="DateTime">2022-01-01</Data></Cell>
+<Cell ss:Index="19"><Data ss:Type="DateTime">2022-01-31</Data></Cell>
+<Cell ss:Index="20"><Data ss:Type="String">16002567</Data></Cell>
+<Cell ss:Index="21"><Data ss:Type="String">VvE-bijdrage</Data></Cell>
+<Cell ss:Index="22"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="23"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="24"><Data ss:Type="String">K</Data></Cell>
+<Cell ss:Index="25"><Data ss:Type="String">2022-011</Data></Cell>
+<Cell ss:Index="26"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="27"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="28"><Data ss:Type="Number">38.66</Data></Cell>
+<Cell ss:Index="29"><Data ss:Type="Number">220162</Data></Cell>
+<Cell ss:Index="30"><Data ss:Type="String">VVE Noordbuurt Steigereiland B</Data></Cell>
+<Cell ss:Index="31"><Data ss:Type="Number">220162</Data></Cell>
+<Cell ss:Index="32"><Data ss:Type="String">VVE Noordbuurt Steigereiland B</Data></Cell>
+<Cell ss:Index="33"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="34"><Data ss:Type="String">30</Data></Cell>
+<Cell ss:Index="35"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="36"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="37"><Data ss:Type="String">TIMMER003</Data></Cell>
+<Cell ss:Index="38"><Data ss:Type="Number">141556</Data></Cell>
+<Cell ss:Index="39"><Data ss:Type="DateTime">2022-01-25</Data></Cell>
+<Cell ss:Index="40"><Data ss:Type="String">su444p052</Data></Cell>
+<Cell ss:Index="41"><Data ss:Type="String">PHLFV002</Data></Cell>
+<Cell ss:Index="42"><Data ss:Type="String">NL98INGB0004376448</Data></Cell>
+<Cell ss:Index="43"><Data ss:Type="String">POF</Data></Cell>
+<Cell ss:Index="44"><Data ss:Type="String">Inkooporder Gecodeerd</Data></Cell>
+<Cell ss:Index="45"><Data ss:Type="String">Boeking-Compleet-P</Data></Cell>
+<Cell ss:Index="47"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="48"><Data ss:Type="String">NL98INGB0004376448</Data></Cell>
+<Cell ss:Index="49"><Data ss:Type="String">Uidam J.</Data></Cell>
+</Row>
+<Row>
+<Cell ss:Index="1"><Data ss:Type="Number">1668704</Data></Cell>
+<Cell ss:Index="2"><Data ss:Type="String">PV</Data></Cell>
+<Cell ss:Index="3"><Data ss:Type="String">270</Data></Cell>
+<Cell ss:Index="4"><Data ss:Type="String">     5250000</Data></Cell>
+<Cell ss:Index="5"><Data ss:Type="String">1016</Data></Cell>
+<Cell ss:Index="6"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="7"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="8"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="9"><Data ss:Type="String">X</Data></Cell>
+<Cell ss:Index="13"><Data ss:Type="String">IO</Data></Cell>
+<Cell ss:Index="14"><Data ss:Type="DateTime">2022-01-19</Data></Cell>
+<Cell ss:Index="15"><Data ss:Type="DateTime">2022-01-14</Data></Cell>
+<Cell ss:Index="16"><Data ss:Type="DateTime">2022-01-19</Data></Cell>
+<Cell ss:Index="17"><Data ss:Type="DateTime">2022-02-13</Data></Cell>
+<Cell ss:Index="18"><Data ss:Type="DateTime">2022-01-14</Data></Cell>
+<Cell ss:Index="19"><Data ss:Type="DateTime">2022-02-13</Data></Cell>
+<Cell ss:Index="20"><Data ss:Type="String">204575</Data></Cell>
+<Cell ss:Index="21"><Data ss:Type="String">lidmaatschap IT Circle Q1-2022</Data></Cell>
+<Cell ss:Index="22"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="23"><Data ss:Type="String">W. Velzeboer T3</Data></Cell>
+<Cell ss:Index="24"><Data ss:Type="String">K</Data></Cell>
+<Cell ss:Index="25"><Data ss:Type="String">2022009</Data></Cell>
+<Cell ss:Index="26"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="27"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="28"><Data ss:Type="Number">5384.50</Data></Cell>
+<Cell ss:Index="29"><Data ss:Type="Number">526941</Data></Cell>
+<Cell ss:Index="30"><Data ss:Type="String">C2Results BV</Data></Cell>
+<Cell ss:Index="31"><Data ss:Type="Number">526941</Data></Cell>
+<Cell ss:Index="32"><Data ss:Type="String">C2Results BV</Data></Cell>
+<Cell ss:Index="33"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="34"><Data ss:Type="String">30</Data></Cell>
+<Cell ss:Index="35"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="36"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="37"><Data ss:Type="String">NEERVO006</Data></Cell>
+<Cell ss:Index="38"><Data ss:Type="Number">131313</Data></Cell>
+<Cell ss:Index="39"><Data ss:Type="DateTime">2022-03-17</Data></Cell>
+<Cell ss:Index="40"><Data ss:Type="String">su444p052</Data></Cell>
+<Cell ss:Index="41"><Data ss:Type="String">PHLFV002</Data></Cell>
+<Cell ss:Index="42"><Data ss:Type="String">NL13RABO0173920918</Data></Cell>
+<Cell ss:Index="43"><Data ss:Type="String">POF</Data></Cell>
+<Cell ss:Index="44"><Data ss:Type="String">Inkooporder Gecodeerd</Data></Cell>
+<Cell ss:Index="45"><Data ss:Type="String">Boeking-Compleet-P</Data></Cell>
+<Cell ss:Index="46"><Data ss:Type="Number">934.50</Data></Cell>
+<Cell ss:Index="47"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="48"><Data ss:Type="String">NL13RABO0173920918</Data></Cell>
+<Cell ss:Index="49"><Data ss:Type="String">Huibregtse E.J.</Data></Cell>
+</Row>
+<Row>
+<Cell ss:Index="1"><Data ss:Type="Number">1670636</Data></Cell>
+<Cell ss:Index="2"><Data ss:Type="String">PX</Data></Cell>
+<Cell ss:Index="3"><Data ss:Type="String">270</Data></Cell>
+<Cell ss:Index="4"><Data ss:Type="String">     5240010</Data></Cell>
+<Cell ss:Index="5"><Data ss:Type="String">1013</Data></Cell>
+<Cell ss:Index="6"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="7"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="8"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="9"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="13"><Data ss:Type="String">GB</Data></Cell>
+<Cell ss:Index="14"><Data ss:Type="DateTime">2022-01-22</Data></Cell>
+<Cell ss:Index="15"><Data ss:Type="DateTime">2022-01-21</Data></Cell>
+<Cell ss:Index="16"><Data ss:Type="DateTime">2022-01-22</Data></Cell>
+<Cell ss:Index="17"><Data ss:Type="DateTime">2022-02-20</Data></Cell>
+<Cell ss:Index="18"><Data ss:Type="DateTime">2022-01-21</Data></Cell>
+<Cell ss:Index="19"><Data ss:Type="DateTime">2022-02-20</Data></Cell>
+<Cell ss:Index="20"><Data ss:Type="String">184104</Data></Cell>
+<Cell ss:Index="21"><Data ss:Type="String">(Tunnelbeheer en Verkeersleiding) maandag tm vrij</Data></Cell>
+<Cell ss:Index="22"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="23"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="24"><Data ss:Type="String">K</Data></Cell>
+<Cell ss:Index="25"><Data ss:Type="String">202200344</Data></Cell>
+<Cell ss:Index="26"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="27"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="28"><Data ss:Type="Number">3167.10</Data></Cell>
+<Cell ss:Index="29"><Data ss:Type="Number">435022</Data></Cell>
+<Cell ss:Index="30"><Data ss:Type="String">De Klop Groep BV</Data></Cell>
+<Cell ss:Index="31"><Data ss:Type="Number">435022</Data></Cell>
+<Cell ss:Index="32"><Data ss:Type="String">De Klop Groep BV</Data></Cell>
+<Cell ss:Index="33"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="34"><Data ss:Type="String">30</Data></Cell>
+<Cell ss:Index="35"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="36"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="37"><Data ss:Type="String">HALMAN002</Data></Cell>
+<Cell ss:Index="38"><Data ss:Type="Number">234547</Data></Cell>
+<Cell ss:Index="39"><Data ss:Type="DateTime">2022-01-25</Data></Cell>
+<Cell ss:Index="40"><Data ss:Type="String">su444p066</Data></Cell>
+<Cell ss:Index="41"><Data ss:Type="String">PHLFV002</Data></Cell>
+<Cell ss:Index="42"><Data ss:Type="String">NL82ABNA0842522654</Data></Cell>
+<Cell ss:Index="43"><Data ss:Type="String">ACF</Data></Cell>
+<Cell ss:Index="44"><Data ss:Type="String">Grootboekrekening Gecodeerd</Data></Cell>
+<Cell ss:Index="45"><Data ss:Type="String">Boeking-Compleet-P</Data></Cell>
+<Cell ss:Index="46"><Data ss:Type="Number">549.66</Data></Cell>
+<Cell ss:Index="47"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="48"><Data ss:Type="String">NL82ABNA0842522654</Data></Cell>
+<Cell ss:Index="49"><Data ss:Type="String">Dos Reis Cardoso M.</Data></Cell>
+</Row>
+<Row>
+<Cell ss:Index="1"><Data ss:Type="Number">1670710</Data></Cell>
+<Cell ss:Index="2"><Data ss:Type="String">PV</Data></Cell>
+<Cell ss:Index="3"><Data ss:Type="String">180</Data></Cell>
+<Cell ss:Index="4"><Data ss:Type="String">78243000</Data></Cell>
+<Cell ss:Index="5"><Data ss:Type="String">1011</Data></Cell>
+<Cell ss:Index="6"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="7"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="8"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="9"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="13"><Data ss:Type="String">GB</Data></Cell>
+<Cell ss:Index="14"><Data ss:Type="DateTime">2022-01-24</Data></Cell>
+<Cell ss:Index="15"><Data ss:Type="DateTime">2022-01-21</Data></Cell>
+<Cell ss:Index="16"><Data ss:Type="DateTime">2022-01-24</Data></Cell>
+<Cell ss:Index="17"><Data ss:Type="DateTime">2022-02-20</Data></Cell>
+<Cell ss:Index="18"><Data ss:Type="DateTime">2022-01-21</Data></Cell>
+<Cell ss:Index="19"><Data ss:Type="DateTime">2022-02-20</Data></Cell>
+<Cell ss:Index="20"><Data ss:Type="String">237344</Data></Cell>
+<Cell ss:Index="21"><Data ss:Type="String">MASTER CityWh CDO-TT Plus</Data></Cell>
+<Cell ss:Index="22"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="23"><Data ss:Type="String">V. Hilgers T5</Data></Cell>
+<Cell ss:Index="24"><Data ss:Type="String">K</Data></Cell>
+<Cell ss:Index="25"><Data ss:Type="String">9711431710</Data></Cell>
+<Cell ss:Index="26"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="27"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="28"><Data ss:Type="Number">895.30</Data></Cell>
+<Cell ss:Index="29"><Data ss:Type="Number">349865</Data></Cell>
+<Cell ss:Index="30"><Data ss:Type="String">Signify Netherlands BV</Data></Cell>
+<Cell ss:Index="31"><Data ss:Type="Number">349865</Data></Cell>
+<Cell ss:Index="32"><Data ss:Type="String">Signify Netherlands BV</Data></Cell>
+<Cell ss:Index="33"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="34"><Data ss:Type="String">30</Data></Cell>
+<Cell ss:Index="35"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="36"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="37"><Data ss:Type="String">KROSS001</Data></Cell>
+<Cell ss:Index="38"><Data ss:Type="Number">165509</Data></Cell>
+<Cell ss:Index="39"><Data ss:Type="DateTime">2022-06-13</Data></Cell>
+<Cell ss:Index="40"><Data ss:Type="String">su444p052</Data></Cell>
+<Cell ss:Index="41"><Data ss:Type="String">PHLFV001</Data></Cell>
+<Cell ss:Index="42"><Data ss:Type="String">NL25INGB0703140736</Data></Cell>
+<Cell ss:Index="43"><Data ss:Type="String">ACF</Data></Cell>
+<Cell ss:Index="44"><Data ss:Type="String">Grootboekrekening Gecodeerd</Data></Cell>
+<Cell ss:Index="45"><Data ss:Type="String">Betaalposten</Data></Cell>
+<Cell ss:Index="46"><Data ss:Type="Number">155.38</Data></Cell>
+<Cell ss:Index="47"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="48"><Data ss:Type="String">NL25INGB0703140736</Data></Cell>
+<Cell ss:Index="49"><Data ss:Type="String">Essen L. van</Data></Cell>
+</Row>
+<Row>
+<Cell ss:Index="1"><Data ss:Type="Number">1671303</Data></Cell>
+<Cell ss:Index="2"><Data ss:Type="String">PV</Data></Cell>
+<Cell ss:Index="3"><Data ss:Type="String">270</Data></Cell>
+<Cell ss:Index="4"><Data ss:Type="String">    75100280</Data></Cell>
+<Cell ss:Index="5"><Data ss:Type="String">1011</Data></Cell>
+<Cell ss:Index="6"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="7"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="8"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="9"><Data ss:Type="String">X</Data></Cell>
+<Cell ss:Index="13"><Data ss:Type="String">IO</Data></Cell>
+<Cell ss:Index="14"><Data ss:Type="DateTime">2022-01-24</Data></Cell>
+<Cell ss:Index="15"><Data ss:Type="DateTime">2022-01-21</Data></Cell>
+<Cell ss:Index="16"><Data ss:Type="DateTime">2022-01-24</Data></Cell>
+<Cell ss:Index="17"><Data ss:Type="DateTime">2022-02-20</Data></Cell>
+<Cell ss:Index="18"><Data ss:Type="DateTime">2022-01-21</Data></Cell>
+<Cell ss:Index="20"><Data ss:Type="String">169414</Data></Cell>
+<Cell ss:Index="21"><Data ss:Type="String">Licentie gidso</Data></Cell>
+<Cell ss:Index="22"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="23"><Data ss:Type="String">R Arents T3</Data></Cell>
+<Cell ss:Index="24"><Data ss:Type="String">K</Data></Cell>
+<Cell ss:Index="25"><Data ss:Type="String">24300006</Data></Cell>
+<Cell ss:Index="26"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="27"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="28"><Data ss:Type="Number">189017.73</Data></Cell>
+<Cell ss:Index="29"><Data ss:Type="Number">535825</Data></Cell>
+<Cell ss:Index="30"><Data ss:Type="String">Topicus Overheid BV</Data></Cell>
+<Cell ss:Index="31"><Data ss:Type="Number">535825</Data></Cell>
+<Cell ss:Index="32"><Data ss:Type="String">Topicus Overheid BV</Data></Cell>
+<Cell ss:Index="33"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="34"><Data ss:Type="String">30</Data></Cell>
+<Cell ss:Index="35"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="36"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="37"><Data ss:Type="String">SLEEPER</Data></Cell>
+<Cell ss:Index="38"><Data ss:Type="Number">154509</Data></Cell>
+<Cell ss:Index="39"><Data ss:Type="DateTime">2022-01-24</Data></Cell>
+<Cell ss:Index="40"><Data ss:Type="String">SU444P033</Data></Cell>
+<Cell ss:Index="41"><Data ss:Type="String">NHLFV005G</Data></Cell>
+<Cell ss:Index="42"><Data ss:Type="String">NL12RABO0174833318</Data></Cell>
+<Cell ss:Index="43"><Data ss:Type="String">POF</Data></Cell>
+<Cell ss:Index="44"><Data ss:Type="String">Inkooporder Gecodeerd</Data></Cell>
+<Cell ss:Index="45"><Data ss:Type="String">Boeking-Compleet-P</Data></Cell>
+<Cell ss:Index="46"><Data ss:Type="Number">32804.73</Data></Cell>
+<Cell ss:Index="47"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="48"><Data ss:Type="String">NL12RABO0174833318</Data></Cell>
+<Cell ss:Index="49"><Data ss:Type="String">Herpen P. van</Data></Cell>
+</Row>
+<Row>
+<Cell ss:Index="1"><Data ss:Type="Number">1672402</Data></Cell>
+<Cell ss:Index="2"><Data ss:Type="String">PV</Data></Cell>
+<Cell ss:Index="3"><Data ss:Type="String">270</Data></Cell>
+<Cell ss:Index="4"><Data ss:Type="String">76832111</Data></Cell>
+<Cell ss:Index="5"><Data ss:Type="String">1010</Data></Cell>
+<Cell ss:Index="6"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="7"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="8"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="9"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="13"><Data ss:Type="String">GB</Data></Cell>
+<Cell ss:Index="14"><Data ss:Type="DateTime">2022-01-25</Data></Cell>
+<Cell ss:Index="15"><Data ss:Type="DateTime">2021-12-07</Data></Cell>
+<Cell ss:Index="16"><Data ss:Type="DateTime">2022-01-25</Data></Cell>
+<Cell ss:Index="17"><Data ss:Type="DateTime">2022-01-06</Data></Cell>
+<Cell ss:Index="18"><Data ss:Type="DateTime">2021-12-07</Data></Cell>
+<Cell ss:Index="19"><Data ss:Type="DateTime">2022-01-06</Data></Cell>
+<Cell ss:Index="20"><Data ss:Type="String">242831</Data></Cell>
+<Cell ss:Index="21"><Data ss:Type="String">1101AX / 98 ADSL 12-2021</Data></Cell>
+<Cell ss:Index="22"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="23"><Data ss:Type="String">J.M&gt; SmitT1</Data></Cell>
+<Cell ss:Index="24"><Data ss:Type="String">K</Data></Cell>
+<Cell ss:Index="25"><Data ss:Type="String">142823504</Data></Cell>
+<Cell ss:Index="26"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="27"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="28"><Data ss:Type="Number">66.55</Data></Cell>
+<Cell ss:Index="29"><Data ss:Type="Number">260332</Data></Cell>
+<Cell ss:Index="30"><Data ss:Type="String">KPN BV</Data></Cell>
+<Cell ss:Index="31"><Data ss:Type="Number">260332</Data></Cell>
+<Cell ss:Index="32"><Data ss:Type="String">KPN BV</Data></Cell>
+<Cell ss:Index="33"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="34"><Data ss:Type="String">30</Data></Cell>
+<Cell ss:Index="35"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="36"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="37"><Data ss:Type="String">BRUIJN008</Data></Cell>
+<Cell ss:Index="38"><Data ss:Type="Number">135239</Data></Cell>
+<Cell ss:Index="39"><Data ss:Type="DateTime">2022-04-19</Data></Cell>
+<Cell ss:Index="40"><Data ss:Type="String">su444p066</Data></Cell>
+<Cell ss:Index="41"><Data ss:Type="String">PHLFV002</Data></Cell>
+<Cell ss:Index="42"><Data ss:Type="String">NL83INGB0000010748</Data></Cell>
+<Cell ss:Index="43"><Data ss:Type="String">ACF</Data></Cell>
+<Cell ss:Index="44"><Data ss:Type="String">Grootboekrekening Gecodeerd</Data></Cell>
+<Cell ss:Index="45"><Data ss:Type="String">Boeking-Compleet-P</Data></Cell>
+<Cell ss:Index="46"><Data ss:Type="Number">11.55</Data></Cell>
+<Cell ss:Index="47"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="48"><Data ss:Type="String">NL83INGB0000010748</Data></Cell>
+<Cell ss:Index="49"><Data ss:Type="String">Lagcher I.O.</Data></Cell>
+</Row>
+<Row>
+<Cell ss:Index="1"><Data ss:Type="Number">1672713</Data></Cell>
+<Cell ss:Index="2"><Data ss:Type="String">PV</Data></Cell>
+<Cell ss:Index="3"><Data ss:Type="String">270</Data></Cell>
+<Cell ss:Index="4"><Data ss:Type="String">6243807</Data></Cell>
+<Cell ss:Index="5"><Data ss:Type="String">1009</Data></Cell>
+<Cell ss:Index="6"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="7"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="8"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="9"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="13"><Data ss:Type="String">GB</Data></Cell>
+<Cell ss:Index="14"><Data ss:Type="DateTime">2022-01-26</Data></Cell>
+<Cell ss:Index="15"><Data ss:Type="DateTime">2022-01-26</Data></Cell>
+<Cell ss:Index="16"><Data ss:Type="DateTime">2022-01-26</Data></Cell>
+<Cell ss:Index="17"><Data ss:Type="DateTime">2022-02-25</Data></Cell>
+<Cell ss:Index="18"><Data ss:Type="DateTime">2022-01-26</Data></Cell>
+<Cell ss:Index="19"><Data ss:Type="DateTime">2022-02-25</Data></Cell>
+<Cell ss:Index="20"><Data ss:Type="String">258176</Data></Cell>
+<Cell ss:Index="21"><Data ss:Type="String">Prj 04015.20.4380.0032/MTW266</Data></Cell>
+<Cell ss:Index="22"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="23"><Data ss:Type="String">G.Kerpens T1</Data></Cell>
+<Cell ss:Index="24"><Data ss:Type="String">K</Data></Cell>
+<Cell ss:Index="25"><Data ss:Type="String">SNL-22-003769</Data></Cell>
+<Cell ss:Index="26"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="27"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="28"><Data ss:Type="Number">2936.67</Data></Cell>
+<Cell ss:Index="29"><Data ss:Type="Number">470636</Data></Cell>
+<Cell ss:Index="30"><Data ss:Type="String">SPIE Nederland BV-Tech FM West</Data></Cell>
+<Cell ss:Index="31"><Data ss:Type="Number">470636</Data></Cell>
+<Cell ss:Index="32"><Data ss:Type="String">SPIE Nederland BV-Tech FM West</Data></Cell>
+<Cell ss:Index="33"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="34"><Data ss:Type="String">30</Data></Cell>
+<Cell ss:Index="35"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="36"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="37"><Data ss:Type="String">LAFKIR001</Data></Cell>
+<Cell ss:Index="38"><Data ss:Type="Number">65406</Data></Cell>
+<Cell ss:Index="39"><Data ss:Type="DateTime">2022-06-03</Data></Cell>
+<Cell ss:Index="40"><Data ss:Type="String">su444p066</Data></Cell>
+<Cell ss:Index="41"><Data ss:Type="String">PHLFV002</Data></Cell>
+<Cell ss:Index="42"><Data ss:Type="String">NL66RABO0359655467</Data></Cell>
+<Cell ss:Index="43"><Data ss:Type="String">ACF</Data></Cell>
+<Cell ss:Index="44"><Data ss:Type="String">Grootboekrekening Gecodeerd</Data></Cell>
+<Cell ss:Index="45"><Data ss:Type="String">Boeking-Compleet-P</Data></Cell>
+<Cell ss:Index="46"><Data ss:Type="Number">509.67</Data></Cell>
+<Cell ss:Index="47"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="48"><Data ss:Type="String">NL66RABO0359655467</Data></Cell>
+<Cell ss:Index="49"><Data ss:Type="String">Leydekkers E.E.</Data></Cell>
+</Row>
+<Row>
+<Cell ss:Index="1"><Data ss:Type="Number">1673032</Data></Cell>
+<Cell ss:Index="2"><Data ss:Type="String">PX</Data></Cell>
+<Cell ss:Index="3"><Data ss:Type="String">270</Data></Cell>
+<Cell ss:Index="4"><Data ss:Type="String">   72454216</Data></Cell>
+<Cell ss:Index="5"><Data ss:Type="String">1008</Data></Cell>
+<Cell ss:Index="6"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="7"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="8"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="9"><Data ss:Type="String">X</Data></Cell>
+<Cell ss:Index="13"><Data ss:Type="String">IO</Data></Cell>
+<Cell ss:Index="14"><Data ss:Type="DateTime">2022-01-26</Data></Cell>
+<Cell ss:Index="15"><Data ss:Type="DateTime">2022-01-26</Data></Cell>
+<Cell ss:Index="16"><Data ss:Type="DateTime">2022-01-26</Data></Cell>
+<Cell ss:Index="17"><Data ss:Type="DateTime">2022-02-25</Data></Cell>
+<Cell ss:Index="18"><Data ss:Type="DateTime">2022-01-26</Data></Cell>
+<Cell ss:Index="19"><Data ss:Type="DateTime">2022-02-25</Data></Cell>
+<Cell ss:Index="20"><Data ss:Type="String">219463</Data></Cell>
+<Cell ss:Index="21"><Data ss:Type="String">beoordeling offerte 52-BHF-3</Data></Cell>
+<Cell ss:Index="22"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="23"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="24"><Data ss:Type="String">K</Data></Cell>
+<Cell ss:Index="25"><Data ss:Type="String">2200123</Data></Cell>
+<Cell ss:Index="26"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="27"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="28"><Data ss:Type="Number">324.89</Data></Cell>
+<Cell ss:Index="29"><Data ss:Type="Number">33917</Data></Cell>
+<Cell ss:Index="30"><Data ss:Type="String">BekkerLaGram Waalwijk BV</Data></Cell>
+<Cell ss:Index="31"><Data ss:Type="Number">33917</Data></Cell>
+<Cell ss:Index="32"><Data ss:Type="String">BekkerLaGram Waalwijk BV</Data></Cell>
+<Cell ss:Index="33"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="34"><Data ss:Type="String">30</Data></Cell>
+<Cell ss:Index="35"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="36"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="37"><Data ss:Type="String">LANDUS004</Data></Cell>
+<Cell ss:Index="38"><Data ss:Type="Number">100015</Data></Cell>
+<Cell ss:Index="39"><Data ss:Type="DateTime">2022-01-28</Data></Cell>
+<Cell ss:Index="40"><Data ss:Type="String">su444p052</Data></Cell>
+<Cell ss:Index="41"><Data ss:Type="String">PHLFV001</Data></Cell>
+<Cell ss:Index="42"><Data ss:Type="String">NL47INGB0650549074</Data></Cell>
+<Cell ss:Index="43"><Data ss:Type="String">POF</Data></Cell>
+<Cell ss:Index="44"><Data ss:Type="String">Inkooporder Gecodeerd</Data></Cell>
+<Cell ss:Index="45"><Data ss:Type="String">Boeking-Compleet-P</Data></Cell>
+<Cell ss:Index="46"><Data ss:Type="Number">56.39</Data></Cell>
+<Cell ss:Index="47"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="48"><Data ss:Type="String">NL47INGB0650549074</Data></Cell>
+<Cell ss:Index="49"><Data ss:Type="String">Kardogan S.</Data></Cell>
+</Row>
+<Row>
+<Cell ss:Index="1"><Data ss:Type="Number">1673168</Data></Cell>
+<Cell ss:Index="2"><Data ss:Type="String">PX</Data></Cell>
+<Cell ss:Index="3"><Data ss:Type="String">270</Data></Cell>
+<Cell ss:Index="4"><Data ss:Type="String">     5570046</Data></Cell>
+<Cell ss:Index="5"><Data ss:Type="String">1008</Data></Cell>
+<Cell ss:Index="6"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="7"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="8"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="9"><Data ss:Type="String">X</Data></Cell>
+<Cell ss:Index="13"><Data ss:Type="String">IO</Data></Cell>
+<Cell ss:Index="14"><Data ss:Type="DateTime">2022-01-26</Data></Cell>
+<Cell ss:Index="15"><Data ss:Type="DateTime">2022-01-13</Data></Cell>
+<Cell ss:Index="16"><Data ss:Type="DateTime">2022-01-26</Data></Cell>
+<Cell ss:Index="17"><Data ss:Type="DateTime">2022-02-12</Data></Cell>
+<Cell ss:Index="18"><Data ss:Type="DateTime">2022-01-13</Data></Cell>
+<Cell ss:Index="20"><Data ss:Type="String">336522</Data></Cell>
+<Cell ss:Index="21"><Data ss:Type="String">Budde, Hans</Data></Cell>
+<Cell ss:Index="22"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="23"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="24"><Data ss:Type="String">K</Data></Cell>
+<Cell ss:Index="25"><Data ss:Type="String">110-V00007033</Data></Cell>
+<Cell ss:Index="26"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="27"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="28"><Data ss:Type="Number">2801.66</Data></Cell>
+<Cell ss:Index="29"><Data ss:Type="Number">379208</Data></Cell>
+<Cell ss:Index="30"><Data ss:Type="String">Highcare</Data></Cell>
+<Cell ss:Index="31"><Data ss:Type="Number">379208</Data></Cell>
+<Cell ss:Index="32"><Data ss:Type="String">Highcare</Data></Cell>
+<Cell ss:Index="33"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="34"><Data ss:Type="String">30</Data></Cell>
+<Cell ss:Index="35"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="36"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="37"><Data ss:Type="String">NEERVO006</Data></Cell>
+<Cell ss:Index="38"><Data ss:Type="Number">154649</Data></Cell>
+<Cell ss:Index="39"><Data ss:Type="DateTime">2022-02-01</Data></Cell>
+<Cell ss:Index="40"><Data ss:Type="String">su444p066</Data></Cell>
+<Cell ss:Index="41"><Data ss:Type="String">PHLFV002</Data></Cell>
+<Cell ss:Index="42"><Data ss:Type="String">NL52RABO0114018642</Data></Cell>
+<Cell ss:Index="43"><Data ss:Type="String">POF</Data></Cell>
+<Cell ss:Index="44"><Data ss:Type="String">Inkooporder Gecodeerd</Data></Cell>
+<Cell ss:Index="45"><Data ss:Type="String">Boeking-Compleet-P</Data></Cell>
+<Cell ss:Index="46"><Data ss:Type="Number">486.24</Data></Cell>
+<Cell ss:Index="47"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="48"><Data ss:Type="String">NL52RABO0114018642</Data></Cell>
+<Cell ss:Index="49"><Data ss:Type="String">GGD ESIZE Prestatieverkl.</Data></Cell>
+</Row>
+<Row>
+<Cell ss:Index="1"><Data ss:Type="Number">1673288</Data></Cell>
+<Cell ss:Index="2"><Data ss:Type="String">PV</Data></Cell>
+<Cell ss:Index="3"><Data ss:Type="String">270</Data></Cell>
+<Cell ss:Index="4"><Data ss:Type="String">    95341299</Data></Cell>
+<Cell ss:Index="5"><Data ss:Type="String">1009</Data></Cell>
+<Cell ss:Index="6"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="7"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="8"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="9"><Data ss:Type="String">X</Data></Cell>
+<Cell ss:Index="13"><Data ss:Type="String">IO</Data></Cell>
+<Cell ss:Index="14"><Data ss:Type="DateTime">2022-01-26</Data></Cell>
+<Cell ss:Index="15"><Data ss:Type="DateTime">2021-12-23</Data></Cell>
+<Cell ss:Index="16"><Data ss:Type="DateTime">2022-01-26</Data></Cell>
+<Cell ss:Index="17"><Data ss:Type="DateTime">2022-01-22</Data></Cell>
+<Cell ss:Index="18"><Data ss:Type="DateTime">2021-12-23</Data></Cell>
+<Cell ss:Index="19"><Data ss:Type="DateTime">2022-01-22</Data></Cell>
+<Cell ss:Index="20"><Data ss:Type="String">182401</Data></Cell>
+<Cell ss:Index="21"><Data ss:Type="String">Fase : 400 - Voorbereiding</Data></Cell>
+<Cell ss:Index="22"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="23"><Data ss:Type="String">S.Ketwaru T1</Data></Cell>
+<Cell ss:Index="24"><Data ss:Type="String">K</Data></Cell>
+<Cell ss:Index="25"><Data ss:Type="String">4544</Data></Cell>
+<Cell ss:Index="26"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="27"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="28"><Data ss:Type="Number">32448.24</Data></Cell>
+<Cell ss:Index="29"><Data ss:Type="Number">33668</Data></Cell>
+<Cell ss:Index="30"><Data ss:Type="String">Waternet Projecten</Data></Cell>
+<Cell ss:Index="31"><Data ss:Type="Number">33668</Data></Cell>
+<Cell ss:Index="32"><Data ss:Type="String">Waternet Projecten</Data></Cell>
+<Cell ss:Index="33"><Data ss:Type="String">X03</Data></Cell>
+<Cell ss:Index="34"><Data ss:Type="String">30</Data></Cell>
+<Cell ss:Index="35"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="36"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="37"><Data ss:Type="String">KROSS001</Data></Cell>
+<Cell ss:Index="38"><Data ss:Type="Number">133640</Data></Cell>
+<Cell ss:Index="39"><Data ss:Type="DateTime">2022-01-31</Data></Cell>
+<Cell ss:Index="40"><Data ss:Type="String">su444p066</Data></Cell>
+<Cell ss:Index="41"><Data ss:Type="String">PHLFV001</Data></Cell>
+<Cell ss:Index="42"><Data ss:Type="String">NL88RABO0110022661</Data></Cell>
+<Cell ss:Index="43"><Data ss:Type="String">POF</Data></Cell>
+<Cell ss:Index="44"><Data ss:Type="String">Inkooporder Gecodeerd</Data></Cell>
+<Cell ss:Index="45"><Data ss:Type="String">Boeking-Compleet-P</Data></Cell>
+<Cell ss:Index="47"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="48"><Data ss:Type="String">NL88RABO0110022661</Data></Cell>
+<Cell ss:Index="49"><Data ss:Type="String">Reijden H. van der</Data></Cell>
+</Row>
+<Row>
+<Cell ss:Index="1"><Data ss:Type="Number">1673728</Data></Cell>
+<Cell ss:Index="2"><Data ss:Type="String">PX</Data></Cell>
+<Cell ss:Index="3"><Data ss:Type="String">270</Data></Cell>
+<Cell ss:Index="4"><Data ss:Type="String">6552019</Data></Cell>
+<Cell ss:Index="5"><Data ss:Type="String">1007</Data></Cell>
+<Cell ss:Index="6"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="7"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="8"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="9"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="13"><Data ss:Type="String">GB</Data></Cell>
+<Cell ss:Index="14"><Data ss:Type="DateTime">2022-01-27</Data></Cell>
+<Cell ss:Index="15"><Data ss:Type="DateTime">2022-01-27</Data></Cell>
+<Cell ss:Index="16"><Data ss:Type="DateTime">2022-01-27</Data></Cell>
+<Cell ss:Index="17"><Data ss:Type="DateTime">2022-02-26</Data></Cell>
+<Cell ss:Index="18"><Data ss:Type="DateTime">2022-01-27</Data></Cell>
+<Cell ss:Index="19"><Data ss:Type="DateTime">2022-02-26</Data></Cell>
+<Cell ss:Index="20"><Data ss:Type="String">187047</Data></Cell>
+<Cell ss:Index="21"><Data ss:Type="String">Projectnummer : 790 Factuurnummer : 220093 / 631 Factuurdatum : 27-1-2022   Scho</Data></Cell>
+<Cell ss:Index="22"><Data ss:Type="String">onmaak August Allebeplein 7-11</Data></Cell>
+<Cell ss:Index="23"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="24"><Data ss:Type="String">K</Data></Cell>
+<Cell ss:Index="25"><Data ss:Type="String">220093</Data></Cell>
+<Cell ss:Index="26"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="27"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="28"><Data ss:Type="Number">747.95</Data></Cell>
+<Cell ss:Index="29"><Data ss:Type="Number">453957</Data></Cell>
+<Cell ss:Index="30"><Data ss:Type="String">DFL Finance BV</Data></Cell>
+<Cell ss:Index="31"><Data ss:Type="Number">453957</Data></Cell>
+<Cell ss:Index="32"><Data ss:Type="String">DFL Finance BV</Data></Cell>
+<Cell ss:Index="33"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="34"><Data ss:Type="String">30</Data></Cell>
+<Cell ss:Index="35"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="36"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="37"><Data ss:Type="String">ERNST002</Data></Cell>
+<Cell ss:Index="38"><Data ss:Type="Number">54438</Data></Cell>
+<Cell ss:Index="39"><Data ss:Type="DateTime">2022-04-12</Data></Cell>
+<Cell ss:Index="40"><Data ss:Type="String">su444p052</Data></Cell>
+<Cell ss:Index="41"><Data ss:Type="String">PHLFV002</Data></Cell>
+<Cell ss:Index="42"><Data ss:Type="String">NL28INGB0661675025</Data></Cell>
+<Cell ss:Index="43"><Data ss:Type="String">ACF</Data></Cell>
+<Cell ss:Index="44"><Data ss:Type="String">Grootboekrekening Gecodeerd</Data></Cell>
+<Cell ss:Index="45"><Data ss:Type="String">Boeking-Compleet-P</Data></Cell>
+<Cell ss:Index="46"><Data ss:Type="Number">129.81</Data></Cell>
+<Cell ss:Index="47"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="48"><Data ss:Type="String">NL28INGB0661675025</Data></Cell>
+<Cell ss:Index="49"><Data ss:Type="String">Boer W.M. de</Data></Cell>
+</Row>
+<Row>
+<Cell ss:Index="1"><Data ss:Type="Number">1674077</Data></Cell>
+<Cell ss:Index="2"><Data ss:Type="String">PX</Data></Cell>
+<Cell ss:Index="3"><Data ss:Type="String">270</Data></Cell>
+<Cell ss:Index="4"><Data ss:Type="String">72454216</Data></Cell>
+<Cell ss:Index="5"><Data ss:Type="String">1007</Data></Cell>
+<Cell ss:Index="6"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="7"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="8"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="9"><Data ss:Type="String">X</Data></Cell>
+<Cell ss:Index="13"><Data ss:Type="String">IO</Data></Cell>
+<Cell ss:Index="14"><Data ss:Type="DateTime">2022-01-27</Data></Cell>
+<Cell ss:Index="15"><Data ss:Type="DateTime">2022-01-27</Data></Cell>
+<Cell ss:Index="16"><Data ss:Type="DateTime">2022-01-27</Data></Cell>
+<Cell ss:Index="17"><Data ss:Type="DateTime">2022-02-26</Data></Cell>
+<Cell ss:Index="18"><Data ss:Type="DateTime">2022-01-27</Data></Cell>
+<Cell ss:Index="19"><Data ss:Type="DateTime">2022-02-26</Data></Cell>
+<Cell ss:Index="20"><Data ss:Type="String">240785</Data></Cell>
+<Cell ss:Index="21"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="22"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="23"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="24"><Data ss:Type="String">K</Data></Cell>
+<Cell ss:Index="25"><Data ss:Type="String">8157595</Data></Cell>
+<Cell ss:Index="26"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="27"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="28"><Data ss:Type="Number">7475.83</Data></Cell>
+<Cell ss:Index="29"><Data ss:Type="Number">30443</Data></Cell>
+<Cell ss:Index="30"><Data ss:Type="String">Truckland BV</Data></Cell>
+<Cell ss:Index="31"><Data ss:Type="Number">30443</Data></Cell>
+<Cell ss:Index="32"><Data ss:Type="String">Truckland BV</Data></Cell>
+<Cell ss:Index="33"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="34"><Data ss:Type="String">30</Data></Cell>
+<Cell ss:Index="35"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="36"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="37"><Data ss:Type="String">MANBOD003</Data></Cell>
+<Cell ss:Index="38"><Data ss:Type="Number">123453</Data></Cell>
+<Cell ss:Index="39"><Data ss:Type="DateTime">2022-06-10</Data></Cell>
+<Cell ss:Index="40"><Data ss:Type="String">su444p066</Data></Cell>
+<Cell ss:Index="41"><Data ss:Type="String">PHLFV002</Data></Cell>
+<Cell ss:Index="42"><Data ss:Type="String">NL83RABO0106385445</Data></Cell>
+<Cell ss:Index="43"><Data ss:Type="String">POF</Data></Cell>
+<Cell ss:Index="44"><Data ss:Type="String">Inkooporder Gecodeerd</Data></Cell>
+<Cell ss:Index="45"><Data ss:Type="String">Boeking-Compleet-P</Data></Cell>
+<Cell ss:Index="46"><Data ss:Type="Number">1297.46</Data></Cell>
+<Cell ss:Index="47"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="48"><Data ss:Type="String">NL83RABO0106385445</Data></Cell>
+<Cell ss:Index="49"><Data ss:Type="String">Kardogan S.</Data></Cell>
+</Row>
+<Row>
+<Cell ss:Index="1"><Data ss:Type="Number">1674685</Data></Cell>
+<Cell ss:Index="2"><Data ss:Type="String">PX</Data></Cell>
+<Cell ss:Index="3"><Data ss:Type="String">270</Data></Cell>
+<Cell ss:Index="4"><Data ss:Type="String"> 78300022</Data></Cell>
+<Cell ss:Index="5"><Data ss:Type="String">1006</Data></Cell>
+<Cell ss:Index="6"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="7"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="8"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="9"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="13"><Data ss:Type="String">GB</Data></Cell>
+<Cell ss:Index="14"><Data ss:Type="DateTime">2022-01-28</Data></Cell>
+<Cell ss:Index="15"><Data ss:Type="DateTime">2022-01-28</Data></Cell>
+<Cell ss:Index="16"><Data ss:Type="DateTime">2022-01-28</Data></Cell>
+<Cell ss:Index="17"><Data ss:Type="DateTime">2022-02-27</Data></Cell>
+<Cell ss:Index="18"><Data ss:Type="DateTime">2022-01-28</Data></Cell>
+<Cell ss:Index="19"><Data ss:Type="DateTime">2022-02-27</Data></Cell>
+<Cell ss:Index="20"><Data ss:Type="String">185951</Data></Cell>
+<Cell ss:Index="21"><Data ss:Type="String">Milieutoeslag</Data></Cell>
+<Cell ss:Index="22"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="23"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="24"><Data ss:Type="String">K</Data></Cell>
+<Cell ss:Index="25"><Data ss:Type="String">8157665</Data></Cell>
+<Cell ss:Index="26"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="27"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="28"><Data ss:Type="Number">66.25</Data></Cell>
+<Cell ss:Index="29"><Data ss:Type="Number">30443</Data></Cell>
+<Cell ss:Index="30"><Data ss:Type="String">Truckland BV</Data></Cell>
+<Cell ss:Index="31"><Data ss:Type="Number">30443</Data></Cell>
+<Cell ss:Index="32"><Data ss:Type="String">Truckland BV</Data></Cell>
+<Cell ss:Index="33"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="34"><Data ss:Type="String">30</Data></Cell>
+<Cell ss:Index="35"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="36"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="37"><Data ss:Type="String">HALMAN002</Data></Cell>
+<Cell ss:Index="38"><Data ss:Type="Number">5453</Data></Cell>
+<Cell ss:Index="39"><Data ss:Type="DateTime">2022-02-02</Data></Cell>
+<Cell ss:Index="40"><Data ss:Type="String">su444p052</Data></Cell>
+<Cell ss:Index="41"><Data ss:Type="String">PHLFV002</Data></Cell>
+<Cell ss:Index="42"><Data ss:Type="String">NL83RABO0106385445</Data></Cell>
+<Cell ss:Index="43"><Data ss:Type="String">ACF</Data></Cell>
+<Cell ss:Index="44"><Data ss:Type="String">Grootboekrekening Gecodeerd</Data></Cell>
+<Cell ss:Index="45"><Data ss:Type="String">Boeking-Compleet-P</Data></Cell>
+<Cell ss:Index="46"><Data ss:Type="Number">11.50</Data></Cell>
+<Cell ss:Index="47"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="48"><Data ss:Type="String">NL83RABO0106385445</Data></Cell>
+<Cell ss:Index="49"><Data ss:Type="String">Kardogan S.</Data></Cell>
+</Row>
+<Row>
+<Cell ss:Index="1"><Data ss:Type="Number">1674962</Data></Cell>
+<Cell ss:Index="2"><Data ss:Type="String">PV</Data></Cell>
+<Cell ss:Index="3"><Data ss:Type="String">270</Data></Cell>
+<Cell ss:Index="4"><Data ss:Type="String">    92603199</Data></Cell>
+<Cell ss:Index="5"><Data ss:Type="String">1004</Data></Cell>
+<Cell ss:Index="6"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="7"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="8"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="9"><Data ss:Type="String">X</Data></Cell>
+<Cell ss:Index="13"><Data ss:Type="String">IO</Data></Cell>
+<Cell ss:Index="14"><Data ss:Type="DateTime">2022-01-31</Data></Cell>
+<Cell ss:Index="15"><Data ss:Type="DateTime">2022-02-01</Data></Cell>
+<Cell ss:Index="16"><Data ss:Type="DateTime">2022-01-31</Data></Cell>
+<Cell ss:Index="17"><Data ss:Type="DateTime">2022-03-03</Data></Cell>
+<Cell ss:Index="18"><Data ss:Type="DateTime">2022-02-01</Data></Cell>
+<Cell ss:Index="20"><Data ss:Type="String">16002566</Data></Cell>
+<Cell ss:Index="21"><Data ss:Type="String">VvE bedrijge 02-2022 A-flats</Data></Cell>
+<Cell ss:Index="22"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="23"><Data ss:Type="String">J.m. SmitT1</Data></Cell>
+<Cell ss:Index="24"><Data ss:Type="String">K</Data></Cell>
+<Cell ss:Index="25"><Data ss:Type="String">2022-003</Data></Cell>
+<Cell ss:Index="26"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="27"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="28"><Data ss:Type="Number">620.92</Data></Cell>
+<Cell ss:Index="29"><Data ss:Type="Number">282957</Data></Cell>
+<Cell ss:Index="30"><Data ss:Type="String">VVE Noordbuurt Steigereiland B</Data></Cell>
+<Cell ss:Index="31"><Data ss:Type="Number">282957</Data></Cell>
+<Cell ss:Index="32"><Data ss:Type="String">VVE Noordbuurt Steigereiland B</Data></Cell>
+<Cell ss:Index="33"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="34"><Data ss:Type="String">30</Data></Cell>
+<Cell ss:Index="35"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="36"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="37"><Data ss:Type="String">TIMMER003</Data></Cell>
+<Cell ss:Index="38"><Data ss:Type="Number">144743</Data></Cell>
+<Cell ss:Index="39"><Data ss:Type="DateTime">2022-01-31</Data></Cell>
+<Cell ss:Index="40"><Data ss:Type="String">su444p052</Data></Cell>
+<Cell ss:Index="41"><Data ss:Type="String">PHLFV002</Data></Cell>
+<Cell ss:Index="42"><Data ss:Type="String">NL49INGB0004540290</Data></Cell>
+<Cell ss:Index="43"><Data ss:Type="String">POF</Data></Cell>
+<Cell ss:Index="44"><Data ss:Type="String">Inkooporder Gecodeerd</Data></Cell>
+<Cell ss:Index="45"><Data ss:Type="String">Boeking-Compleet-P</Data></Cell>
+<Cell ss:Index="47"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="48"><Data ss:Type="String">NL49INGB0004540290</Data></Cell>
+<Cell ss:Index="49"><Data ss:Type="String">Uidam J.</Data></Cell>
+</Row>
+<Row>
+<Cell ss:Index="1"><Data ss:Type="Number">1675025</Data></Cell>
+<Cell ss:Index="2"><Data ss:Type="String">PV</Data></Cell>
+<Cell ss:Index="3"><Data ss:Type="String">270</Data></Cell>
+<Cell ss:Index="4"><Data ss:Type="String">78700963</Data></Cell>
+<Cell ss:Index="5"><Data ss:Type="String">1004</Data></Cell>
+<Cell ss:Index="6"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="7"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="8"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="9"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="13"><Data ss:Type="String">GB</Data></Cell>
+<Cell ss:Index="14"><Data ss:Type="DateTime">2022-01-31</Data></Cell>
+<Cell ss:Index="15"><Data ss:Type="DateTime">2022-02-01</Data></Cell>
+<Cell ss:Index="16"><Data ss:Type="DateTime">2022-01-31</Data></Cell>
+<Cell ss:Index="17"><Data ss:Type="DateTime">2022-03-03</Data></Cell>
+<Cell ss:Index="18"><Data ss:Type="DateTime">2022-02-01</Data></Cell>
+<Cell ss:Index="19"><Data ss:Type="DateTime">2022-03-03</Data></Cell>
+<Cell ss:Index="20"><Data ss:Type="String">130633</Data></Cell>
+<Cell ss:Index="21"><Data ss:Type="String">Februari 2022 Oudekersplein 30</Data></Cell>
+<Cell ss:Index="22"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="23"><Data ss:Type="String">t.monen T3</Data></Cell>
+<Cell ss:Index="24"><Data ss:Type="String">K</Data></Cell>
+<Cell ss:Index="25"><Data ss:Type="String">SGMV22-00240</Data></Cell>
+<Cell ss:Index="26"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="27"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="28"><Data ss:Type="Number">540.64</Data></Cell>
+<Cell ss:Index="29"><Data ss:Type="Number">272998</Data></Cell>
+<Cell ss:Index="30"><Data ss:Type="String">Stadsgoed Monumenten BV</Data></Cell>
+<Cell ss:Index="31"><Data ss:Type="Number">272998</Data></Cell>
+<Cell ss:Index="32"><Data ss:Type="String">Stadsgoed Monumenten BV</Data></Cell>
+<Cell ss:Index="33"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="34"><Data ss:Type="String">30</Data></Cell>
+<Cell ss:Index="35"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="36"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="37"><Data ss:Type="String">HUIZEN001</Data></Cell>
+<Cell ss:Index="38"><Data ss:Type="Number">145754</Data></Cell>
+<Cell ss:Index="39"><Data ss:Type="DateTime">2022-06-07</Data></Cell>
+<Cell ss:Index="40"><Data ss:Type="String">su444p066</Data></Cell>
+<Cell ss:Index="41"><Data ss:Type="String">PHLFV002</Data></Cell>
+<Cell ss:Index="42"><Data ss:Type="String">NL63BNGH0285118013</Data></Cell>
+<Cell ss:Index="43"><Data ss:Type="String">ACF</Data></Cell>
+<Cell ss:Index="44"><Data ss:Type="String">Grootboekrekening Gecodeerd</Data></Cell>
+<Cell ss:Index="45"><Data ss:Type="String">Boeking-Compleet-P</Data></Cell>
+<Cell ss:Index="46"><Data ss:Type="Number">93.83</Data></Cell>
+<Cell ss:Index="47"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="48"><Data ss:Type="String">NL63BNGH0285118013</Data></Cell>
+<Cell ss:Index="49"><Data ss:Type="String">Uitval FiV-Prestatieverkl</Data></Cell>
+</Row>
+<Row>
+<Cell ss:Index="1"><Data ss:Type="Number">1675265</Data></Cell>
+<Cell ss:Index="2"><Data ss:Type="String">PV</Data></Cell>
+<Cell ss:Index="3"><Data ss:Type="String">140</Data></Cell>
+<Cell ss:Index="4"><Data ss:Type="String">X78243000</Data></Cell>
+<Cell ss:Index="5"><Data ss:Type="String">1004</Data></Cell>
+<Cell ss:Index="6"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="7"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="8"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="9"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="13"><Data ss:Type="String">GB</Data></Cell>
+<Cell ss:Index="14"><Data ss:Type="DateTime">2022-01-31</Data></Cell>
+<Cell ss:Index="15"><Data ss:Type="DateTime">2022-01-28</Data></Cell>
+<Cell ss:Index="16"><Data ss:Type="DateTime">2022-01-31</Data></Cell>
+<Cell ss:Index="17"><Data ss:Type="DateTime">2022-02-27</Data></Cell>
+<Cell ss:Index="18"><Data ss:Type="DateTime">2022-01-28</Data></Cell>
+<Cell ss:Index="19"><Data ss:Type="DateTime">2022-02-27</Data></Cell>
+<Cell ss:Index="20"><Data ss:Type="String">237344</Data></Cell>
+<Cell ss:Index="21"><Data ss:Type="String">Land van herkomst : PL</Data></Cell>
+<Cell ss:Index="22"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="23"><Data ss:Type="String">G Atasever T1</Data></Cell>
+<Cell ss:Index="24"><Data ss:Type="String">K</Data></Cell>
+<Cell ss:Index="25"><Data ss:Type="String">9711433609</Data></Cell>
+<Cell ss:Index="26"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="27"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="28"><Data ss:Type="Number">5028.86</Data></Cell>
+<Cell ss:Index="29"><Data ss:Type="Number">349865</Data></Cell>
+<Cell ss:Index="30"><Data ss:Type="String">Signify Netherlands BV</Data></Cell>
+<Cell ss:Index="31"><Data ss:Type="Number">349865</Data></Cell>
+<Cell ss:Index="32"><Data ss:Type="String">Signify Netherlands BV</Data></Cell>
+<Cell ss:Index="33"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="34"><Data ss:Type="String">30</Data></Cell>
+<Cell ss:Index="35"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="36"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="37"><Data ss:Type="String">KROSS001</Data></Cell>
+<Cell ss:Index="38"><Data ss:Type="Number">165654</Data></Cell>
+<Cell ss:Index="39"><Data ss:Type="DateTime">2022-06-13</Data></Cell>
+<Cell ss:Index="40"><Data ss:Type="String">su444p052</Data></Cell>
+<Cell ss:Index="41"><Data ss:Type="String">PHLFV001</Data></Cell>
+<Cell ss:Index="42"><Data ss:Type="String">NL25INGB0703140736</Data></Cell>
+<Cell ss:Index="43"><Data ss:Type="String">ACF</Data></Cell>
+<Cell ss:Index="44"><Data ss:Type="String">Grootboekrekening Gecodeerd</Data></Cell>
+<Cell ss:Index="45"><Data ss:Type="String">Gevalideerd-Check</Data></Cell>
+<Cell ss:Index="46"><Data ss:Type="Number">872.78</Data></Cell>
+<Cell ss:Index="47"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="48"><Data ss:Type="String">NL25INGB0703140736</Data></Cell>
+<Cell ss:Index="49"><Data ss:Type="String"> </Data></Cell>
+</Row>
+<Row>
+<Cell ss:Index="1"><Data ss:Type="Number">1675476</Data></Cell>
+<Cell ss:Index="2"><Data ss:Type="String">PV</Data></Cell>
+<Cell ss:Index="3"><Data ss:Type="String">270</Data></Cell>
+<Cell ss:Index="4"><Data ss:Type="String">     5570039</Data></Cell>
+<Cell ss:Index="5"><Data ss:Type="String">1004</Data></Cell>
+<Cell ss:Index="6"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="7"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="8"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="9"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="13"><Data ss:Type="String">GB</Data></Cell>
+<Cell ss:Index="14"><Data ss:Type="DateTime">2022-01-31</Data></Cell>
+<Cell ss:Index="15"><Data ss:Type="DateTime">2022-01-19</Data></Cell>
+<Cell ss:Index="16"><Data ss:Type="DateTime">2022-01-31</Data></Cell>
+<Cell ss:Index="17"><Data ss:Type="DateTime">2022-02-02</Data></Cell>
+<Cell ss:Index="18"><Data ss:Type="DateTime">2022-01-19</Data></Cell>
+<Cell ss:Index="19"><Data ss:Type="DateTime">2022-02-02</Data></Cell>
+<Cell ss:Index="20"><Data ss:Type="String">308910</Data></Cell>
+<Cell ss:Index="21"><Data ss:Type="String">Hr. JVJ Kohlbrugge</Data></Cell>
+<Cell ss:Index="22"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="23"><Data ss:Type="String">S.Ketwaru T1</Data></Cell>
+<Cell ss:Index="24"><Data ss:Type="String">K</Data></Cell>
+<Cell ss:Index="25"><Data ss:Type="String">36603450</Data></Cell>
+<Cell ss:Index="26"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="27"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="28"><Data ss:Type="Number">4961.18</Data></Cell>
+<Cell ss:Index="29"><Data ss:Type="Number">30069</Data></Cell>
+<Cell ss:Index="30"><Data ss:Type="String">Randstad Uitzendbureau BV</Data></Cell>
+<Cell ss:Index="31"><Data ss:Type="Number">30069</Data></Cell>
+<Cell ss:Index="32"><Data ss:Type="String">Randstad Uitzendbureau BV</Data></Cell>
+<Cell ss:Index="33"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="34"><Data ss:Type="String">14</Data></Cell>
+<Cell ss:Index="35"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="36"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="37"><Data ss:Type="String">NEERVO006</Data></Cell>
+<Cell ss:Index="38"><Data ss:Type="Number">105810</Data></Cell>
+<Cell ss:Index="39"><Data ss:Type="DateTime">2022-03-07</Data></Cell>
+<Cell ss:Index="40"><Data ss:Type="String">su444p066</Data></Cell>
+<Cell ss:Index="41"><Data ss:Type="String">PHLFV002</Data></Cell>
+<Cell ss:Index="42"><Data ss:Type="String">NL58ABNA0465768296</Data></Cell>
+<Cell ss:Index="43"><Data ss:Type="String">ACF</Data></Cell>
+<Cell ss:Index="44"><Data ss:Type="String">Grootboekrekening Gecodeerd</Data></Cell>
+<Cell ss:Index="45"><Data ss:Type="String">Boeking-Compleet-P</Data></Cell>
+<Cell ss:Index="46"><Data ss:Type="Number">861.03</Data></Cell>
+<Cell ss:Index="47"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="48"><Data ss:Type="String">NL58ABNA0465768296</Data></Cell>
+<Cell ss:Index="49"><Data ss:Type="String">GGD ESIZE Prestatieverkl.</Data></Cell>
+</Row>
+<Row>
+<Cell ss:Index="1"><Data ss:Type="Number">1675544</Data></Cell>
+<Cell ss:Index="2"><Data ss:Type="String">PX</Data></Cell>
+<Cell ss:Index="3"><Data ss:Type="String">270</Data></Cell>
+<Cell ss:Index="4"><Data ss:Type="String">5570046</Data></Cell>
+<Cell ss:Index="5"><Data ss:Type="String">1003</Data></Cell>
+<Cell ss:Index="6"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="7"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="8"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="9"><Data ss:Type="String">X</Data></Cell>
+<Cell ss:Index="13"><Data ss:Type="String">IO</Data></Cell>
+<Cell ss:Index="14"><Data ss:Type="DateTime">2022-01-31</Data></Cell>
+<Cell ss:Index="15"><Data ss:Type="DateTime">2022-01-07</Data></Cell>
+<Cell ss:Index="16"><Data ss:Type="DateTime">2022-01-31</Data></Cell>
+<Cell ss:Index="17"><Data ss:Type="DateTime">2022-02-06</Data></Cell>
+<Cell ss:Index="18"><Data ss:Type="DateTime">2022-01-07</Data></Cell>
+<Cell ss:Index="19"><Data ss:Type="DateTime">2022-02-06</Data></Cell>
+<Cell ss:Index="20"><Data ss:Type="String">338975</Data></Cell>
+<Cell ss:Index="21"><Data ss:Type="String">Ellemijn Kappelle; week 51; periode van 2021-12-20 t/m 2021-12-26</Data></Cell>
+<Cell ss:Index="22"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="23"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="24"><Data ss:Type="String">K</Data></Cell>
+<Cell ss:Index="25"><Data ss:Type="String">294V00477955</Data></Cell>
+<Cell ss:Index="26"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="27"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="28"><Data ss:Type="Number">787.90</Data></Cell>
+<Cell ss:Index="29"><Data ss:Type="Number">496445</Data></Cell>
+<Cell ss:Index="30"><Data ss:Type="String">Unique Diensten BV</Data></Cell>
+<Cell ss:Index="31"><Data ss:Type="Number">496445</Data></Cell>
+<Cell ss:Index="32"><Data ss:Type="String">Unique Diensten BV</Data></Cell>
+<Cell ss:Index="33"><Data ss:Type="String">X01</Data></Cell>
+<Cell ss:Index="34"><Data ss:Type="String">30</Data></Cell>
+<Cell ss:Index="35"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="36"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="37"><Data ss:Type="String">DO001</Data></Cell>
+<Cell ss:Index="38"><Data ss:Type="Number">163008</Data></Cell>
+<Cell ss:Index="39"><Data ss:Type="DateTime">2022-02-24</Data></Cell>
+<Cell ss:Index="40"><Data ss:Type="String">su444p052</Data></Cell>
+<Cell ss:Index="41"><Data ss:Type="String">PHLFV002</Data></Cell>
+<Cell ss:Index="42"><Data ss:Type="String">NL13ABNA0578313162</Data></Cell>
+<Cell ss:Index="43"><Data ss:Type="String">POF</Data></Cell>
+<Cell ss:Index="44"><Data ss:Type="String">Inkooporder Gecodeerd</Data></Cell>
+<Cell ss:Index="45"><Data ss:Type="String">Boeking-Compleet-P</Data></Cell>
+<Cell ss:Index="46"><Data ss:Type="Number">136.74</Data></Cell>
+<Cell ss:Index="47"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="48"><Data ss:Type="String">NL13ABNA0578313162</Data></Cell>
+<Cell ss:Index="49"><Data ss:Type="String">GGD ESIZE Prestatieverkl.</Data></Cell>
+</Row>
+<Row>
+<Cell ss:Index="1"><Data ss:Type="Number">1677598</Data></Cell>
+<Cell ss:Index="2"><Data ss:Type="String">PV</Data></Cell>
+<Cell ss:Index="3"><Data ss:Type="String">270</Data></Cell>
+<Cell ss:Index="4"><Data ss:Type="String">76832111</Data></Cell>
+<Cell ss:Index="5"><Data ss:Type="String">1003</Data></Cell>
+<Cell ss:Index="6"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="7"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="8"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="9"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="13"><Data ss:Type="String">GB</Data></Cell>
+<Cell ss:Index="14"><Data ss:Type="DateTime">2022-02-01</Data></Cell>
+<Cell ss:Index="15"><Data ss:Type="DateTime">2022-01-07</Data></Cell>
+<Cell ss:Index="16"><Data ss:Type="DateTime">2022-02-01</Data></Cell>
+<Cell ss:Index="17"><Data ss:Type="DateTime">2022-02-06</Data></Cell>
+<Cell ss:Index="18"><Data ss:Type="DateTime">2022-01-07</Data></Cell>
+<Cell ss:Index="19"><Data ss:Type="DateTime">2022-02-06</Data></Cell>
+<Cell ss:Index="20"><Data ss:Type="String">242856</Data></Cell>
+<Cell ss:Index="21"><Data ss:Type="String">Zakelijk DSL</Data></Cell>
+<Cell ss:Index="22"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="23"><Data ss:Type="String">A.Krenz T5</Data></Cell>
+<Cell ss:Index="24"><Data ss:Type="String">K</Data></Cell>
+<Cell ss:Index="25"><Data ss:Type="String">142939302</Data></Cell>
+<Cell ss:Index="26"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="27"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="28"><Data ss:Type="Number">54.45</Data></Cell>
+<Cell ss:Index="29"><Data ss:Type="Number">260332</Data></Cell>
+<Cell ss:Index="30"><Data ss:Type="String">KPN BV</Data></Cell>
+<Cell ss:Index="31"><Data ss:Type="Number">260332</Data></Cell>
+<Cell ss:Index="32"><Data ss:Type="String">KPN BV</Data></Cell>
+<Cell ss:Index="33"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="34"><Data ss:Type="String">30</Data></Cell>
+<Cell ss:Index="35"><Data ss:Type="String">I</Data></Cell>
+<Cell ss:Index="36"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="37"><Data ss:Type="String">LAACHI010</Data></Cell>
+<Cell ss:Index="38"><Data ss:Type="Number">94355</Data></Cell>
+<Cell ss:Index="39"><Data ss:Type="DateTime">2022-05-16</Data></Cell>
+<Cell ss:Index="40"><Data ss:Type="String">su444p066</Data></Cell>
+<Cell ss:Index="41"><Data ss:Type="String">PHLFV002</Data></Cell>
+<Cell ss:Index="42"><Data ss:Type="String">NL83INGB0000010748</Data></Cell>
+<Cell ss:Index="43"><Data ss:Type="String">ACF</Data></Cell>
+<Cell ss:Index="44"><Data ss:Type="String">Grootboekrekening Gecodeerd</Data></Cell>
+<Cell ss:Index="45"><Data ss:Type="String">Boeking-Compleet-P</Data></Cell>
+<Cell ss:Index="46"><Data ss:Type="Number">9.45</Data></Cell>
+<Cell ss:Index="47"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="48"><Data ss:Type="String">NL83INGB0000010748</Data></Cell>
+<Cell ss:Index="49"><Data ss:Type="String">Lagcher I.O.</Data></Cell>
+</Row>
+<Row>
+<Cell ss:Index="1"><Data ss:Type="Number">1677629</Data></Cell>
+<Cell ss:Index="2"><Data ss:Type="String">PX</Data></Cell>
+<Cell ss:Index="3"><Data ss:Type="String">270</Data></Cell>
+<Cell ss:Index="4"><Data ss:Type="String">72152421</Data></Cell>
+<Cell ss:Index="5"><Data ss:Type="String">1002</Data></Cell>
+<Cell ss:Index="6"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="7"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="8"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="9"><Data ss:Type="String">X</Data></Cell>
+<Cell ss:Index="13"><Data ss:Type="String">IO</Data></Cell>
+<Cell ss:Index="14"><Data ss:Type="DateTime">2022-02-01</Data></Cell>
+<Cell ss:Index="15"><Data ss:Type="DateTime">2022-02-01</Data></Cell>
+<Cell ss:Index="16"><Data ss:Type="DateTime">2022-02-01</Data></Cell>
+<Cell ss:Index="17"><Data ss:Type="DateTime">2022-03-03</Data></Cell>
+<Cell ss:Index="18"><Data ss:Type="DateTime">2022-02-01</Data></Cell>
+<Cell ss:Index="19"><Data ss:Type="DateTime">2022-03-03</Data></Cell>
+<Cell ss:Index="20"><Data ss:Type="String">262233</Data></Cell>
+<Cell ss:Index="21"><Data ss:Type="String">Hosting testomgeving</Data></Cell>
+<Cell ss:Index="22"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="23"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="24"><Data ss:Type="String">K</Data></Cell>
+<Cell ss:Index="25"><Data ss:Type="String">22500068</Data></Cell>
+<Cell ss:Index="26"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="27"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="28"><Data ss:Type="Number">745.60</Data></Cell>
+<Cell ss:Index="29"><Data ss:Type="Number">30208</Data></Cell>
+<Cell ss:Index="30"><Data ss:Type="String">IV-Software BV</Data></Cell>
+<Cell ss:Index="31"><Data ss:Type="Number">30208</Data></Cell>
+<Cell ss:Index="32"><Data ss:Type="String">IV-Software BV</Data></Cell>
+<Cell ss:Index="33"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="34"><Data ss:Type="String">30</Data></Cell>
+<Cell ss:Index="35"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="36"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="37"><Data ss:Type="String">AVELOO003</Data></Cell>
+<Cell ss:Index="38"><Data ss:Type="Number">114032</Data></Cell>
+<Cell ss:Index="39"><Data ss:Type="DateTime">2022-06-13</Data></Cell>
+<Cell ss:Index="40"><Data ss:Type="String">su444p052</Data></Cell>
+<Cell ss:Index="41"><Data ss:Type="String">PHLFV002</Data></Cell>
+<Cell ss:Index="42"><Data ss:Type="String">NL46RABO0140012907</Data></Cell>
+<Cell ss:Index="43"><Data ss:Type="String">POF</Data></Cell>
+<Cell ss:Index="44"><Data ss:Type="String">Inkooporder Gecodeerd</Data></Cell>
+<Cell ss:Index="45"><Data ss:Type="String">Boeking-Compleet-P</Data></Cell>
+<Cell ss:Index="46"><Data ss:Type="Number">129.40</Data></Cell>
+<Cell ss:Index="47"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="48"><Data ss:Type="String">NL46RABO0140012907</Data></Cell>
+<Cell ss:Index="49"><Data ss:Type="String">Kelly J.J.</Data></Cell>
+</Row>
+<Row>
+<Cell ss:Index="1"><Data ss:Type="Number">1677742</Data></Cell>
+<Cell ss:Index="2"><Data ss:Type="String">PV</Data></Cell>
+<Cell ss:Index="3"><Data ss:Type="String">270</Data></Cell>
+<Cell ss:Index="4"><Data ss:Type="String">    77653000</Data></Cell>
+<Cell ss:Index="5"><Data ss:Type="String">1003</Data></Cell>
+<Cell ss:Index="6"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="7"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="8"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="9"><Data ss:Type="String">X</Data></Cell>
+<Cell ss:Index="13"><Data ss:Type="String">IO</Data></Cell>
+<Cell ss:Index="14"><Data ss:Type="DateTime">2022-02-01</Data></Cell>
+<Cell ss:Index="15"><Data ss:Type="DateTime">2022-02-01</Data></Cell>
+<Cell ss:Index="16"><Data ss:Type="DateTime">2022-02-01</Data></Cell>
+<Cell ss:Index="17"><Data ss:Type="DateTime">2022-03-03</Data></Cell>
+<Cell ss:Index="18"><Data ss:Type="DateTime">2022-02-01</Data></Cell>
+<Cell ss:Index="19"><Data ss:Type="DateTime">2022-03-03</Data></Cell>
+<Cell ss:Index="20"><Data ss:Type="String">173958</Data></Cell>
+<Cell ss:Index="21"><Data ss:Type="String">&quot;renovatie berg. woonwagen loc</Data></Cell>
+<Cell ss:Index="22"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="23"><Data ss:Type="String">G.Kerpens T1</Data></Cell>
+<Cell ss:Index="24"><Data ss:Type="String">K</Data></Cell>
+<Cell ss:Index="25"><Data ss:Type="String">2022054034</Data></Cell>
+<Cell ss:Index="26"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="27"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="28"><Data ss:Type="Number">22385.00</Data></Cell>
+<Cell ss:Index="29"><Data ss:Type="Number">498718</Data></Cell>
+<Cell ss:Index="30"><Data ss:Type="String">KernBouw Vastgoedbeheer Amster</Data></Cell>
+<Cell ss:Index="31"><Data ss:Type="Number">498718</Data></Cell>
+<Cell ss:Index="32"><Data ss:Type="String">KernBouw Vastgoedbeheer Amster</Data></Cell>
+<Cell ss:Index="33"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="34"><Data ss:Type="String">30</Data></Cell>
+<Cell ss:Index="35"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="36"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="37"><Data ss:Type="String">GUNNIN001</Data></Cell>
+<Cell ss:Index="38"><Data ss:Type="Number">120157</Data></Cell>
+<Cell ss:Index="39"><Data ss:Type="DateTime">2022-03-04</Data></Cell>
+<Cell ss:Index="40"><Data ss:Type="String">su444p066</Data></Cell>
+<Cell ss:Index="41"><Data ss:Type="String">PHLFV002</Data></Cell>
+<Cell ss:Index="42"><Data ss:Type="String">NL46ABNA0243437528</Data></Cell>
+<Cell ss:Index="43"><Data ss:Type="String">POF</Data></Cell>
+<Cell ss:Index="44"><Data ss:Type="String">Inkooporder Gecodeerd</Data></Cell>
+<Cell ss:Index="45"><Data ss:Type="String">Boeking-Compleet-P</Data></Cell>
+<Cell ss:Index="46"><Data ss:Type="Number">3885.00</Data></Cell>
+<Cell ss:Index="47"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="48"><Data ss:Type="String">NL46ABNA0243437528</Data></Cell>
+<Cell ss:Index="49"><Data ss:Type="String">Wendel C.</Data></Cell>
+</Row>
+<Row>
+<Cell ss:Index="1"><Data ss:Type="Number">1678020</Data></Cell>
+<Cell ss:Index="2"><Data ss:Type="String">PX</Data></Cell>
+<Cell ss:Index="3"><Data ss:Type="String">270</Data></Cell>
+<Cell ss:Index="4"><Data ss:Type="String">     5570039</Data></Cell>
+<Cell ss:Index="5"><Data ss:Type="String">1002</Data></Cell>
+<Cell ss:Index="6"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="7"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="8"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="9"><Data ss:Type="String">X</Data></Cell>
+<Cell ss:Index="13"><Data ss:Type="String">IO</Data></Cell>
+<Cell ss:Index="14"><Data ss:Type="DateTime">2022-02-01</Data></Cell>
+<Cell ss:Index="15"><Data ss:Type="DateTime">2022-01-02</Data></Cell>
+<Cell ss:Index="16"><Data ss:Type="DateTime">2022-02-01</Data></Cell>
+<Cell ss:Index="17"><Data ss:Type="DateTime">2022-02-01</Data></Cell>
+<Cell ss:Index="18"><Data ss:Type="DateTime">2022-01-02</Data></Cell>
+<Cell ss:Index="19"><Data ss:Type="DateTime">2022-02-01</Data></Cell>
+<Cell ss:Index="20"><Data ss:Type="String">335384</Data></Cell>
+<Cell ss:Index="21"><Data ss:Type="String">inhuur</Data></Cell>
+<Cell ss:Index="22"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="23"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="24"><Data ss:Type="String">K</Data></Cell>
+<Cell ss:Index="25"><Data ss:Type="String">20220125</Data></Cell>
+<Cell ss:Index="26"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="27"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="28"><Data ss:Type="Number">6984.80</Data></Cell>
+<Cell ss:Index="29"><Data ss:Type="Number">269505</Data></Cell>
+<Cell ss:Index="30"><Data ss:Type="String">HR Via Care BV</Data></Cell>
+<Cell ss:Index="31"><Data ss:Type="Number">269505</Data></Cell>
+<Cell ss:Index="32"><Data ss:Type="String">HR Via Care BV</Data></Cell>
+<Cell ss:Index="33"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="34"><Data ss:Type="String">30</Data></Cell>
+<Cell ss:Index="35"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="36"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="37"><Data ss:Type="String">VALPOO001</Data></Cell>
+<Cell ss:Index="38"><Data ss:Type="Number">2508</Data></Cell>
+<Cell ss:Index="39"><Data ss:Type="DateTime">2022-02-11</Data></Cell>
+<Cell ss:Index="40"><Data ss:Type="String">su444p052</Data></Cell>
+<Cell ss:Index="41"><Data ss:Type="String">PHLFV002</Data></Cell>
+<Cell ss:Index="42"><Data ss:Type="String">NL37RABO0119633272</Data></Cell>
+<Cell ss:Index="43"><Data ss:Type="String">POF</Data></Cell>
+<Cell ss:Index="44"><Data ss:Type="String">Inkooporder Gecodeerd</Data></Cell>
+<Cell ss:Index="45"><Data ss:Type="String">Boeking-Compleet-P</Data></Cell>
+<Cell ss:Index="46"><Data ss:Type="Number">1212.24</Data></Cell>
+<Cell ss:Index="47"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="48"><Data ss:Type="String">NL37RABO0119633272</Data></Cell>
+<Cell ss:Index="49"><Data ss:Type="String">GGD ESIZE Prestatieverkl.</Data></Cell>
+</Row>
+<Row>
+<Cell ss:Index="1"><Data ss:Type="Number">1678255</Data></Cell>
+<Cell ss:Index="2"><Data ss:Type="String">PX</Data></Cell>
+<Cell ss:Index="3"><Data ss:Type="String">270</Data></Cell>
+<Cell ss:Index="4"><Data ss:Type="String">     5840052</Data></Cell>
+<Cell ss:Index="5"><Data ss:Type="String">1002</Data></Cell>
+<Cell ss:Index="6"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="7"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="8"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="9"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="13"><Data ss:Type="String">GB</Data></Cell>
+<Cell ss:Index="14"><Data ss:Type="DateTime">2022-02-02</Data></Cell>
+<Cell ss:Index="15"><Data ss:Type="DateTime">2022-02-01</Data></Cell>
+<Cell ss:Index="16"><Data ss:Type="DateTime">2022-02-02</Data></Cell>
+<Cell ss:Index="17"><Data ss:Type="DateTime">2022-03-03</Data></Cell>
+<Cell ss:Index="18"><Data ss:Type="DateTime">2022-02-01</Data></Cell>
+<Cell ss:Index="19"><Data ss:Type="DateTime">2022-03-03</Data></Cell>
+<Cell ss:Index="20"><Data ss:Type="String">237431</Data></Cell>
+<Cell ss:Index="21"><Data ss:Type="String">Diversen</Data></Cell>
+<Cell ss:Index="22"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="23"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="24"><Data ss:Type="String">K</Data></Cell>
+<Cell ss:Index="25"><Data ss:Type="String">22007799</Data></Cell>
+<Cell ss:Index="26"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="27"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="28"><Data ss:Type="Number">5096.44</Data></Cell>
+<Cell ss:Index="29"><Data ss:Type="Number">31009</Data></Cell>
+<Cell ss:Index="30"><Data ss:Type="String">Olympia Nederland BV</Data></Cell>
+<Cell ss:Index="31"><Data ss:Type="Number">31009</Data></Cell>
+<Cell ss:Index="32"><Data ss:Type="String">Olympia Nederland BV</Data></Cell>
+<Cell ss:Index="33"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="34"><Data ss:Type="String">30</Data></Cell>
+<Cell ss:Index="35"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="36"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="37"><Data ss:Type="String">ABOUEL003</Data></Cell>
+<Cell ss:Index="38"><Data ss:Type="Number">145109</Data></Cell>
+<Cell ss:Index="39"><Data ss:Type="DateTime">2022-04-22</Data></Cell>
+<Cell ss:Index="40"><Data ss:Type="String">su444p066</Data></Cell>
+<Cell ss:Index="41"><Data ss:Type="String">PHLFV002</Data></Cell>
+<Cell ss:Index="42"><Data ss:Type="String">NL60INGB0679735267</Data></Cell>
+<Cell ss:Index="43"><Data ss:Type="String">ACF</Data></Cell>
+<Cell ss:Index="44"><Data ss:Type="String">Grootboekrekening Gecodeerd</Data></Cell>
+<Cell ss:Index="45"><Data ss:Type="String">Boeking-Compleet-P</Data></Cell>
+<Cell ss:Index="46"><Data ss:Type="Number">884.51</Data></Cell>
+<Cell ss:Index="47"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="48"><Data ss:Type="String">NL60INGB0679735267</Data></Cell>
+<Cell ss:Index="49"><Data ss:Type="String">Boskma  Willem-Jan</Data></Cell>
+</Row>
+<Row>
+<Cell ss:Index="1"><Data ss:Type="Number">1678256</Data></Cell>
+<Cell ss:Index="2"><Data ss:Type="String">PX</Data></Cell>
+<Cell ss:Index="3"><Data ss:Type="String">270</Data></Cell>
+<Cell ss:Index="4"><Data ss:Type="String">     5840052</Data></Cell>
+<Cell ss:Index="5"><Data ss:Type="String">1002</Data></Cell>
+<Cell ss:Index="6"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="7"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="8"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="9"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="13"><Data ss:Type="String">GB</Data></Cell>
+<Cell ss:Index="14"><Data ss:Type="DateTime">2022-02-02</Data></Cell>
+<Cell ss:Index="15"><Data ss:Type="DateTime">2022-02-01</Data></Cell>
+<Cell ss:Index="16"><Data ss:Type="DateTime">2022-02-02</Data></Cell>
+<Cell ss:Index="17"><Data ss:Type="DateTime">2022-03-03</Data></Cell>
+<Cell ss:Index="18"><Data ss:Type="DateTime">2022-02-01</Data></Cell>
+<Cell ss:Index="19"><Data ss:Type="DateTime">2022-03-03</Data></Cell>
+<Cell ss:Index="20"><Data ss:Type="String">237431</Data></Cell>
+<Cell ss:Index="21"><Data ss:Type="String">Kesteren A, wk 222 tm 222</Data></Cell>
+<Cell ss:Index="22"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="23"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="24"><Data ss:Type="String">K</Data></Cell>
+<Cell ss:Index="25"><Data ss:Type="String">22007793</Data></Cell>
+<Cell ss:Index="26"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="27"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="28"><Data ss:Type="Number">1913.89</Data></Cell>
+<Cell ss:Index="29"><Data ss:Type="Number">31009</Data></Cell>
+<Cell ss:Index="30"><Data ss:Type="String">Olympia Nederland BV</Data></Cell>
+<Cell ss:Index="31"><Data ss:Type="Number">31009</Data></Cell>
+<Cell ss:Index="32"><Data ss:Type="String">Olympia Nederland BV</Data></Cell>
+<Cell ss:Index="33"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="34"><Data ss:Type="String">30</Data></Cell>
+<Cell ss:Index="35"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="36"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="37"><Data ss:Type="String">ABOUEL003</Data></Cell>
+<Cell ss:Index="38"><Data ss:Type="Number">145129</Data></Cell>
+<Cell ss:Index="39"><Data ss:Type="DateTime">2022-04-22</Data></Cell>
+<Cell ss:Index="40"><Data ss:Type="String">su444p066</Data></Cell>
+<Cell ss:Index="41"><Data ss:Type="String">PHLFV002</Data></Cell>
+<Cell ss:Index="42"><Data ss:Type="String">NL60INGB0679735267</Data></Cell>
+<Cell ss:Index="43"><Data ss:Type="String">ACF</Data></Cell>
+<Cell ss:Index="44"><Data ss:Type="String">Grootboekrekening Gecodeerd</Data></Cell>
+<Cell ss:Index="45"><Data ss:Type="String">Boeking-Compleet-P</Data></Cell>
+<Cell ss:Index="46"><Data ss:Type="Number">332.16</Data></Cell>
+<Cell ss:Index="47"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="48"><Data ss:Type="String">NL60INGB0679735267</Data></Cell>
+<Cell ss:Index="49"><Data ss:Type="String">Boskma  Willem-Jan</Data></Cell>
+</Row>
+<Row>
+<Cell ss:Index="1"><Data ss:Type="Number">1678264</Data></Cell>
+<Cell ss:Index="2"><Data ss:Type="String">PX</Data></Cell>
+<Cell ss:Index="3"><Data ss:Type="String">270</Data></Cell>
+<Cell ss:Index="4"><Data ss:Type="String">     5840052</Data></Cell>
+<Cell ss:Index="5"><Data ss:Type="String">1002</Data></Cell>
+<Cell ss:Index="6"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="7"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="8"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="9"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="13"><Data ss:Type="String">GB</Data></Cell>
+<Cell ss:Index="14"><Data ss:Type="DateTime">2022-02-02</Data></Cell>
+<Cell ss:Index="15"><Data ss:Type="DateTime">2022-02-01</Data></Cell>
+<Cell ss:Index="16"><Data ss:Type="DateTime">2022-02-02</Data></Cell>
+<Cell ss:Index="17"><Data ss:Type="DateTime">2022-03-03</Data></Cell>
+<Cell ss:Index="18"><Data ss:Type="DateTime">2022-02-01</Data></Cell>
+<Cell ss:Index="19"><Data ss:Type="DateTime">2022-03-03</Data></Cell>
+<Cell ss:Index="20"><Data ss:Type="String">237431</Data></Cell>
+<Cell ss:Index="21"><Data ss:Type="String">Diversen</Data></Cell>
+<Cell ss:Index="22"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="23"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="24"><Data ss:Type="String">K</Data></Cell>
+<Cell ss:Index="25"><Data ss:Type="String">22007797</Data></Cell>
+<Cell ss:Index="26"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="27"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="28"><Data ss:Type="Number">4348.29</Data></Cell>
+<Cell ss:Index="29"><Data ss:Type="Number">31009</Data></Cell>
+<Cell ss:Index="30"><Data ss:Type="String">Olympia Nederland BV</Data></Cell>
+<Cell ss:Index="31"><Data ss:Type="Number">31009</Data></Cell>
+<Cell ss:Index="32"><Data ss:Type="String">Olympia Nederland BV</Data></Cell>
+<Cell ss:Index="33"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="34"><Data ss:Type="String">30</Data></Cell>
+<Cell ss:Index="35"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="36"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="37"><Data ss:Type="String">ABOUEL003</Data></Cell>
+<Cell ss:Index="38"><Data ss:Type="Number">145147</Data></Cell>
+<Cell ss:Index="39"><Data ss:Type="DateTime">2022-04-22</Data></Cell>
+<Cell ss:Index="40"><Data ss:Type="String">su444p066</Data></Cell>
+<Cell ss:Index="41"><Data ss:Type="String">PHLFV002</Data></Cell>
+<Cell ss:Index="42"><Data ss:Type="String">NL60INGB0679735267</Data></Cell>
+<Cell ss:Index="43"><Data ss:Type="String">ACF</Data></Cell>
+<Cell ss:Index="44"><Data ss:Type="String">Grootboekrekening Gecodeerd</Data></Cell>
+<Cell ss:Index="45"><Data ss:Type="String">Boeking-Compleet-P</Data></Cell>
+<Cell ss:Index="46"><Data ss:Type="Number">754.66</Data></Cell>
+<Cell ss:Index="47"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="48"><Data ss:Type="String">NL60INGB0679735267</Data></Cell>
+<Cell ss:Index="49"><Data ss:Type="String">Boskma  Willem-Jan</Data></Cell>
+</Row>
+<Row>
+<Cell ss:Index="1"><Data ss:Type="Number">1678275</Data></Cell>
+<Cell ss:Index="2"><Data ss:Type="String">PX</Data></Cell>
+<Cell ss:Index="3"><Data ss:Type="String">270</Data></Cell>
+<Cell ss:Index="4"><Data ss:Type="String">     5840052</Data></Cell>
+<Cell ss:Index="5"><Data ss:Type="String">1002</Data></Cell>
+<Cell ss:Index="6"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="7"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="8"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="9"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="13"><Data ss:Type="String">GB</Data></Cell>
+<Cell ss:Index="14"><Data ss:Type="DateTime">2022-02-02</Data></Cell>
+<Cell ss:Index="15"><Data ss:Type="DateTime">2022-02-01</Data></Cell>
+<Cell ss:Index="16"><Data ss:Type="DateTime">2022-02-02</Data></Cell>
+<Cell ss:Index="17"><Data ss:Type="DateTime">2022-03-03</Data></Cell>
+<Cell ss:Index="18"><Data ss:Type="DateTime">2022-02-01</Data></Cell>
+<Cell ss:Index="19"><Data ss:Type="DateTime">2022-03-03</Data></Cell>
+<Cell ss:Index="20"><Data ss:Type="String">237431</Data></Cell>
+<Cell ss:Index="21"><Data ss:Type="String">Diversen</Data></Cell>
+<Cell ss:Index="22"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="23"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="24"><Data ss:Type="String">K</Data></Cell>
+<Cell ss:Index="25"><Data ss:Type="String">22007789</Data></Cell>
+<Cell ss:Index="26"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="27"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="28"><Data ss:Type="Number">2316.88</Data></Cell>
+<Cell ss:Index="29"><Data ss:Type="Number">31009</Data></Cell>
+<Cell ss:Index="30"><Data ss:Type="String">Olympia Nederland BV</Data></Cell>
+<Cell ss:Index="31"><Data ss:Type="Number">31009</Data></Cell>
+<Cell ss:Index="32"><Data ss:Type="String">Olympia Nederland BV</Data></Cell>
+<Cell ss:Index="33"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="34"><Data ss:Type="String">30</Data></Cell>
+<Cell ss:Index="35"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="36"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="37"><Data ss:Type="String">ABOUEL003</Data></Cell>
+<Cell ss:Index="38"><Data ss:Type="Number">145203</Data></Cell>
+<Cell ss:Index="39"><Data ss:Type="DateTime">2022-04-22</Data></Cell>
+<Cell ss:Index="40"><Data ss:Type="String">su444p066</Data></Cell>
+<Cell ss:Index="41"><Data ss:Type="String">PHLFV002</Data></Cell>
+<Cell ss:Index="42"><Data ss:Type="String">NL60INGB0679735267</Data></Cell>
+<Cell ss:Index="43"><Data ss:Type="String">ACF</Data></Cell>
+<Cell ss:Index="44"><Data ss:Type="String">Grootboekrekening Gecodeerd</Data></Cell>
+<Cell ss:Index="45"><Data ss:Type="String">Boeking-Compleet-P</Data></Cell>
+<Cell ss:Index="46"><Data ss:Type="Number">402.10</Data></Cell>
+<Cell ss:Index="47"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="48"><Data ss:Type="String">NL60INGB0679735267</Data></Cell>
+<Cell ss:Index="49"><Data ss:Type="String">Boskma  Willem-Jan</Data></Cell>
+</Row>
+<Row>
+<Cell ss:Index="1"><Data ss:Type="Number">1678292</Data></Cell>
+<Cell ss:Index="2"><Data ss:Type="String">PX</Data></Cell>
+<Cell ss:Index="3"><Data ss:Type="String">270</Data></Cell>
+<Cell ss:Index="4"><Data ss:Type="String">     5840052</Data></Cell>
+<Cell ss:Index="5"><Data ss:Type="String">1002</Data></Cell>
+<Cell ss:Index="6"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="7"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="8"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="9"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="13"><Data ss:Type="String">GB</Data></Cell>
+<Cell ss:Index="14"><Data ss:Type="DateTime">2022-02-02</Data></Cell>
+<Cell ss:Index="15"><Data ss:Type="DateTime">2022-02-01</Data></Cell>
+<Cell ss:Index="16"><Data ss:Type="DateTime">2022-02-02</Data></Cell>
+<Cell ss:Index="17"><Data ss:Type="DateTime">2022-03-03</Data></Cell>
+<Cell ss:Index="18"><Data ss:Type="DateTime">2022-02-01</Data></Cell>
+<Cell ss:Index="19"><Data ss:Type="DateTime">2022-03-03</Data></Cell>
+<Cell ss:Index="20"><Data ss:Type="String">237431</Data></Cell>
+<Cell ss:Index="21"><Data ss:Type="String">Kesteren A, wk 221 tm 221</Data></Cell>
+<Cell ss:Index="22"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="23"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="24"><Data ss:Type="String">K</Data></Cell>
+<Cell ss:Index="25"><Data ss:Type="String">22007790</Data></Cell>
+<Cell ss:Index="26"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="27"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="28"><Data ss:Type="Number">1817.71</Data></Cell>
+<Cell ss:Index="29"><Data ss:Type="Number">31009</Data></Cell>
+<Cell ss:Index="30"><Data ss:Type="String">Olympia Nederland BV</Data></Cell>
+<Cell ss:Index="31"><Data ss:Type="Number">31009</Data></Cell>
+<Cell ss:Index="32"><Data ss:Type="String">Olympia Nederland BV</Data></Cell>
+<Cell ss:Index="33"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="34"><Data ss:Type="String">30</Data></Cell>
+<Cell ss:Index="35"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="36"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="37"><Data ss:Type="String">ABOUEL003</Data></Cell>
+<Cell ss:Index="38"><Data ss:Type="Number">145218</Data></Cell>
+<Cell ss:Index="39"><Data ss:Type="DateTime">2022-04-22</Data></Cell>
+<Cell ss:Index="40"><Data ss:Type="String">su444p066</Data></Cell>
+<Cell ss:Index="41"><Data ss:Type="String">PHLFV002</Data></Cell>
+<Cell ss:Index="42"><Data ss:Type="String">NL60INGB0679735267</Data></Cell>
+<Cell ss:Index="43"><Data ss:Type="String">ACF</Data></Cell>
+<Cell ss:Index="44"><Data ss:Type="String">Grootboekrekening Gecodeerd</Data></Cell>
+<Cell ss:Index="45"><Data ss:Type="String">Boeking-Compleet-P</Data></Cell>
+<Cell ss:Index="46"><Data ss:Type="Number">315.47</Data></Cell>
+<Cell ss:Index="47"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="48"><Data ss:Type="String">NL60INGB0679735267</Data></Cell>
+<Cell ss:Index="49"><Data ss:Type="String">Boskma  Willem-Jan</Data></Cell>
+</Row>
+<Row>
+<Cell ss:Index="1"><Data ss:Type="Number">1679126</Data></Cell>
+<Cell ss:Index="2"><Data ss:Type="String">PV</Data></Cell>
+<Cell ss:Index="3"><Data ss:Type="String">270</Data></Cell>
+<Cell ss:Index="4"><Data ss:Type="String">     5570039</Data></Cell>
+<Cell ss:Index="5"><Data ss:Type="String">1002</Data></Cell>
+<Cell ss:Index="6"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="7"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="8"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="9"><Data ss:Type="String">X</Data></Cell>
+<Cell ss:Index="13"><Data ss:Type="String">IO</Data></Cell>
+<Cell ss:Index="14"><Data ss:Type="DateTime">2022-02-02</Data></Cell>
+<Cell ss:Index="15"><Data ss:Type="DateTime">2022-01-31</Data></Cell>
+<Cell ss:Index="16"><Data ss:Type="DateTime">2022-02-02</Data></Cell>
+<Cell ss:Index="17"><Data ss:Type="DateTime">2022-02-14</Data></Cell>
+<Cell ss:Index="18"><Data ss:Type="DateTime">2022-01-31</Data></Cell>
+<Cell ss:Index="20"><Data ss:Type="String">339565</Data></Cell>
+<Cell ss:Index="21"><Data ss:Type="String">Anthon Tsang UREN</Data></Cell>
+<Cell ss:Index="22"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="23"><Data ss:Type="String">A.Noslin T5</Data></Cell>
+<Cell ss:Index="24"><Data ss:Type="String">K</Data></Cell>
+<Cell ss:Index="25"><Data ss:Type="String">36644954</Data></Cell>
+<Cell ss:Index="26"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="27"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="28"><Data ss:Type="Number">16.34</Data></Cell>
+<Cell ss:Index="29"><Data ss:Type="Number">30069</Data></Cell>
+<Cell ss:Index="30"><Data ss:Type="String">Randstad Uitzendbureau BV</Data></Cell>
+<Cell ss:Index="31"><Data ss:Type="Number">30069</Data></Cell>
+<Cell ss:Index="32"><Data ss:Type="String">Randstad Uitzendbureau BV</Data></Cell>
+<Cell ss:Index="33"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="34"><Data ss:Type="String">14</Data></Cell>
+<Cell ss:Index="35"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="36"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="37"><Data ss:Type="String">NEERVO006</Data></Cell>
+<Cell ss:Index="38"><Data ss:Type="Number">172835</Data></Cell>
+<Cell ss:Index="39"><Data ss:Type="DateTime">2022-02-15</Data></Cell>
+<Cell ss:Index="40"><Data ss:Type="String">su444p052</Data></Cell>
+<Cell ss:Index="41"><Data ss:Type="String">PHLFV002</Data></Cell>
+<Cell ss:Index="42"><Data ss:Type="String">NL58ABNA0465768296</Data></Cell>
+<Cell ss:Index="43"><Data ss:Type="String">POF</Data></Cell>
+<Cell ss:Index="44"><Data ss:Type="String">Inkooporder Gecodeerd</Data></Cell>
+<Cell ss:Index="45"><Data ss:Type="String">Boeking-Compleet-P</Data></Cell>
+<Cell ss:Index="46"><Data ss:Type="Number">2.84</Data></Cell>
+<Cell ss:Index="47"><Data ss:Type="String">N</Data></Cell>
+<Cell ss:Index="48"><Data ss:Type="String">NL58ABNA0465768296</Data></Cell>
+<Cell ss:Index="49"><Data ss:Type="String">GGD ESIZE Prestatieverkl.</Data></Cell>
+</Row>
+<Row>
+<Cell ss:Index="1"><Data ss:Type="Number">1679446</Data></Cell>
+<Cell ss:Index="2"><Data ss:Type="String">PX</Data></Cell>
+<Cell ss:Index="3"><Data ss:Type="String">270</Data></Cell>
+<Cell ss:Index="4"><Data ss:Type="String">     5570039</Data></Cell>
+<Cell ss:Index="5"><Data ss:Type="String">1001</Data></Cell>
+<Cell ss:Index="6"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="7"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="8"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="9"><Data ss:Type="String">X</Data></Cell>
+<Cell ss:Index="13"><Data ss:Type="String">IO</Data></Cell>
+<Cell ss:Index="14"><Data ss:Type="DateTime">2022-02-02</Data></Cell>
+<Cell ss:Index="15"><Data ss:Type="DateTime">2022-02-02</Data></Cell>
+<Cell ss:Index="16"><Data ss:Type="DateTime">2022-02-02</Data></Cell>
+<Cell ss:Index="17"><Data ss:Type="DateTime">2022-03-04</Data></Cell>
+<Cell ss:Index="18"><Data ss:Type="DateTime">2022-02-02</Data></Cell>
+<Cell ss:Index="20"><Data ss:Type="String">341297</Data></Cell>
+<Cell ss:Index="21"><Data ss:Type="String">Razia Bakridi week 43 t/m 4 Wij verzoeken u het factuurbedrag over te maken op N</Data></Cell>
+<Cell ss:Index="22"><Data ss:Type="String">L89INGB0006662512 ten name van Manpower B.V., onder vermelding van het factuurnu</Data></Cell>
+<Cell ss:Index="23"><Data ss:Type="String">mmer. Manpower B.V. is geregistreerd bij de KvK onder nr. 33138744 BTW nr. NL003</Data></Cell>
+<Cell ss:Index="24"><Data ss:Type="String">K</Data></Cell>
+<Cell ss:Index="25"><Data ss:Type="String">1726233</Data></Cell>
+<Cell ss:Index="26"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="27"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="28"><Data ss:Type="Number">4990.43</Data></Cell>
+<Cell ss:Index="29"><Data ss:Type="Number">37335</Data></Cell>
+<Cell ss:Index="30"><Data ss:Type="String">Manpower BV</Data></Cell>
+<Cell ss:Index="31"><Data ss:Type="Number">37335</Data></Cell>
+<Cell ss:Index="32"><Data ss:Type="String">Manpower BV</Data></Cell>
+<Cell ss:Index="33"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="34"><Data ss:Type="String">30</Data></Cell>
+<Cell ss:Index="35"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="36"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="37"><Data ss:Type="String">SLEEPER</Data></Cell>
+<Cell ss:Index="38"><Data ss:Type="Number">75853</Data></Cell>
+<Cell ss:Index="39"><Data ss:Type="DateTime">2022-02-03</Data></Cell>
+<Cell ss:Index="40"><Data ss:Type="String">SU444P033</Data></Cell>
+<Cell ss:Index="41"><Data ss:Type="String">NHLFV005G</Data></Cell>
+<Cell ss:Index="42"><Data ss:Type="String">NL89INGB0006662512</Data></Cell>
+<Cell ss:Index="43"><Data ss:Type="String">POF</Data></Cell>
+<Cell ss:Index="44"><Data ss:Type="String">Inkooporder Gecodeerd</Data></Cell>
+<Cell ss:Index="45"><Data ss:Type="String">Boeking-Compleet-P</Data></Cell>
+<Cell ss:Index="46"><Data ss:Type="Number">866.11</Data></Cell>
+<Cell ss:Index="47"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="48"><Data ss:Type="String">NL89INGB0006662512</Data></Cell>
+<Cell ss:Index="49"><Data ss:Type="String">GGD ESIZE Prestatieverkl.</Data></Cell>
+</Row>
+<Row>
+<Cell ss:Index="1"><Data ss:Type="Number">1679837</Data></Cell>
+<Cell ss:Index="2"><Data ss:Type="String">PV</Data></Cell>
+<Cell ss:Index="3"><Data ss:Type="String">270</Data></Cell>
+<Cell ss:Index="4"><Data ss:Type="String">    95800129</Data></Cell>
+<Cell ss:Index="5"><Data ss:Type="String">1002</Data></Cell>
+<Cell ss:Index="6"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="7"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="8"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="9"><Data ss:Type="String">X</Data></Cell>
+<Cell ss:Index="13"><Data ss:Type="String">IO</Data></Cell>
+<Cell ss:Index="14"><Data ss:Type="DateTime">2022-02-02</Data></Cell>
+<Cell ss:Index="15"><Data ss:Type="DateTime">2021-11-30</Data></Cell>
+<Cell ss:Index="16"><Data ss:Type="DateTime">2022-02-02</Data></Cell>
+<Cell ss:Index="17"><Data ss:Type="DateTime">2021-12-30</Data></Cell>
+<Cell ss:Index="18"><Data ss:Type="DateTime">2021-11-30</Data></Cell>
+<Cell ss:Index="20"><Data ss:Type="String">211135</Data></Cell>
+<Cell ss:Index="21"><Data ss:Type="String">Communicatie uren</Data></Cell>
+<Cell ss:Index="22"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="23"><Data ss:Type="String">S.Ketwaru T1</Data></Cell>
+<Cell ss:Index="24"><Data ss:Type="String">K</Data></Cell>
+<Cell ss:Index="25"><Data ss:Type="String">54</Data></Cell>
+<Cell ss:Index="26"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="27"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="28"><Data ss:Type="Number">1096.26</Data></Cell>
+<Cell ss:Index="29"><Data ss:Type="Number">666454</Data></Cell>
+<Cell ss:Index="30"><Data ss:Type="String">Lotte Gottschal</Data></Cell>
+<Cell ss:Index="31"><Data ss:Type="Number">666454</Data></Cell>
+<Cell ss:Index="32"><Data ss:Type="String">Lotte Gottschal</Data></Cell>
+<Cell ss:Index="33"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="34"><Data ss:Type="String">30</Data></Cell>
+<Cell ss:Index="35"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="36"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="37"><Data ss:Type="String">SLEEPER</Data></Cell>
+<Cell ss:Index="38"><Data ss:Type="Number">164645</Data></Cell>
+<Cell ss:Index="39"><Data ss:Type="DateTime">2022-02-02</Data></Cell>
+<Cell ss:Index="40"><Data ss:Type="String">SU444P033</Data></Cell>
+<Cell ss:Index="41"><Data ss:Type="String">NHLFV005G</Data></Cell>
+<Cell ss:Index="42"><Data ss:Type="String">NL78INGB0008241870</Data></Cell>
+<Cell ss:Index="43"><Data ss:Type="String">POF</Data></Cell>
+<Cell ss:Index="44"><Data ss:Type="String">Inkooporder Gecodeerd</Data></Cell>
+<Cell ss:Index="45"><Data ss:Type="String">Boeking-Compleet-P</Data></Cell>
+<Cell ss:Index="46"><Data ss:Type="Number">190.26</Data></Cell>
+<Cell ss:Index="47"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="48"><Data ss:Type="String">NL78INGB0008241870</Data></Cell>
+<Cell ss:Index="49"><Data ss:Type="String">Beek van der  M.</Data></Cell>
+</Row>
+<Row>
+<Cell ss:Index="1"><Data ss:Type="Number">1680058</Data></Cell>
+<Cell ss:Index="2"><Data ss:Type="String">PX</Data></Cell>
+<Cell ss:Index="3"><Data ss:Type="String">270</Data></Cell>
+<Cell ss:Index="4"><Data ss:Type="String">     5570038</Data></Cell>
+<Cell ss:Index="5"><Data ss:Type="String">1001</Data></Cell>
+<Cell ss:Index="6"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="7"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="8"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="9"><Data ss:Type="String">X</Data></Cell>
+<Cell ss:Index="13"><Data ss:Type="String">IO</Data></Cell>
+<Cell ss:Index="14"><Data ss:Type="DateTime">2022-02-02</Data></Cell>
+<Cell ss:Index="15"><Data ss:Type="DateTime">2022-02-02</Data></Cell>
+<Cell ss:Index="16"><Data ss:Type="DateTime">2022-02-02</Data></Cell>
+<Cell ss:Index="17"><Data ss:Type="DateTime">2022-03-04</Data></Cell>
+<Cell ss:Index="18"><Data ss:Type="DateTime">2022-02-02</Data></Cell>
+<Cell ss:Index="20"><Data ss:Type="String">334410</Data></Cell>
+<Cell ss:Index="21"><Data ss:Type="String">Sumeyra Tok week 52 t/m 2 Wij verzoeken u het factuurbedrag over te maken op NL8</Data></Cell>
+<Cell ss:Index="22"><Data ss:Type="String">9INGB0006662512 ten name van Manpower B.V., onder vermelding van het factuurnumm</Data></Cell>
+<Cell ss:Index="23"><Data ss:Type="String">er. Manpower B.V. is geregistreerd bij de KvK onder nr. 33138744 BTW nr. NL00315</Data></Cell>
+<Cell ss:Index="24"><Data ss:Type="String">K</Data></Cell>
+<Cell ss:Index="25"><Data ss:Type="String">1726397</Data></Cell>
+<Cell ss:Index="26"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="27"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="28"><Data ss:Type="Number">2256.13</Data></Cell>
+<Cell ss:Index="29"><Data ss:Type="Number">37335</Data></Cell>
+<Cell ss:Index="30"><Data ss:Type="String">Manpower BV</Data></Cell>
+<Cell ss:Index="31"><Data ss:Type="Number">37335</Data></Cell>
+<Cell ss:Index="32"><Data ss:Type="String">Manpower BV</Data></Cell>
+<Cell ss:Index="33"><Data ss:Type="String"> </Data></Cell>
+<Cell ss:Index="34"><Data ss:Type="String">30</Data></Cell>
+<Cell ss:Index="35"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="36"><Data ss:Type="String">A</Data></Cell>
+<Cell ss:Index="37"><Data ss:Type="String">SLEEPER</Data></Cell>
+<Cell ss:Index="38"><Data ss:Type="Number">82525</Data></Cell>
+<Cell ss:Index="39"><Data ss:Type="DateTime">2022-02-03</Data></Cell>
+<Cell ss:Index="40"><Data ss:Type="String">SU444P033</Data></Cell>
+<Cell ss:Index="41"><Data ss:Type="String">NHLFV005G</Data></Cell>
+<Cell ss:Index="42"><Data ss:Type="String">NL89INGB0006662512</Data></Cell>
+<Cell ss:Index="43"><Data ss:Type="String">POF</Data></Cell>
+<Cell ss:Index="44"><Data ss:Type="String">Inkooporder Gecodeerd</Data></Cell>
+<Cell ss:Index="45"><Data ss:Type="String">Boeking-Compleet-P</Data></Cell>
+<Cell ss:Index="46"><Data ss:Type="Number">391.56</Data></Cell>
+<Cell ss:Index="47"><Data ss:Type="String">Y</Data></Cell>
+<Cell ss:Index="48"><Data ss:Type="String">NL89INGB0006662512</Data></Cell>
+<Cell ss:Index="49"><Data ss:Type="String">GGD ESIZE Prestatieverkl.</Data></Cell>
+</Row>
+</Table>
+</Worksheet>
+</Workbook>

@@ -1,0 +1,11 @@
+﻿{
+    "Name": "[Name]",
+    "ValueScope": "Global",
+    "ValueType": "[ValueType]", 
+    "StringValue": "[StringValue]",
+	"IntValue": [IntValue],
+	"BoolValue": [BoolValue],
+	"CredentialUsername": "[CredentialUsername]",
+	"CredentialPassword": "[CredentialPassword]",
+	"Description": "[Description]"
+}

@@ -1,0 +1,38 @@
+<HTML>
+	<HEAD>
+		<STYLE>
+			th,td {
+				padding: 10px;
+				border: 1px solid black; 
+			}
+			th{
+				text-align: left
+			}
+			table {
+				border-collapse: collapse;
+			}
+			.mapping {
+				background-color: #D3D4D7;
+				color: black;
+				padding: 1px;
+			}
+		</STYLE>
+	</HEAD>
+	<BODY>
+		<FONT size=2 face=Arial>Beste beheerder,<BR><BR>Hierbij een overzicht van de resultaten van <SPAN class=mapping contentEditable=false>{{ProcesNaam}}</SPAN>:<BR><BR>Totaal aantal verwerkt: <SPAN class=mapping contentEditable=false>{{Totaaltelling}}</SPAN><BR><BR></FONT>
+		<TABLE border=1>
+		<TBODY>
+		<TR>
+		<TH><FONT size=2 face=Arial>Resultaat</FONT></TH>
+		<TH><FONT size=2 face=Arial>Aantal</FONT></TH></TR>
+		<TR>
+		<TD><FONT size=2 face=Arial>Succesvol</FONT></TD>
+		<TD><FONT size=2 face=Arial><SPAN class=mapping contentEditable=false>{{Succesvol}}</SPAN></FONT></TD></TR>
+		<TR>
+		<TD><FONT size=2 face=Arial>Functionele uitval</FONT></TD>
+		<TD><FONT size=2 face=Arial><SPAN class=mapping contentEditable=false>{{FunctioneleUitval}}</SPAN></FONT></TD></TR>
+		<TR>
+		<TD><FONT size=2 face=Arial>Technische uitval</FONT></TD>
+		<TD><FONT size=2 face=Arial><SPAN class=mapping contentEditable=false>{{TechnischeUitval}}</SPAN></FONT></TD></TR></TBODY></TABLE><BR><BR><FONT size=2><FONT face=Arial><STRONG><SPAN class=mapping contentEditable=false>{{RedenStopProces}}</SPAN></STRONG><BR><BR>Startijd proces: <SPAN class=mapping contentEditable=false>{{StarttijdProces}}</SPAN><BR>Eindtijd proces: <SPAN class=mapping contentEditable=false>{{EindtijdProces}}</SPAN><BR>Totale draaitijd: <SPAN class=mapping contentEditable=false>{{DraaitijdProces}}</SPAN><BR><BR>Met vriendelijke groet,<BR><BR><SPAN class=mapping contentEditable=false>{{RobotNaam}}</SPAN></FONT></FONT>
+	</BODY>
+</HTML>
