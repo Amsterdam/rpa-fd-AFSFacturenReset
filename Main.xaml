@@ -473,7 +473,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Transition.To>
-            <State x:Name="__ReferenceID7" sap2010:Annotation.AnnotationText="Process a single transaction. &#xA;The result of the processing can be: 1) Success, 2) Business Exception, 3) System Exception. &#xA;In the case of a system exception, the transaction can be automatically retried." DisplayName="Process Transaction" sap:VirtualizedContainerService.HintSize="584,1453" sap2010:WorkflowViewState.IdRef="State_3">
+            <State x:Name="__ReferenceID7" sap2010:Annotation.AnnotationText="Process a single transaction. &#xA;The result of the processing can be: 1) Success, 2) Business Exception, 3) System Exception. &#xA;In the case of a system exception, the transaction can be automatically retried." DisplayName="Process Transaction" sap:VirtualizedContainerService.HintSize="231,188" sap2010:WorkflowViewState.IdRef="State_3">
               <State.Entry>
                 <TryCatch DisplayName="Try to process transaction" sap:VirtualizedContainerService.HintSize="538,981" sap2010:WorkflowViewState.IdRef="TryCatch_9">
                   <sap:WorkflowViewStateService.ViewState>
@@ -757,7 +757,7 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                                 <If.Then>
-                                  <Sequence DisplayName="First run" sap:VirtualizedContainerService.HintSize="548,3791" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                                  <Sequence DisplayName="First run" sap:VirtualizedContainerService.HintSize="492,2271" sap2010:WorkflowViewState.IdRef="Sequence_17">
                                     <Sequence.Variables>
                                       <Variable x:TypeArguments="sd:DataTable" sap2010:Annotation.AnnotationText="Bevat de keys van de TransactionDetails van de Config in tab &quot;Logmail&quot;. Dit zijn de keys die in de logmail naar de business gestuurd worden." Name="dtConfigLogging" />
                                     </Sequence.Variables>
@@ -767,7 +767,7 @@
                                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <Sequence sap2010:Annotation.AnnotationText="ALS de o365 authentication token bestaat&#xA;DAN dit bestand verwijderen&#xA;&#xA;Dit is nodig zodat de token niet verouderd. &#xA;Als de token verouderd kan dit problemen geven bij het verzenden van logmail of wachtwoord reset notificaties." DisplayName="Verwijder o365 authentication token" sap:VirtualizedContainerService.HintSize="506,183" sap2010:WorkflowViewState.IdRef="Sequence_66">
+                                    <Sequence sap2010:Annotation.AnnotationText="ALS de o365 authentication token bestaat&#xA;DAN dit bestand verwijderen&#xA;&#xA;Dit is nodig zodat de token niet verouderd. &#xA;Als de token verouderd kan dit problemen geven bij het verzenden van logmail of wachtwoord reset notificaties." DisplayName="Verwijder o365 authentication token" sap:VirtualizedContainerService.HintSize="450,183" sap2010:WorkflowViewState.IdRef="Sequence_66">
                                       <Sequence.Variables>
                                         <Variable x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Folder + Bestandsnaam van de o365 Authentication Token" Name="o365AuthenticationTokenBestand" />
                                         <Variable x:TypeArguments="x:Boolean" sap2010:Annotation.AnnotationText="Geeft aan of het Bestand bestaat of niet" Name="BestandBestaat" />
@@ -816,7 +816,7 @@
                                         </If.Else>
                                       </If>
                                     </Sequence>
-                                    <If Condition="[Screen.PrimaryScreen.Bounds.Width.ToString+&quot; x &quot;+ Screen.PrimaryScreen.Bounds.Height.ToString &lt;&gt; &quot;1920 x 1080&quot;]" DisplayName="If SchermResolutie niet 1920 x 1080" sap:VirtualizedContainerService.HintSize="506,182" sap2010:WorkflowViewState.IdRef="If_22">
+                                    <If Condition="[Screen.PrimaryScreen.Bounds.Width.ToString+&quot; x &quot;+ Screen.PrimaryScreen.Bounds.Height.ToString &lt;&gt; &quot;1920 x 1080&quot;]" DisplayName="If SchermResolutie niet 1920 x 1080" sap:VirtualizedContainerService.HintSize="450,182" sap2010:WorkflowViewState.IdRef="If_22">
                                       <If.Then>
                                         <Sequence sap:VirtualizedContainerService.HintSize="376,260" sap2010:WorkflowViewState.IdRef="Sequence_53">
                                           <sap:WorkflowViewStateService.ViewState>
@@ -844,7 +844,7 @@
                                         </Sequence>
                                       </If.Else>
                                     </If>
-                                    <Assign sap2010:Annotation.AnnotationText="StartTijdProces wordt gebruikt in het logverslag" DisplayName="Assign StarttijdProces" sap:VirtualizedContainerService.HintSize="506,113" sap2010:WorkflowViewState.IdRef="Assign_30">
+                                    <Assign sap2010:Annotation.AnnotationText="StartTijdProces wordt gebruikt in het logverslag" DisplayName="Assign StarttijdProces" sap:VirtualizedContainerService.HintSize="450,113" sap2010:WorkflowViewState.IdRef="Assign_30">
                                       <Assign.To>
                                         <OutArgument x:TypeArguments="s:DateTime">[StartTijdProces]</OutArgument>
                                       </Assign.To>
@@ -857,7 +857,7 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </Assign>
-                                    <Sequence sap2010:Annotation.AnnotationText="Dit wordt gebruikt om de looptijd per transactie (in Orchestrator log) en de volledige looptijd (in het logverslag) te bepalen" DisplayName="Stopwatch" sap:VirtualizedContainerService.HintSize="506,123" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                                    <Sequence sap2010:Annotation.AnnotationText="Dit wordt gebruikt om de looptijd per transactie (in Orchestrator log) en de volledige looptijd (in het logverslag) te bepalen" DisplayName="Stopwatch" sap:VirtualizedContainerService.HintSize="450,123" sap2010:WorkflowViewState.IdRef="Sequence_35">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -884,14 +884,14 @@
                                         </sap:WorkflowViewStateService.ViewState>
                                       </InvokeMethod>
                                     </Sequence>
-                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke InitAllSettings workflow" sap:VirtualizedContainerService.HintSize="506,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="Framework\InitAllSettings.xaml">
+                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke InitAllSettings workflow" sap:VirtualizedContainerService.HintSize="450,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="Framework\InitAllSettings.xaml">
                                       <ui:InvokeWorkflowFile.Arguments>
                                         <InArgument x:TypeArguments="x:String" x:Key="in_ConfigFile">Data\Config.xlsx</InArgument>
                                         <InArgument x:TypeArguments="s:String[]" x:Key="in_ConfigSheets">[{"Settings", "Constants"}]</InArgument>
                                         <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="out_Config">[Config]</OutArgument>
                                       </ui:InvokeWorkflowFile.Arguments>
                                     </ui:InvokeWorkflowFile>
-                                    <TryCatch sap2010:Annotation.AnnotationText="ALS Exception bij Proxy Instellen&#xA;DAN Geef logmelding dat het instellen niet gelukt is&#xA;" DisplayName="Try Catch Proxy Instellen" sap:VirtualizedContainerService.HintSize="506,124" sap2010:WorkflowViewState.IdRef="TryCatch_18">
+                                    <TryCatch sap2010:Annotation.AnnotationText="ALS Exception bij Proxy Instellen&#xA;DAN Geef logmelding dat het instellen niet gelukt is&#xA;" DisplayName="Try Catch Proxy Instellen" sap:VirtualizedContainerService.HintSize="450,124" sap2010:WorkflowViewState.IdRef="TryCatch_18">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -975,7 +975,7 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:AddLogFields>
-                                    <Sequence sap2010:Annotation.AnnotationText="Hier wordt het excel bestand voor de logging opgebouwd. In de &quot;logging' sheet in de config moet aangegeven worden welke kolommen nodig zijn. Hier worden ze dan in de dtLogDetails aangemaakt" DisplayName="Opbouwen logbestand (Excel)" sap:VirtualizedContainerService.HintSize="506,1658" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                                    <Sequence sap2010:Annotation.AnnotationText="Hier wordt het excel bestand voor de logging opgebouwd. In de &quot;logging' sheet in de config moet aangegeven worden welke kolommen nodig zijn. Hier worden ze dan in de dtLogDetails aangemaakt" DisplayName="Opbouwen logbestand (Excel)" sap:VirtualizedContainerService.HintSize="496,867" sap2010:WorkflowViewState.IdRef="Sequence_36">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -983,8 +983,8 @@
                                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dtConfigLogging]" DisplayName="Read range (Logging sheet)" sap:VirtualizedContainerService.HintSize="444,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Logmail" WorkbookPath="Data\Config.xlsx" />
-                                      <Assign sap2010:Annotation.AnnotationText="Hier wordt een nieuwe datatabel geinitialiseerd. dtLogDetails wordt gebruikt voor de logging" DisplayName="Assign dtLogDetails" sap:VirtualizedContainerService.HintSize="444,124" sap2010:WorkflowViewState.IdRef="Assign_32">
+                                      <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dtConfigLogging]" DisplayName="Read range (Logging sheet)" sap:VirtualizedContainerService.HintSize="434,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Logmail" WorkbookPath="Data\Config.xlsx" />
+                                      <Assign sap2010:Annotation.AnnotationText="Hier wordt een nieuwe datatabel geinitialiseerd. dtLogDetails wordt gebruikt voor de logging" DisplayName="Assign dtLogDetails" sap:VirtualizedContainerService.HintSize="434,124" sap2010:WorkflowViewState.IdRef="Assign_32">
                                         <Assign.To>
                                           <OutArgument x:TypeArguments="sd:DataTable">[dtLogDetails]</OutArgument>
                                         </Assign.To>
@@ -997,21 +997,25 @@
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                       </Assign>
-                                      <ui:AddDataColumn x:TypeArguments="x:String" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" sap2010:Annotation.AnnotationText="Status kolom wordt toegevoegd aan dtLogDetails" ColumnName="Status" DataTable="[dtLogDetails]" DisplayName="Add Data Column Status" sap:VirtualizedContainerService.HintSize="444,217" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_1">
+                                      <ui:AddDataColumn x:TypeArguments="x:String" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" sap2010:Annotation.AnnotationText="Status kolom wordt toegevoegd aan dtLogDetails" ColumnName="Status" DataTable="[dtLogDetails]" DisplayName="Add Data Column Status" sap:VirtualizedContainerService.HintSize="434,94" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_1">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                       </ui:AddDataColumn>
-                                      <ui:AddDataColumn x:TypeArguments="x:String" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" Unique="{x:Null}" sap2010:Annotation.AnnotationText="Toelichting kolom wordt toegevoegd aan dtLogDetails" ColumnName="Toelichting" DataTable="[dtLogDetails]" DisplayName="Add Data Column Toelichting" sap:VirtualizedContainerService.HintSize="444,217" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_2" MaxLength="-1">
+                                      <ui:AddDataColumn x:TypeArguments="x:String" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" Unique="{x:Null}" sap2010:Annotation.AnnotationText="Toelichting kolom wordt toegevoegd aan dtLogDetails" ColumnName="Toelichting" DataTable="[dtLogDetails]" DisplayName="Add Data Column Toelichting" sap:VirtualizedContainerService.HintSize="434,94" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_2" MaxLength="-1">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                       </ui:AddDataColumn>
-                                      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Elke aangegeven kolomnaam in de Config wordt hier toegevoegd aan de data tabel. Lege waardes worden niet toegevoegd." DataTable="[dtConfigLogging]" DisplayName="For Each Row in Data voeg kolom toe" sap:VirtualizedContainerService.HintSize="444,684" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                                      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Elke aangegeven kolomnaam in de Config wordt hier toegevoegd aan de data tabel. Lege waardes worden niet toegevoegd." DataTable="[dtConfigLogging]" DisplayName="For Each Row in Data voeg kolom toe" sap:VirtualizedContainerService.HintSize="434,139" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
                                         <ui:ForEachRow.Body>
                                           <ActivityAction x:TypeArguments="sd:DataRow">
                                             <ActivityAction.Argument>
@@ -1043,6 +1047,8 @@
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                       </ui:ForEachRow>

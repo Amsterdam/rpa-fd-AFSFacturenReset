@@ -10,7 +10,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1038,1268</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1038,1453</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="50">
@@ -122,7 +122,7 @@
       <AssemblyReference>System.Private.Xml</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="548,1203" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="541,1388" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strDocumentNummer" />
       <Variable x:TypeArguments="x:String" Name="strRedenAfkeuring" />
@@ -133,8 +133,8 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message Process Start" sap:VirtualizedContainerService.HintSize="486,141" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Started Process&quot;]" />
-    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="486,147" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+    <ui:LogMessage DisplayName="Log Message Process Start" sap:VirtualizedContainerService.HintSize="479,141" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Started Process&quot;]" />
+    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="479,147" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -156,39 +156,21 @@
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="486,141" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Trace]" Message="[&quot;Te behandelen document: &quot; &amp; strDocumentNummer]" />
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="RPA_Workflows\AFS\AFS_DeCoderenEnAfkeurenSimulatie.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="486,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="RPA_Workflows\AFS\AFS_DeCoderenEnAfkeurenSimulatie.xaml">
-      <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">
-          <VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="in_Config" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_strDocumentnummer">
-          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="strDocumentNummer" />
-        </InArgument>
-        <InArgument x:TypeArguments="ui:UiElement" x:Key="in_uieOpenBrowserAFS">
-          <VisualBasicValue x:TypeArguments="ui:UiElement" ExpressionText="io_uieOpenBrowserAFS" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_strRedenAfkeuring">
-          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="strRedenAfkeuring" />
-        </InArgument>
-        <InOutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="io_TransactionDetails">
-          <VisualBasicReference x:TypeArguments="scg:Dictionary(x:String, x:String)" ExpressionText="io_TransactionDetails" />
-        </InOutArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="BreakTriggerScopeInArgument" />
-        <InArgument x:TypeArguments="x:Int32" x:Key="in_TransactionNumber">
-          <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="in_TransactionNumber" />
-        </InArgument>
-      </ui:InvokeWorkflowFile.Arguments>
-    </ui:InvokeWorkflowFile>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="486,303" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-      <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,224" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="479,141" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Trace]" Message="[&quot;Te behandelen document: &quot; &amp; strDocumentNummer]" />
+    <If sap2010:Annotation.AnnotationText="Tijdens ontwikkelen kan in productie AFS alleen de simulatie worden gebruikt.&#xD;&#xA;In acceptatie kan ook decoderen owrden gebruikt." Condition="[in_Config(&quot;blnUseProductieAFS&quot;).ToString = &quot;True&quot;]" DisplayName="If AFS Productie of Acceptatie" sap:VirtualizedContainerService.HintSize="479,641" sap2010:WorkflowViewState.IdRef="If_1">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <If.Then>
+        <Sequence sap:VirtualizedContainerService.HintSize="376,201" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="RPA_Workflows\AFS\AFS_DeCoderenEnAfkeuren.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="RPA_Workflows\AFS\AFS_DeCoderenEnAfkeuren.xaml">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="RPA_Workflows\AFS\AFS_DeCoderenEnAfkeurenSimulatie.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="RPA_Workflows\AFS\AFS_DeCoderenEnAfkeurenSimulatie.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
               <InArgument x:TypeArguments="x:String" x:Key="in_strDocumentnummer">[strDocumentNummer]</InArgument>
@@ -200,7 +182,27 @@
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
         </Sequence>
-      </ui:CommentOut.Body>
-    </ui:CommentOut>
+      </If.Then>
+      <If.Else>
+        <Sequence sap:VirtualizedContainerService.HintSize="376,201" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="RPA_Workflows\AFS\AFS_DeCoderenEnAfkeuren.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="RPA_Workflows\AFS\AFS_DeCoderenEnAfkeuren.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_strDocumentnummer">[strDocumentNummer]</InArgument>
+              <InArgument x:TypeArguments="ui:UiElement" x:Key="in_uieOpenBrowserAFS">[io_uieOpenBrowserAFS]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_strRedenAfkeuring">[strRedenAfkeuring]</InArgument>
+              <InOutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="io_TransactionDetails">[io_TransactionDetails]</InOutArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="BreakTriggerScopeInArgument" />
+              <InArgument x:TypeArguments="x:Int32" x:Key="in_TransactionNumber">[in_TransactionNumber]</InArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+          </ui:InvokeWorkflowFile>
+        </Sequence>
+      </If.Else>
+    </If>
   </Sequence>
 </Activity>

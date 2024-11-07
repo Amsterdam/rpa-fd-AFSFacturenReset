@@ -95,9 +95,10 @@
       "Path": "RPA_Workflows/AFS/AFS_OpenenEnLogin.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "strAFSurl&Sequence_1",
+        "strAFSlogin&Sequence_1",
         "strAFSGebruikersnaam&Sequence_17",
         "ssAFSWachtwoord&Sequence_17",
-        "AFSurl&Sequence_1",
         "blnAanmelden&Sequence_1",
         "blnIngelogd&Sequence_1",
         "SE&Sequence_13"

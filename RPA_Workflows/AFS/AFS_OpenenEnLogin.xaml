@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1298,5610</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1298,5811</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>AFS_OpenenEnLogin_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="70">
@@ -115,11 +115,12 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Opmerking: AFS openen in Chrome, inloggen in AFS &#xA;&#xA;Pre: geen browser actief, die is zo nodig gesloten bij initialisatie. &#xA;Post: &#xA;- browser gestart, met AFS inlogpagina. &#xA;- Ingelogd.&#xA;- browser gegevens opgeslagen in UiElement om later deze AFS sessie te kunnen oproepen." DisplayName="AFS_OpenenEnLogin" sap:VirtualizedContainerService.HintSize="1308,5545" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Opmerking: AFS openen in Chrome, inloggen in AFS &#xA;&#xA;Pre: geen browser actief, die is zo nodig gesloten bij initialisatie. &#xA;Post: &#xA;- browser gestart, met AFS inlogpagina. &#xA;- Ingelogd.&#xA;- browser gegevens opgeslagen in UiElement om later deze AFS sessie te kunnen oproepen." DisplayName="AFS_OpenenEnLogin" sap:VirtualizedContainerService.HintSize="1308,5746" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="blnAanmelden" />
       <Variable x:TypeArguments="x:Boolean" Name="blnIngelogd" />
-      <Variable x:TypeArguments="x:String" Name="AFSurl" />
+      <Variable x:TypeArguments="x:String" Name="strAFSurl" />
+      <Variable x:TypeArguments="x:String" Name="strAFSlogin" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -129,65 +130,81 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message Gestart: AFS_OpenenEnLogin." sap:VirtualizedContainerService.HintSize="1246,141" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Start AFS_OpenenEnLogin.&quot;]" />
-    <If Condition="[in_Config(&quot;blnUseProductieAFS&quot;).ToString = &quot;True&quot;]" DisplayName="If AFS Productie of Acceptatie" sap:VirtualizedContainerService.HintSize="1246,522" sap2010:WorkflowViewState.IdRef="If_2">
+    <If Condition="[in_Config(&quot;blnUseProductieAFS&quot;).ToString = &quot;True&quot;]" DisplayName="If AFS Productie of Acceptatie" sap:VirtualizedContainerService.HintSize="1246,763" sap2010:WorkflowViewState.IdRef="If_2">
       <If.Then>
-        <Sequence sap:VirtualizedContainerService.HintSize="476,170" sap2010:WorkflowViewState.IdRef="Sequence_15">
+        <Sequence sap:VirtualizedContainerService.HintSize="476,290" sap2010:WorkflowViewState.IdRef="Sequence_15">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Assign DisplayName="Assign AFS Productie omgeving" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_4">
+          <Assign DisplayName="Assign AFS url Productie omgeving" sap:VirtualizedContainerService.HintSize="434,81" sap2010:WorkflowViewState.IdRef="Assign_4">
             <Assign.To>
-              <OutArgument x:TypeArguments="x:String">[AFSurl]</OutArgument>
+              <OutArgument x:TypeArguments="x:String">[strAFSurl]</OutArgument>
             </Assign.To>
             <Assign.Value>
               <InArgument x:TypeArguments="x:String">[in_Config("AFSurlProd").ToString]</InArgument>
             </Assign.Value>
           </Assign>
+          <Assign DisplayName="Assign AFS login Productie omgeving" sap:VirtualizedContainerService.HintSize="434,81" sap2010:WorkflowViewState.IdRef="Assign_6">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">[strAFSlogin]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String">Robot_AFSProd_Login</InArgument>
+            </Assign.Value>
+          </Assign>
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence sap:VirtualizedContainerService.HintSize="476,170" sap2010:WorkflowViewState.IdRef="Sequence_16">
+        <Sequence sap:VirtualizedContainerService.HintSize="476,291" sap2010:WorkflowViewState.IdRef="Sequence_16">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_5">
+          <Assign DisplayName="Assign AFS url Acceptatie omgeving " sap:VirtualizedContainerService.HintSize="434,81" sap2010:WorkflowViewState.IdRef="Assign_5">
             <Assign.To>
-              <OutArgument x:TypeArguments="x:String">[AFSurl]</OutArgument>
+              <OutArgument x:TypeArguments="x:String">[strAFSurl]</OutArgument>
             </Assign.To>
             <Assign.Value>
               <InArgument x:TypeArguments="x:String">[in_Config("AFSurlAcc").ToString]</InArgument>
             </Assign.Value>
           </Assign>
+          <Assign DisplayName="Assign AFS Acceptatie omgeving" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_7">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">[strAFSlogin]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String">Robot_AFSAcc_Login</InArgument>
+            </Assign.Value>
+          </Assign>
         </Sequence>
       </If.Else>
     </If>
-    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Chrome starten met juiste pagina. Pagina straks doorgeven via argumenten." AttachMode="ByInstance" CloseMode="Never" DisplayName="Private: Use Browser Chrome: JD Edwards" sap:VirtualizedContainerService.HintSize="1246,4393" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" IsIncognito="True" OpenMode="IfNotOpen" OutUiElement="[out_uieOpenBrowserAFS]" ScopeGuid="cfe8b114-c5d2-4837-92de-fb260aded030" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Chrome starten met juiste pagina. Pagina straks doorgeven via argumenten." AttachMode="ByInstance" CloseMode="Never" DisplayName="Private: Use Browser Chrome: JD Edwards" sap:VirtualizedContainerService.HintSize="1246,4353" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" IsIncognito="True" OpenMode="IfNotOpen" OutUiElement="[out_uieOpenBrowserAFS]" ScopeGuid="cfe8b114-c5d2-4837-92de-fb260aded030" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence sap2010:Annotation.AnnotationText="" DisplayName="Do inloggen in AFS" sap:VirtualizedContainerService.HintSize="1212,4145" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence sap2010:Annotation.AnnotationText="" DisplayName="Do inloggen in AFS" sap:VirtualizedContainerService.HintSize="1212,4105" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:RetryScope DisplayName="Retry Scope Zoek knop aanmelden" sap:VirtualizedContainerService.HintSize="1150,1418" sap2010:WorkflowViewState.IdRef="RetryScope_1">
+            <ui:RetryScope DisplayName="Retry Scope Zoek knop aanmelden" sap:VirtualizedContainerService.HintSize="1150,1378" sap2010:WorkflowViewState.IdRef="RetryScope_1">
               <ui:RetryScope.ActivityBody>
                 <ActivityAction>
-                  <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="1108,1129" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                  <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="1108,1089" sap2010:WorkflowViewState.IdRef="Sequence_12">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NCheckState sap2010:Annotation.AnnotationText="Controleren of AFS werkelijk wacht op inloggen. Anders foutmelding genereren en in logboek opnemen." DisplayName="Check App State 'Aanmelden'" Exists="[blnAanmelden]" sap:VirtualizedContainerService.HintSize="1046,1018" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="cfe8b114-c5d2-4837-92de-fb260aded030" Timeout="10" Version="V1">
+                    <uix:NCheckState sap2010:Annotation.AnnotationText="Controleren of AFS werkelijk wacht op inloggen. Anders foutmelding genereren en in logboek opnemen." DisplayName="Check App State 'Aanmelden'" Exists="[blnAanmelden]" sap:VirtualizedContainerService.HintSize="1046,978" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="cfe8b114-c5d2-4837-92de-fb260aded030" Timeout="10" Version="V1">
                       <uix:NCheckState.IfExists>
                         <Sequence DisplayName="Target appears Aanmelden" sap:VirtualizedContainerService.HintSize="496,380" sap2010:WorkflowViewState.IdRef="Sequence_3">
                           <sap:WorkflowViewStateService.ViewState>
@@ -287,7 +304,7 @@
                 <Sequence DisplayName="" sap2010:WorkflowViewState.IdRef="Sequence_14" />
               </If.Else>
             </If>
-            <Sequence DisplayName="Sequence Veilig inloggen" sap:VirtualizedContainerService.HintSize="450,832" sap2010:WorkflowViewState.IdRef="Sequence_17">
+            <Sequence DisplayName="Sequence Veilig inloggen" sap:VirtualizedContainerService.HintSize="1150,836" sap2010:WorkflowViewState.IdRef="Sequence_17">
               <Sequence.Variables>
                 <Variable x:TypeArguments="ss:SecureString" Name="ssAFSWachtwoord" />
                 <Variable x:TypeArguments="x:String" Name="strAFSGebruikersnaam" />
@@ -297,7 +314,7 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="[in_Config(&quot;Robot_AFS_Login&quot;).ToString]" CacheStrategy="None" DisplayName="Get Credential AFS inlog" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="GetRobotCredential_2" Password="[ssAFSWachtwoord]" Username="[strAFSGebruikersnaam]" />
+              <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="[in_Config(strAFSlogin).ToString]" CacheStrategy="None" DisplayName="Get Credential AFS inlog" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="GetRobotCredential_2" Password="[ssAFSWachtwoord]" Username="[strAFSGebruikersnaam]" />
               <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="Gebruikersnaam afs invullen" ClickBeforeMode="Single" DisplayName="Type Into 'Gebruiker-ID'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,249" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="HardwareEvents" ScopeIdentifier="cfe8b114-c5d2-4837-92de-fb260aded030" Text="[strAFSGebruikersnaam]" Version="V1">
                 <uix:NTypeInto.Target>
                   <uix:TargetAnchorable BrowserURL="https://afs.acc.amsterdam.nl/jde/E1Menu.maf?jdeLoginAction=LOGOUT&amp;RENDER_MAFLET=E1Menu" DesignTimeRectangle="663, 504, 158, 27" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT User'" FullSelectorArgument="&lt;webctrl aria-role='presentation' id='mainLoginTable' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' id='mainLoginTable' tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' class='textfield margin-top5' aaname='Gebruiker-ID' /&gt;" Guid="d6cadc6a-05ca-45e6-b96c-a01d91a19c4e" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKIAAAAfCAYAAABkphawAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIuSURBVHhe7dzbSgJBHMfxHkG6kMo8vEoXatFtdKSlp4igw1uJh+suzIqCynqFLlpxM4NO//pNjDvSlEpuO8Fv4EO1u7MH+iKi7E7M5JPyX80WpyQ9Py2ZhRnJLc5GDsfB8XBc27HxO5bj3JJzk32wbJjzxD71teFv275cp899EPNaeyFuHXjSuGxIu9MWDo4oR/DR2EnzWLz9DdUeglQhensbaoNSqSSFQkEymYwkEgmisUNbaKxSqajmNnfX1aujChGvhOVy2TqRKCrValWOrxphiJ1uR1WKlSura3JYr8vtnU80dmgLjaE1NNcK/DBEjFQqpVaenp3LffeRKDJoDK3lcjnVXl+IWAGPT89EkdO9YeDThC8hvry+EUXODLH38Q0GQ6S/ZIaIBhkixYIhkhPMEPFtDEOkWDBEcgJDJCcwRHICQyQnMERyAkMkJ5ghokGGSLEwQ+RXfBQbM0S+IlJszBD5HpFiwxDJCQyRnMAQyQnfhoj7B7Di8qppnUg0LmgMrel7Vnoh+oHfu4tv0/OkeX1j3QHRbyFCNIbW0Jzf9sMQeV8zxaFWq0nj4igMUT/pATHm83lJp9PWiUS/lc1mpVgsqpvrMVa2l8IQdYy46z54CNQGHBxRjVbQkqOLuqztLKsI+0J0wU9Py8L3kdhGP4FLX8AwME/PH4VtX6PCfmzXo+Fa9PFwjlg2yrHNufrnIOZ25lywHQOwbpinmWEbvT/8r7Dsp/1+mpR3NM/tg488h64AAAAASUVORK5CYII=" InformativeScreenshot="5b2a6332d8d35b37e6ec5b3d7c4dc01e.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='JD Edwards' /&gt;" SearchSteps="Selector" Visibility="Interactive">
@@ -390,7 +407,7 @@
         </ActivityAction>
       </uix:NApplicationCard.Body>
       <uix:NApplicationCard.TargetApp>
-        <uix:TargetApp Area="-8, -8, 1936, 1176" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="9192f707f35136f733c291e0ef747d0a.png" Selector="&lt;html app='chrome.exe' url='http://prd.afs.amsterdam.nl/jde' /&gt;" Url="[AFSurl]" />
+        <uix:TargetApp Area="-8, -8, 1936, 1176" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="9192f707f35136f733c291e0ef747d0a.png" Selector="&lt;html app='chrome.exe' url='http://prd.afs.amsterdam.nl/jde' /&gt;" Url="[strAFSurl]" />
       </uix:NApplicationCard.TargetApp>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">

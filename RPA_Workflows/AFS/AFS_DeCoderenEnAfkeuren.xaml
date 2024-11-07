@@ -11,7 +11,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>951,1730</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>951,1832</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>AFS_DeCoderenEnAfkeuren_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -115,7 +115,7 @@
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart DisplayName="AFS_DeCoderenEnAfkeuren" sap:VirtualizedContainerService.HintSize="961,1665" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart sap2010:Annotation.AnnotationText="Preconditie: AFS geopend in Raadplegen.&#xD;&#xA;&#xD;&#xA;Postconditie: Factuur ontdaan van codering en afgekeurd.&#xD;&#xA;&#xD;&#xA;Acties: Documentnummer (verkregen uit Queue) opzoeken, codering verwijderen (indien aanwezig) en dan afkeuren.&#xD;&#xA;Bij het document moet eerst de pagina Codering worden geopend, bij deze stap kan AFS vastlopen, dan wordt er een System Exception tegenaan gegooid." DisplayName="AFS_DeCoderenEnAfkeuren" sap:VirtualizedContainerService.HintSize="961,1767" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:String" Name="strGekoppeld" />
       <Variable x:TypeArguments="x:Boolean" Name="blnFactuurGevonden" />
@@ -128,7 +128,8 @@
         <av:Size x:Key="ShapeSize">60,75</av:Size>
         <x:Double x:Key="Width">927</x:Double>
         <x:Double x:Key="Height">1628</x:Double>
-        <av:PointCollection x:Key="ConnectorLocation">60,40 330,40 330,73</av:PointCollection>
+        <av:PointCollection x:Key="ConnectorLocation">60,40 320,40 320,63</av:PointCollection>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
@@ -137,9 +138,9 @@
     <FlowStep x:Name="__ReferenceID13">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">230,73</av:Point>
+          <av:Point x:Key="ShapeLocation">220,63</av:Point>
           <av:Size x:Key="ShapeSize">200,94</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">330,167 330,197 320,197 320,214</av:PointCollection>
+          <av:PointCollection x:Key="ConnectorLocation">320,157 320,214</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <ui:Comment sap:VirtualizedContainerService.HintSize="200,94" sap2010:WorkflowViewState.IdRef="Comment_1" Text="De factuur decoderen en afkeuren met controles voor en na elke stap.">
@@ -155,7 +156,7 @@
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <av:Point x:Key="ShapeLocation">220,214</av:Point>
               <av:Size x:Key="ShapeSize">200,52</av:Size>
-              <av:PointCollection x:Key="ConnectorLocation">320,266 320,339.5</av:PointCollection>
+              <av:PointCollection x:Key="ConnectorLocation">320,266 320,311</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <ui:LogMessage DisplayName="Log Message &quot;Gestart: AFS_DeCoderen.&quot;" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Start AFS_DeCoderen en afkeuren.&quot;]" />
@@ -163,12 +164,12 @@
             <FlowStep x:Name="__ReferenceID2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <av:Point x:Key="ShapeLocation">220,339.5</av:Point>
-                  <av:Size x:Key="ShapeSize">200,123</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">320,462.5 320,492.5 321.64166666666665,492.5 321.64166666666665,506.5</av:PointCollection>
+                  <av:Point x:Key="ShapeLocation">220,311</av:Point>
+                  <av:Size x:Key="ShapeSize">200,138</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">320,449 320,479 321.64166666666665,479 321.64166666666665,506.5</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence sap2010:Annotation.AnnotationText="Documentnummer opzoeken bij Raadplegen." DisplayName="Sequence factuur opzoeken" sap:VirtualizedContainerService.HintSize="200,123" sap2010:WorkflowViewState.IdRef="Sequence_29">
+              <Sequence sap2010:Annotation.AnnotationText="Factuur op basis van Documentnummer opzoeken bij Raadplegen." DisplayName="Factuur opzoeken" sap:VirtualizedContainerService.HintSize="200,138" sap2010:WorkflowViewState.IdRef="Sequence_29">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -420,7 +421,7 @@
                               <av:PointCollection x:Key="ConnectorLocation">240,816 330,816 330,916.5</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <Sequence sap2010:Annotation.AnnotationText="Poging om tabblad Coderen te openen.&#xA;Soms loopt het proces herop vast." DisplayName="Sequence Codering zoeken" sap:VirtualizedContainerService.HintSize="546,443" sap2010:WorkflowViewState.IdRef="Sequence_52">
+                          <Sequence sap2010:Annotation.AnnotationText="Poging om tabblad Coderen te openen.&#xA;Soms loopt het proces herop vast." DisplayName="Pagina Codering openen" sap:VirtualizedContainerService.HintSize="200,153" sap2010:WorkflowViewState.IdRef="Sequence_52">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -557,7 +558,7 @@
                                       <av:PointCollection x:Key="ConnectorLocation">140,1150.5 140,1232</av:PointCollection>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <Sequence DisplayName="Sequence Factuur decoderen starten" sap:VirtualizedContainerService.HintSize="200,81" sap2010:WorkflowViewState.IdRef="Sequence_1">
+                                  <Sequence DisplayName="Factuur decoderen starten" sap:VirtualizedContainerService.HintSize="200,81" sap2010:WorkflowViewState.IdRef="Sequence_1">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -753,7 +754,7 @@
                                               <av:Size x:Key="ShapeSize">200,81</av:Size>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <Sequence sap:VirtualizedContainerService.HintSize="200,81" sap2010:WorkflowViewState.IdRef="Sequence_43">
+                                          <Sequence DisplayName="Afkeuren Factuur" sap:VirtualizedContainerService.HintSize="200,81" sap2010:WorkflowViewState.IdRef="Sequence_43">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -874,7 +875,7 @@
                                           <av:Size x:Key="ShapeSize">200,94</av:Size>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <Throw sap2010:Annotation.AnnotationText="Oproepen Codering vastgelopen in AFS." DisplayName="Throw Codering vastgelopen" Exception="[New SystemException(&quot;AFS loopt vast op pagina Codering&quot;)]" sap:VirtualizedContainerService.HintSize="334,121" sap2010:WorkflowViewState.IdRef="Throw_1">
+                                      <Throw sap2010:Annotation.AnnotationText="Oproepen SE Codering vastgelopen in AFS." DisplayName="Throw Codering vastgelopen" Exception="[New SystemException(&quot;AFS loopt vast op pagina Codering&quot;)]" sap:VirtualizedContainerService.HintSize="200,94" sap2010:WorkflowViewState.IdRef="Throw_1">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
